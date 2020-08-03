@@ -3,6 +3,8 @@
 ---
 ## markdown 사용법 정리하기 
 [마크다운 내용](./a_assest/a_markdown.md)
+---
+
 
 ---
 1.  git 계정 생성하기!
