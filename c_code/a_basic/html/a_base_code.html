@@ -4,10 +4,24 @@
 <head>
   <meta charset="UTF-8">
   <title>웹기초 - 기본 코드내용</title>
+
+  <!-- link:favicon -->
+  <link rel="shortcut icon" href="../img/icon_01.png" type="image/png">
+  <!-- link:touch -->
+  <link rel="apple-touch-icon" href="../img/icon_01.png">
+
   <style>
-    /* h1 {font-size:10px;} */
     div { border-width:5px; border-color:salmon; border-style:solid; 
           background-color:aliceblue;}
+    #pageTitle { width:600px; margin:auto; margin-bottom:20px; border-width:2px; }
+    #pageParagraph { width:80%; margin:auto; background-color: #dfdfdf; 
+                    border-radius:20px;}
+
+    .shadow_box { width:70%; margin:auto; margin-bottom:50px; 
+               box-shadow:5px 5px 5px rgba(10,10,10,0.7); }  
+    .margin_top { background-color: #fa0; border:0; font-size:1.2rem;
+                  transition:all 1000ms ease;}
+    .margin_top:hover {background-color: #07a; color:#fff; font-size:1.5rem;}
     span { background-color:#f77; color:white;}
   </style>
 </head>
@@ -23,7 +37,7 @@
    <!-- h1 ~ h6 목차에서 표현된 내용으로 이해~ 
         반드시 의미로 구분하자 
    -->
-  <div>
+  <div id="pageTitle">
     <h1>하나의 웹문서에서 가장 중요한 제목, 하나의 문서에 한번만 사용가능</h1>
     <h2>문서에서 <span>두번째로</span> 중요한 제목</h2>
     <h3>문서에서 세번째로 중요한 제목</h3>
@@ -32,7 +46,7 @@
     <h6>문서에서 제목으로 구분되는 요소중에 가장 하위 형태</h6>
   </div>
    <hr />
-  <div>
+  <div id="pageParagraph">
    <p>내용을 작성하는 요소로서, 
       단락(paragraph)이라는 의미를 가지고 있다.</p>
    <p>웹문서에서는 띄어쓰기를 여러번하거나, 
@@ -46,8 +60,7 @@
      아닌경우에는 사용률이 매우 낮다.
    </pre>
   </div>
-
-  <div>
+  <div class="shadow_box">
    <q>q요소는 인용문의 형태를 의미, 한줄의 내용을 작성하는 경우에 주로 사용</q>
 
    <blockquote cite="인용내용의 원본첨부">
@@ -65,8 +78,7 @@
      <p>연락처...</p>
    </address>
   </div>
-
-  <div>
+  <div class="shadow_box margin_top">
    <!-- 내용2 : 크기를 가질 수 없는 inline 요소들에대한 내용-->
    <p>
      내용을 작성할때에는, 때로 강조를 하고자 할 때도 있다.<br />
@@ -97,7 +109,7 @@
         div와 span은 단순히 각자의 영역을 구분 기능이있지만, 의미는 없다.
    -->
   
-  <div>
+  <div class="shadow_box">
     <h2>목록의 형태 파악</h2>
   <!-- 목록(나열) 3가지
     순서가 없는 형태(리스트) - unorder list -> ul (자식으로: li만 첨부)
@@ -182,6 +194,19 @@
       <a href="https://naver.com" target="_self">naver로 이동</a>
     </p>
     <p><a href="https://google.com" target="_blank">구글</a>로 페이지 이동</p>
+    
+    <div>
+      <img src="../img/icon_01.png" alt="불러온 이미지에 대한 이해 가능한 설명" />
+      <img src="../img/icon_02.jpg" alt="불러온 이미지에 대한 설명">
+    </div>
+    <p>
+      <a href="http://sbs.co.kr">
+        sbs 찾아가는길
+        <img src="../img/sbs_suwon.png" 
+            alt="sbs 수원지사주소 경기 수원시 팔달구 효원로 295이며, 
+                  연락처는 031-234-4670 입니다.">
+      </a>
+    </p>
   </div>
 
   
