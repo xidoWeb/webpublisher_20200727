@@ -1,0 +1,99 @@
+@charset "UTF-8";
+/* selector_02.css */
+#wrap {
+  width:900px; height:auto;
+  margin-bottom:500px;
+}
+
+
+ul,li {
+  margin:0; padding:0; list-style:none;}
+.nth_child_01 {
+  width:50px; height:auto;  background-color:#aac;}
+.nth_child_01 > li {
+  width:100%; height:20px;
+  border-width:1px;  border-style:solid;  border-color:#777;}
+
+/** nth-child기능: 
+  * nth-child는 반드시 연속되어진 요소끼리 처리하는 형태
+  * 가급적이면 중간에 다른요소가 들어갈 수 없는 요소에서 사용하는것이 좋다.
+
+  1. 3번째 요소에 글씨색을 빨간색으로 처리 
+  2. 뒤에서 2번째 요소에 글씨색을 암적색으로 처리 
+  3. 마지막요소,첫번째요소 글씨 노란색
+  4. 4번째 마다 배경색상을 회색으로 처리
+  5. 4번째 마다에서 첫번째에 해당하는 요소에 글씨굵기를 굵게 처리
+  6. 4번째 마다에서 4번째 바로전에 해당하는 요소에 글씨 크기를 조금 더 작게 처리
+  7. 5번째 부터 7번째 까지 글씨에 밑줄 생성
+*/
+
+/* .color {color:#f00;} */
+.nth_child_01 > li:nth-child(3) {color:#f00;}
+.nth_child_01 > li:nth-last-child(2) {color:#b00;}
+/* .nth_child_01 > li:nth-last-child(1) {color:#fa0;} */
+.nth_child_01 > li:last-child, 
+.nth_child_01 > li:first-child {color:#fa0;}
+/* 4 * n ->  4*1, 4*2, 4*3 ... */
+.nth_child_01 > li:nth-child(4n) { background-color:#ccc;}
+.nth_child_01 > li:nth-child(4n + 1) { font-weight: 900; }
+.nth_child_01 > li:nth-child(4n - 1) { font-size:0.8rem; }
+/* .nth_child_01 > li:nth-child(5) { text-decoration:underline; } 
+ .nth_child_01 > li:nth-child(6) { text-decoration:underline; }
+.nth_child_01 > li:nth-child(7) { text-decoration:underline; } */
+.nth_child_01 > li:nth-child(n + 5):nth-child(-n + 7) { text-decoration:underline; }
+/* 
+ 5번째부터(n) - 7번째까지(n)
+ */
+ 
+ /* ====================================== */
+.nth_child_02 {
+  width: 70px; height:auto;
+  padding:5px; background-color: #ddd;}
+h3,p{margin:0; padding:0;}
+.nth_child_02 > * {  border:1px solid #777;}
+
+/* 
+p요소중에 3번째 요소에 배경색상을 #acf로 처리
+p요소 중 첫번째, 마지막요소에 배경색을 #fa0 처리
+ */
+.nth_child_02 > p:nth-of-type(3) {background-color: #acf;}
+.nth_child_02 > p:first-of-type,
+.nth_child_02 > p:last-of-type { background-color: #fa0;}
+
+/** :nth-of-type()
+  * 동일한 레벨의 요소에서(형제중에서) 
+    연속되어있지 않은 요소들이라도, 
+    동일한 타입(태그)을 선택하여 처리하는 기능
+*/
+p.nt:nth-of-type(2) { color:#f00; font-weight:900; }
+/* ========================================= */
+dl,dt,dd{margin:0; padding:0;}
+
+.siblings,
+.siblings_02 {
+  width:400px; height:auto;
+  padding:5px;
+  background-color: #daa;
+}
+.siblings > dt,
+.siblings_02 > dt{ 
+  width:100%; height:25px; background-color: #077;
+  border-bottom:2px solid #fff;  color:#fff; font-weight: 900;}
+
+.siblings > dd,
+.siblings_02 > dd {  width:100%; height:0; background-color: #dfdfdf;   overflow:hidden;}
+
+.siblings > dt:hover,
+.siblings_02 > dt:hover {  background-color: #07a;  cursor:pointer;}
+
+.siblings > dt:hover + dd { height:50px; }
+
+.siblings_02 dd {  transition:all 300ms ease-out;  margin-bottom:5px;}
+/* transition _ 단회성의 애니메이션,   animation  _ 다회성의 애니메이션 */
+
+.siblings_02 > dt:hover ~ dd {height:50px;}
+/* 형제 선택자
+  ~ 형제선택자 중 먼저 선택한 요소의 뒤에오는 모든 선택요소를 의미한다.
+  + 형제 선택자 중 인접하여 붙어있는 바로 뒤으이 선택요소
+*/
+

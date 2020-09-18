@@ -1,0 +1,81 @@
+/* @charset "UTF-8"; */
+/* layout_01.css */
+
+#wrap {
+  width:600px; height:auto; min-height:500px;
+  margin:100px auto;
+}
+
+/* #header ==================== */
+#header{
+  width:100%; height:100px;
+  background-color:#f07;
+}
+
+/* #section ==================== */
+#section{
+  width:100%; height:300px;
+}
+#section > h2 {
+  width:0; height:0; overflow: hidden;
+}
+
+  .sect_01 {float:left;
+    width:40%; height:300px; background-color: #329664;
+  }
+  .sect_02 {float:right;
+    width:60%; height:300px; background-color: #555;
+  }
+
+/* #aside ==================== */
+#aside {
+  width:100%; height:auto; background-color: #d6e700;}
+
+#aside h2 {
+  width:0; height:0; overflow: hidden; }
+  .side_01 {float:left;
+    width:33.333333%; height:300px; background-color: #adaadd; }  
+  .side_02 {float:left;
+    width:33.333334%; height:300px; background-color: #607259; }  
+  .side_03 {float:left;
+    width:33.333333%; height:300px; background-color: #ad6fdd; } 
+    /* ? {float:기능을 제거하는 명령어 -> clear:both}  */
+#aside:after, 
+#aside::after {
+  content:" "; display:block; clear:both;
+}
+/* #article ==================== */
+#article {
+  width:100%; height:auto; }
+#article h2 {
+  width: 0; height: 0; overflow: hidden;}
+
+#article .art_01 {float:left;
+    width:30%; height:300px; background-color: #27294d;}
+#article .art_02 {float:left;
+    width:70%; height:150px; background-color:#ff7259;}
+#article .art_03 {float:left;
+    width:70%; height:150px; background-color:#ad6fdd;}
+
+#article:after,
+#article::after{ content:" "; display:block; clear:both; }
+
+/* #content ==================== */
+#content {width: 100%; height:auto;}
+  #content h2 {
+    width:0; height: 0; overflow: hidden; }
+
+#content .art_02 {float:left;
+    width:70%; height:150px; background-color: #ff7259;  }
+#content .art_03 {float:left;
+    width:70%; height:300px; background-color: #ad6fdd;  }
+#content .art_01 {float:left;
+    width: 30%; height: 450px; margin-top:-150px; background-color: #ff294d;  }
+#content:after, #content::after{
+    content:" "; display:block; clear:both; }
+
+/* #footer ==================== */
+#footer{
+  width:100%; height:100px;
+  background-color:#03f;
+}

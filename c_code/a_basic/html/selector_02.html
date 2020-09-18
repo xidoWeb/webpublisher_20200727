@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<!-- selector_02.html -->
+<html lang="ko-KR">
+<head>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="../css/src/selector_02.css">
+  <title>웹기초 - CSS선택자</title>
+  <link rel="shortcut icon" href="../img/icon_01.png" type="image/png">
+  <link rel="apple-touch-icon" href="../img/icon_01.png">
+</head>
+<body>
+  <!-- layout -->
+  <div id="wrap">
+    <h1><a href="./contents.html">웹기초</a></h1>
+    <hr />
+    <h2>nth 선택자</h2>
+    <ul class="nth_child_01">
+      <li>01</li>
+      <li>02</li>
+      <li>03</li>
+      <li>04</li>
+      <li>05</li>
+      <li>06</li>
+      <li>07</li>
+      <li>08</li>
+      <li>09</li>
+      <li>10</li>
+      <li>11</li>
+      <li>12</li>
+      <li>13</li>
+      <li>14</li>
+      <li>15</li>
+    </ul>
+<!-- ===== -->
+    <div class="nth_child_02">
+      <h3 class="nt">연속되지 않은 요소를 처리하기</h3>
+      <p class="nt">내용 01</p>
+      <span>???</span>
+      <br />
+      <p class="nt">내용 02</p>
+      <p>내용 03</p>
+      <div class="nt">div?</div>
+      <p>내용 04</p>
+      <p class="nt">내용 05</p>
+    </div>
+<!-- ===== -->
+    <dl class="siblings">
+      <dt>제목_01</dt>
+      <dd>내용 _ 01</dd>
+      <dt>제목_02</dt>
+      <dd>내용 _ 02</dd>
+      <dt>제목_03</dt>
+      <dd>내용 _ 03<br />
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+      </dd>
+      <dt>제목_04</dt>
+      <dd>내용 _ 04<br />
+        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Omnis sapiente velit 
+      </dd>
+    </dl>
+
+    <dl class="siblings_02">
+      <dt>제목</dt>
+      <dd>Lorem ipsum dolor sit amet consectetur adipisicing elit. </dd>
+      <dd>Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam, odit?</dd>
+      <dd>Lorem ipsum dolor sit.</dd>
+    </dl>
+  </div>
+</body>
+</html>

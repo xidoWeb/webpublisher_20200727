@@ -1,0 +1,37 @@
+@charset "UTF-8";
+/* selector_03.css */
+
+#wrap {
+  width:800px; height:auto;
+  margin:auto; margin-bottom:500px;
+  background-color: #ddd;  
+}
+
+ul,li{ margin:0; padding:0; list-style:none; }
+
+ul {
+  width:50%; height:auto; 
+  margin:auto; background-color: #fcc;}
+
+li {
+  width:100%; height:20px;
+  margin-bottom:5px;
+  background-color: #fff;}
+
+a { 
+  color: inherit; text-decoration:none;}
+
+/* =================================== */
+/** 속성 선택자
+  * 속성선택자란? id,class등의 매우 복잡하고 많은 이름설정에서 벗어나 
+    요소의 고유 속성을 통해 처리할 수 있도록 만들어진 선택자 기능
+*/
+
+[id="wrap"] {padding-bottom:10px;}
+a[target="_blank"] {display:block; background-color: #aca;}
+a[href="#"] {color:#f07;}
+a[data-myattr] {text-decoration: overline;}
+
+a[href^="#"] { border-left:5px solid #f07; }
+a[href$="com"] { border-left:5px solid #fa0;}
+a[href*="."] { font-size:1.2rem; }
