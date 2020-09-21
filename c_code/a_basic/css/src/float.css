@@ -80,3 +80,73 @@
   border:2px solid #0ac;
   text-align:center; line-height:50px;}
 
+  .fl_02_01{  
+    float:left; background-color: #3F1;    }
+  .fl_02_02{
+    float:left; background-color: #FD0;    }
+  .fl_02_03{
+    float:left; background-color: #3E1;    }
+  .fl_02_04{  
+    float:left; background-color: #5DE;    }
+  .fl_02_05{  
+    float:left; background-color: #DC8;    }
+  .fl_02_06{  
+    clear:both; background-color: #F01;    }
+  .fl_02_07{  
+    float:left; 
+    margin-top:20px;
+    background-color: #3DA;    }
+  .fl_02_08{  
+    float:left; margin-top:20px;
+    background-color: #C94;    }
+  .fl_02_09{  
+    float:left;margin-top:20px;
+    background-color: #860;    }
+  .fl_02_10{ 
+    float:left; background-color: #DA4;    }
+  .fl_02_11{ 
+    float:left; background-color: #A2F;    }
+  .fl_02_12{ 
+    float:left; background-color: #8E0;    }
+
+  /* ---------------------------- */
+
+  .float_05 {
+    width:100%; height:1000px; background-color: #acf;  }
+  .sample_05 {
+    width:600px; height:auto; border:2px solid #555; }
+  .sample_05 > div {
+    float:left; width:300px; height:100px; }
+
+  .sam_01 { background-color: #92FC80;}
+  .sam_02 { background-color: #9D5642;}
+  .sam_03 { background-color: #739A66;}
+  .sam_04 { background-color: #999442;}
+  .sam_05 { background-color: #3B6CEB;}
+  .sam_06 { background-color: #AAA2BA;}
+
+  .sample_05 > .clear_sample {
+    float:none; clear:both; width:100%; height:50px; background-color: #fff;
+  }
+
+  .sample_06 {
+    width:100%; height:100px;
+    color:#fff;
+    background-color: #f53;
+  }
+
+  .sample_05::after {
+    content:" ";
+    display:block; clear:both;
+  }
+
+  /* 
+    float 이란? 선택된 요소를 다른 요소와 비교처리하여, 기본은 옆으로 나열이란의미로
+    1. 뒤에 다른 요소를 담아서 글자를 주변에 위치하도록 처리하거나,
+    2. 여러개의 형제요소에 같이 사용하여, 옆으로 나란이 붙이도록 처리하거나,
+    3. 때로는 float처리되어 이를 강제로 취소 처리( float:none )하거나, 
+    4. 여러개의 float처리된 요소들의 마지막에 float종료의 의미를 부여( clear:both )
+    5. float요소를 담으면, inline 또는 inline-block요소들은 모두 block으로 강제 변환된다.
+    할 수 있는 기능을 담고있다.
+  */
+  
