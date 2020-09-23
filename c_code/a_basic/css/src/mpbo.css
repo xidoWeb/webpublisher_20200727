@@ -1,14 +1,20 @@
 @charset "utf-8";
 /* mpbo.css */
+/* 내용진행하기앞서, 기본 margin, padding요소를 지우고 시작하기 */
+html,body,h1,h2,h3,h4,h5,h6,p,ul,hr{ margin:0; padding:0; }
+
 
 #wrap {
   width:1100px; height:auto; min-height:1200px;
-  margin:auto; background-color: #dfdfdf;}
-
+  margin:auto; padding-top:20px; background-color: #dfdfdf;}
+h1 { 
+    width:300px; height:40px; background-color: #aca;
+    margin:auto; margin-bottom:20px;}
+/* ---------- */
 .part {
   width:100%; height:700px; border:1px solid #777;}
 .part > ul {
-  margin: 0; padding: 0; list-style: none;  width: 100%; height: 100%;}
+  list-style: none;  width: 100%; height: 100%;}
 .part > ul > li {
   float: left; width: 100px; height: 100px;  border:1px solid #0af;
   text-align: center; line-height:100px;}
@@ -29,9 +35,52 @@
 .margin li:nth-child(5) { margin:0 0 0 100px;}
 .margin li:nth-child(6) { margin-top:30px; margin-left:50px; }
 .margin li:nth-child(7) { margin:20px; margin-top:70px; margin-right:10px; }
-/* -------------------------------------------------------------------------- */
+/* --------------------------------------------------------- */
 .padding > ul > li { text-align: left; line-height:20px; font-weight: bold;}
 .padding > ul > li:nth-child(2n - 1){background-color: #fa3;}
 .padding > ul > li:nth-child(2n){background-color: #3af;}
 
-.padding > ul > li:nth-child(1) {}
+.padding_sample {
+  padding:20px;  width: 300px; height:150px;
+  background-color: #fa7;}
+.insert_p{
+  width: 100%; height: 100%;
+  background-color: transparent;}
+
+/* padding: 요소의 부피를 키워서 공간을 확보하는 형태로,
+      width/height값의 실제는 변하지 않지만, 외부에서 보이기로는
+      width/height가 변한것 처럼 보이도록 처리된다.
+  padding:20px; 위,오른,아래,왼쪽으로 4방향을 모두 면적을 만든다.
+  padding:20px 40px; 위/아래(20), 좌/우(40) 공간 면적을 만든다.
+  padding:10px 30px 100px; 위(10), 좌/우(30), 아래(100) 공간 면적을 만든다.
+  padding:10px 20px 30px 40px; 시계방향으로 각각 공간의 면적을 만든다.
+  padding-방향:50px; 사용된 방향만 별도의 공간 면적을 가진다.
+  단, 전체의 값을 먼저 사용하고 일부분을 나중에 사용하여야 필요한 형태로 제작이 가능
+*/
+
+.padding > ul > li:nth-child(1) { padding:20px; }
+.padding > ul > li:nth-child(2) { padding:20px 40px; }
+.padding > ul > li:nth-child(3) { padding:10px 30px 100px;}
+.padding > ul > li:nth-child(4) { padding:10px 20px 30px 40px;}
+.padding > ul > li:nth-child(5) { padding:10px 10px 50px 10px;}
+.padding > ul > li:nth-child(6) { padding:10px; padding-bottom:50px;}
+/* ------------------------------------------------------------------- */
+
+.mp_sample {
+  width:700px; height:1000px; margin:auto; border:2px solid #777;}
+.mp_sample p {
+  width:70%; height:80px; background-color: #aca; border-bottom:1px solid #07f;} 
+
+.mp_sample p:nth-of-type(1) { margin:auto; margin-top:10px; margin-bottom:30px;}
+.mp_sample p:nth-of-type(2) { margin-top:50px;}
+.mp_sample p:nth-of-type(4) { width:50%; margin-left:50px; margin-top:-20px; 
+                              background-color: #caa;}
+.mp_sample p:nth-of-type(5) { 
+  width:50%; height:100px; background-color: #fa0;
+  margin-left:10%; margin-top:10%;
+}
+
+
+
+  /* ---------------------------------------  */
+

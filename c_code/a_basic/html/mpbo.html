@@ -27,6 +27,11 @@
     </div><!--// .part -->
     <!-- .part.padding>ul>li*7{padding_$$} -->
     <div class="part padding">
+      <div class="padding_sample">
+        <div class="insert_p">내용작성
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati deleniti molestias excepturi minima consequuntur quisquam eveniet consequatur molestiae blanditiis maiores provident quod, illo nemo maxime distinctio earum magni quam id!
+        </div>
+      </div>
       <ul>
         <li>padding_01</li>
         <li>padding_02</li>
@@ -36,8 +41,33 @@
         <li>padding_06</li>
         <li>padding_07</li>
       </ul>
-    </div>
-  </div>
+    </div><!-- // .padding-->
+    <div class="part mp_sample">
+      <p>margin과 padding의 쓰임새를 조금더 파악해보자!</p>
+      <p>하나의 요소내에서 첫번째 존재하는 요소가 float,position처리되어 있지않다면,
+         margin-top값을 사용할 경우에는 자신이 아닌 부모요소를 margin처리하게 된다.</p>
+      <p>margin값이 위아래 겹칠경우에는 큰값만 처리가 된다.(단, float처리된 겹침은 제외)</p>
+      <p>margin값은 눈에 보이는 공간의 거리를 조절하는 기능이기에 +가아닌 -값으로 처리가 가능.</p>
+      <p>단, margin값은 auto, 좌우에 한해서는 %값 처리가 가능하지만, 위/아래는 %로 사용하는것은 지양
+        <br />위/아래는 명확한 값을 파악하기가 어렵다(부모의 높이를 기준으로 보는 것이 아니다)
+      </p>
+      <p>float기능과 margin기능을 같이 사용할 경우, 
+         margin:auto는 좌/우 가운데 배치가 되지 않는다.</p>
+    </div><!-- // .mp_sample-->
+    <!-- .part.border>ul>li*7{border_$$} -->
+    <div class="part border">
+      <ul>
+        <li>border_01</li>
+        <li>border_02</li>
+        <li>border_03</li>
+        <li>border_04</li>
+        <li>border_05</li>
+        <li>border_06</li>
+        <li>border_07</li>
+      </ul>
+    </div><!-- // .border -->
+
+  </div><!-- // #wrap -->
   <!-- script -->
   <script></script>
 </body>
