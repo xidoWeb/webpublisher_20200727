@@ -5,6 +5,7 @@
 웹페이지 디자인작업을위해, 
 매번 처리해야하는 번거로운 작업을 미리 설정하여 초기화 시키는 처리 */
 html,body {margin:0;}
+h1, h2, h3, h4, h5, h6, p, div { margin:0; padding:0; }
 
 /* design.css */
 #wrap {
@@ -14,19 +15,58 @@ html,body {margin:0;}
 
 /* #headBox ========== */
   #headBox { 
-    height:150px; background-color: #ddd;  }
+    height:150px; padding:34px 50px 0; box-sizing:border-box;
+    background-color: #ddd;  }
+    .main_heading {
+      float:left; width:250px; height:80px; 
+      margin-right:75px;
+      background-color: #0af;}
+    .search_bar {
+      float:left; width:850px; height:80px; 
+      background-color: #0af;}
+    .member {
+      float:right; width:250px; height:80px; 
+      background-color: #0af;}
+    
 /* #adViewBox ========== */
   #adViewBox {
-    height:750px; background-color: #bbb;  }
+    height:auto; min-height:750px; 
+    padding:28px 0; box-sizing:border-box;
+    background-color: #bbb;  }
+    .view_outer { 
+      width:1300px; height:600px; margin:auto;
+      background-color: #0af;}
+    .view_indicator {
+      width:850px; height:60px; margin:auto; margin-top:28px;
+      background-color: #0af;}
+
 /* #localNavBox ========== */
   #localNavBox {
-    height:250px; margin-bottom:50px; background-color: #999;  }
+    height:250px; 
+    margin-bottom:50px; padding:20px 0 25px; box-sizing:border-box;
+    background-color: #999;  }
+    .local_nav_outer { 
+      width:1500px; height:100%; margin:auto; 
+      background-color: #0af;}
+
+
+/* .content_area */
+.content_area { height:auto; }
+.content_area > div { 
+  width:100%; padding-bottom:30px; box-sizing: border-box;}
+.content_area h3 {
+  width:1300px; height:50px; margin:auto; margin-bottom:30px;
+  background-color:#0af;}
+.con_area {
+  width:1300px; height:auto; min-height:400px; margin:auto;
+  background-color: #0af;}
+
 /* #populaContentBox ========== */
   #populaContentBox {
     height: 600px; background-color: #bbb;  }
 /* #newContentBox ========== */
   #newContentBox {
-    height:900px; margin-bottom:80px; background-color: rgb(31, 25, 25);  }
+    height:900px; margin-bottom:80px; background-color: #aaa;  }
 /* #recommendedContentBox ========== */
   #recommendedContentBox {
     height:600px; margin-bottom:80px; background-color: #bbb;  }
