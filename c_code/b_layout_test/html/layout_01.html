@@ -5,44 +5,56 @@
   <meta charset="UTF-8">
   <link rel="stylesheet" href="../css/base/reset.css">
   <link rel="stylesheet" href="../css/src/layout_01.css">
-  <title>Document</title>
+  <title>웹 레이아웃 연습</title>
 </head>
 <body>
   <!-- layout -->
-  <h1>web layout check</h1>
-  <hr />
+
+  <!-- <h1>web layout check</h1>
+  <hr /> -->
+
   <!-- layout check -->
   <div id="wrap">
-    <div id="header">
-      header
+    <div id="header" class="clearfix">
+      <h1><a href="./layout_01.html">web layout check</a></h1>
+      <div class="navigation">
+        <ul>
+          <li><a href="#">list_01</a></li>
+          <li><a href="#">list_02</a></li>
+          <li><a href="#">list_03</a></li>
+          <li><a href="#">list_04</a></li>
+          <li><a href="#">list_05</a></li>
+          <li><a href="#">list_06</a></li>
+        </ul>
+      </div>
     </div><!-- // #header  -->
     <div id="section">
-      <h2>section</h2>
+      <h2 class="hidden">section</h2>
       <div class="sect_01">sect_01</div>
       <div class="sect_02">sect_02</div>
     </div><!-- // #section  -->
 
-    <div id="aside">
-      <h2>aside</h2>
+    <div id="aside" class="clearfix">
+      <h2 class="hidden">aside</h2>
       <div class="side_01">side_01</div>
       <div class="side_02">side_02</div>
       <div class="side_03">side_03</div>
     </div>
     <!-- // #aside -->
 
-    <div id="article">
-      <h2>article</h2>
-      <div class="art_01">art_01</div>
-      <div class="art_02">art_02</div>
-      <div class="art_03">art_03</div>
+    <div id="article" class="clearfix">
+      <h2 class="hidden">article</h2>
+      <div class="art_base_01 art_01">art_01</div>
+      <div class="art_base_01 art_02">art_02</div>
+      <div class="art_base_01 art_03">art_03</div>
     </div>
     <!-- // #article -->
     
-    <div id="content">
-      <h2>content</h2>
-      <div class="art_02">art_02</div>
-      <div class="art_03">art_03</div>
-      <div class="art_01">art_01</div>
+    <div id="content" class="clearfix">
+      <h2 class="hidden">content</h2>
+      <div class="cont_base_01 art_02">art_02</div>
+      <div class="cont_base_01 art_03">art_03</div>
+      <div class="cont_base_01 art_01">art_01</div>
     </div>
     <!-- // #content -->
 

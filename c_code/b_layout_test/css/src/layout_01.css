@@ -1,78 +1,107 @@
 /* @charset "UTF-8"; */
 /* layout_01.css */
 
+/* common.css: 
+    공통의 class이름을 부여하여, 
+    반복 사용하는 형태를 이름을 기입함으로 인하여, 
+    빠르고 쉽게 웹페이지를 구성하도록 처리하는 기능
+ */
+
+.hidden {
+  width:0; height:0; overflow: hidden;}
+
+.clearfix:after, 
+.clearfix::after {
+    content:" "; display:block; clear:both;
+  }
+/* -------------------------------------- */
+
 #wrap {
   width:600px; height:auto; min-height:500px;
-  margin:100px auto;
+  margin:auto;
 }
 
 /* #header ==================== */
+/* width:calc(100% - 20px); calc??? */
 #header{
-  width:100%; height:100px;
+  width:100%; height:auto; 
+  padding:10px;
+  box-sizing:border-box;
   background-color:#f07;
 }
 
+h1 {
+  float:left;
+  width:120px; height:100px;
+  background-color: #ccc;}
+
+h1 a{display:block; 
+  width: 100%; height:100%;
+  font-size:1rem;}
+
+.navigation {
+  float:right;
+  width: 400px; height:100px;}
+.navigation ul {
+  margin:0; padding:0; list-style:none;
+  width: 100%; height: 100%;}
+.navigation ul li {
+  float:left; width:60px; height:100%;
+  margin-right:8px;
+  background-color: #fac;}
+.navigation ul li:nth-child(2n) {
+  background-color: #0ac;}
+.navigation ul li:last-child {
+  margin-right:0;}
+
+.navigation a {
+  display: block; width: 100%; height: 100%;}
+
 /* #section ==================== */
 #section{
-  width:100%; height:300px;
-}
-#section > h2 {
-  width:0; height:0; overflow: hidden;
-}
+  width:100%; height:300px; }
 
-  .sect_01 {float:left;
-    width:40%; height:300px; background-color: #329664;
-  }
-  .sect_02 {float:right;
-    width:60%; height:300px; background-color: #555;
-  }
+  #section > div {float:left; height:300px;}
+  .sect_01 {
+    width:40%; background-color: #329664; }
+  .sect_02 {
+    width:60%; background-color: #555; }
 
 /* #aside ==================== */
 #aside {
   width:100%; height:auto; background-color: #d6e700;}
 
-#aside h2 {
-  width:0; height:0; overflow: hidden; }
-  .side_01 {float:left;
-    width:33.333333%; height:300px; background-color: #adaadd; }  
-  .side_02 {float:left;
-    width:33.333334%; height:300px; background-color: #607259; }  
-  .side_03 {float:left;
-    width:33.333333%; height:300px; background-color: #ad6fdd; } 
+  #aside > div {float:left; width:33.333333%; height:300px;}
+  #aside .side_01 {
+      background-color: #adaadd; }  
+  #aside .side_02 {
+    width:33.333334%; background-color: #607259; }  
+  #aside .side_03 {
+      background-color: #ad6fdd; } 
     /* ? {float:기능을 제거하는 명령어 -> clear:both}  */
-#aside:after, 
-#aside::after {
-  content:" "; display:block; clear:both;
-}
+
 /* #article ==================== */
 #article {
   width:100%; height:auto; }
-#article h2 {
-  width: 0; height: 0; overflow: hidden;}
 
-#article .art_01 {float:left;
+.art_base_01 {float:left; width:70%; height:150px;}
+.art_base_01.art_01 {
     width:30%; height:300px; background-color: #27294d;}
-#article .art_02 {float:left;
-    width:70%; height:150px; background-color:#ff7259;}
-#article .art_03 {float:left;
-    width:70%; height:150px; background-color:#ad6fdd;}
-
-#article:after,
-#article::after{ content:" "; display:block; clear:both; }
+.art_base_01.art_02 {
+    background-color:#ff7259;}
+.art_base_01.art_03 {
+    background-color:#ad6fdd;}
 
 /* #content ==================== */
 #content {width: 100%; height:auto;}
-  #content h2 {
-    width:0; height: 0; overflow: hidden; }
 
-#content .art_02 {float:left;
-    width:70%; height:150px; background-color: #ff7259;  }
-#content .art_03 {float:left;
-    width:70%; height:300px; background-color: #ad6fdd;  }
-#content .art_01 {float:left;
+.cont_base_01 {float:left; width:70%;}
+.cont_base_01.art_02 {
+    height:150px; background-color: #ff7259;  }
+.cont_base_01.art_03 {
+    height:300px; background-color: #ad6fdd;  }
+.cont_base_01.art_01 {
     width: 30%; height: 450px; margin-top:-150px; background-color: #ff294d;  }
-#content:after, #content::after{
-    content:" "; display:block; clear:both; }
 
 /* #footer ==================== */
 #footer{
