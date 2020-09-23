@@ -8,5 +8,34 @@ html,body {margin:0;}
 
 /* design.css */
 #wrap {
-  width:1600px; height:auto; min-height:500px; margin:auto; background-color: #dadada;}
+  width:1600px; height:auto; min-height:500px; margin:auto;}
  
+#wrap > div { width:100%; }
+
+/* #headBox ========== */
+  #headBox { 
+    height:150px; background-color: #ddd;  }
+/* #adViewBox ========== */
+  #adViewBox {
+    height:750px; background-color: #bbb;  }
+/* #localNavBox ========== */
+  #localNavBox {
+    height:250px; margin-bottom:50px; background-color: #999;  }
+/* #populaContentBox ========== */
+  #populaContentBox {
+    height: 600px; background-color: #bbb;  }
+/* #newContentBox ========== */
+  #newContentBox {
+    height:900px; margin-bottom:80px; background-color: rgb(31, 25, 25);  }
+/* #recommendedContentBox ========== */
+  #recommendedContentBox {
+    height:600px; margin-bottom:80px; background-color: #bbb;  }
+/* #communityBox ========== */
+  #communityBox {
+    height:800px; margin-bottom:80px; background-color: #ddd; }
+/* #miniAdBox ========== */
+  #miniAdBox {
+    height:400px; margin-bottom:80px; background-color: #bbb; }
+/* #footBox ========== */
+  #footBox {
+    height:200px; background-color: #aaa;  }
