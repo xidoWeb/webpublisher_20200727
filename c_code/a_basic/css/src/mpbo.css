@@ -138,3 +138,61 @@ h1 {
     display: block; width: 100%; height: 100%;
     transform:rotate(-45deg);
   }
+  /* ------------------------------------- */
+  /* 
+  1. outline속성은 margin, padding, border와는 다르게 다른요소에 영향을 미치지 않는다.
+  2. outline속성은 일부 방향성이 없다.
+  3. 기존 선의 위치에서 일부 공간을 만들어서 표기하는 형태만 존재
+  4. 그 쓰임위치는 대부분 focus를 처리하게 만드는 요소 
+     (a, button, form내부의 요소)에서 주로 사용 한다.
+   */
+  .outline ul li, 
+  .outline ul li > button{ width:auto; min-width:100px; cursor:pointer;}  
+
+  .outline li:nth-child(1) {
+    /* outline-width:10px;
+    outline-style:solid;
+    outline-color:#0af; */
+    outline:10px solid #ff0;
+    outline-offset:5px;  }
+  /* .outline li > a:nth-child(2) {}  li내부에 존재하는 형제중 두번째 a */
+  /* 두번째 li내부에 존재하는 a */
+  .outline li:nth-child(2) > a {
+    display: block; width: 100px; height: 100%;   }
+   /* :focus란? 
+        링크(a), 버튼(input or button), 입력창(input, select) 등의 환경에서,
+        마우스가 아닌 키보드로 위치를 찾아서 기능을 수행하고자 할때, 해당 위치에 선점한것을
+        체크하는 기능
+   */
+  .outline li:nth-child(2) > a:focus {
+    outline:5px solid #fa0; }
+
+  .outline li:nth-child(3) > button {
+    display: block; width: 100px; height: 100%; 
+    border:0; background-color: transparent;}
+  .outline li:nth-child(3) > button:focus { 
+    outline:10px solid #f07; 
+  }
+
+  .outline li:nth-child(4):focus {
+    outline:20px solid #0f7;
+  }
+
+  .box_sizing{ 
+    width:80%; height:400px; margin:100px auto; }
+
+  .box_sizing div {
+    float:left;
+    width:100px; height:100px;
+    margin:10px; padding:15px; border:30px solid #777; border-right-color:#0af;
+    background-color: #fa5;
+  }
+  .box_sizing div:nth-of-type(1){ box-sizing:content-box;}
+  .box_sizing div:nth-of-type(2){ box-sizing:border-box;}
+
+  /* 
+  box-sizing하기전 (before)은 box-sizing:content-box;로서 기본형으로 처리
+  box-sizing을 사용하면 (after) box-sizing:border-box; 로서 border와, padding 모두 내부에 처리
+   */
+   /* =========================== */
+  

@@ -1,0 +1,11 @@
+@charset "UTF-8";
+/* layout_02_result.css */
+
+/* reset.css: 
+웹페이지 디자인작업을위해, 
+매번 처리해야하는 번거로운 작업을 미리 설정하여 초기화 시키는 처리 */
+html,body {margin:0;}
+
+/* design.css */
+#wrap {
+  width:1600px; height:auto; min-height:500px; margin:auto; background-color: #dadada;}
