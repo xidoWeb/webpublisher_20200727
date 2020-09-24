@@ -6,10 +6,33 @@
 매번 처리해야하는 번거로운 작업을 미리 설정하여 초기화 시키는 처리 */
 html,body {margin:0;}
 h1, h2, h3, h4, h5, h6, p, div { margin:0; padding:0; }
+ul,ol,li,dl,dt,dd {margin:0; padding:0; list-style:none;}
+
+/* variable.css */
+:root {
+  --step2-color:#0af;
+  --gray1:#ddd;
+  --gray2:#ccc;
+  --gray3:#bbb;
+  --gray4:#777;
+  --black:#333;
+  --max-width_01:1600px;
+}
+
+/* common.css */
+
+/* 
+  1. float을 정리하기위해서 마지막에 clear:both를 사용해야한다. 
+  2. li의 마지막에는 다른요소가 들어갈 수 없으므로, 가상의존재를 생성한다.
+  3. 가상의 존재는 ::after의 형태를 취하고, 
+  4. after는 반드시 content를 가지고있어야 한다.
+*/
+.clearfix:after,
+.clearfix::after { content:" "; display:block; clear:both; }
 
 /* design.css */
 #wrap {
-  width:1600px; height:auto; min-height:500px; margin:auto;}
+  width:var(--max-width_01); height:auto; min-height:500px; margin:auto;}
  
 #wrap > div { width:100%; }
 
@@ -20,13 +43,20 @@ h1, h2, h3, h4, h5, h6, p, div { margin:0; padding:0; }
     .main_heading {
       float:left; width:250px; height:80px; 
       margin-right:75px;
-      background-color: #0af;}
-    .search_bar {
-      float:left; width:850px; height:80px; 
-      background-color: #0af;}
+      background-color: var(--step2-color);}
+    .navigation {
+      float:left; width:850px; height:auto; 
+      background-color: var(--step2-color);}
+      .navigation > ul {width: 100%; height:auto;}
+      .navigation li { 
+        float:left; width: 150px; height: 70px; 
+        margin:5px 10px;
+        background-color: #fc7;}
+
+      /* --- */
     .member {
       float:right; width:250px; height:80px; 
-      background-color: #0af;}
+      background-color: var(--step2-color);}
     
 /* #adViewBox ========== */
   #adViewBox {
@@ -35,19 +65,34 @@ h1, h2, h3, h4, h5, h6, p, div { margin:0; padding:0; }
     background-color: #bbb;  }
     .view_outer { 
       width:1300px; height:600px; margin:auto;
-      background-color: #0af;}
+      background-color: var(--step2-color);}
     .view_indicator {
-      width:850px; height:60px; margin:auto; margin-top:28px;
-      background-color: #0af;}
+      width:840px; height:auto; margin:auto; margin-top:28px;
+      background-color: var(--step2-color);}
+      .view_indicator ol {
+        width:100%; height:auto;}
+
+      .view_indicator li {
+        float:left; width:120px; height:40px; margin:10px;
+        background-color: #fc7;}
+
 
 /* #localNavBox ========== */
   #localNavBox {
-    height:250px; 
-    margin-bottom:50px; padding:20px 0 25px; box-sizing:border-box;
+    height:auto; 
+    margin-bottom:50px; padding:20px 0 30px; box-sizing:border-box;
     background-color: #999;  }
     .local_nav_outer { 
-      width:1500px; height:100%; margin:auto; 
-      background-color: #0af;}
+      width:1500px; height:auto; margin:auto; 
+      padding:0 60px; box-sizing:border-box;
+      background-color: var(--step2-color);}
+    .local_nav_outer ul {
+      width:100%; height:auto; }
+    .local_nav_outer li {
+      float:left; width:200px; height:150px;
+      margin:25px 15px;
+      background-color: #fc7;
+    }
 
 
 /* .content_area */
@@ -56,26 +101,42 @@ h1, h2, h3, h4, h5, h6, p, div { margin:0; padding:0; }
   width:100%; padding-bottom:30px; box-sizing: border-box;}
 .content_area h3 {
   width:1300px; height:50px; margin:auto; margin-bottom:30px;
-  background-color:#0af;}
+  background-color:var(--step2-color);}
 .con_area {
   width:1300px; height:auto; min-height:400px; margin:auto;
-  background-color: #0af;}
-
+  background-color: var(--step2-color);}
 /* #populaContentBox ========== */
-  #populaContentBox {
-    height: 600px; background-color: #bbb;  }
+  #popularContentBox {
+    height: auto; background-color: #bbb;  }
+    #popularContentBox .con_area { min-height:470px; }
 /* #newContentBox ========== */
   #newContentBox {
-    height:900px; margin-bottom:80px; background-color: #aaa;  }
+    height:auto;     margin-bottom:80px; padding-top:60px; 
+    background-color: #aaa;  }
+    #newContentBox .con_area { min-height:700px; }
 /* #recommendedContentBox ========== */
   #recommendedContentBox {
-    height:600px; margin-bottom:80px; background-color: #bbb;  }
+    height:auto;     margin-bottom:80px; padding-top:30px;
+    background-color: #bbb;  }
+    #recommendedContentBox .con_area { min-height:440px; }
 /* #communityBox ========== */
   #communityBox {
-    height:800px; margin-bottom:80px; background-color: #ddd; }
+    height:auto;     margin-bottom:80px; padding-top:60px;
+    background-color: #ddd; }
+    #communityBox .con_area { min-height:600px; }
+
 /* #miniAdBox ========== */
   #miniAdBox {
-    height:400px; margin-bottom:80px; background-color: #bbb; }
+    height:auto; 
+    margin-bottom:80px; padding:40px 0;
+    background-color: #bbb; }
+    .mini_ad_outer {
+      width:1500px; height:300px; margin:auto;
+      background-color: var(--step2-color); }
+
 /* #footBox ========== */
-  #footBox {
-    height:200px; background-color: #aaa;  }
+  #footBox { margin-bottom:500px;
+    height:auto; padding:25px 0 30px; background-color: #aaa;  }
+    .foot_outer {
+      width:1300px; height:140px; margin:auto;
+      background-color:var(--step2-color); }

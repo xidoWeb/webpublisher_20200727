@@ -4,6 +4,11 @@
 <head>
   <meta charset="UTF-8">
   <link rel="stylesheet" href="../css/src/layout_02_result.css">
+  <!--[if IE]>
+    <script src="../ie/modernizr-custom.js"></script>
+    <link rel="shortcut icon" href="../favicon.png" type="image/png" >
+  <![endif]-->
+ 
   <title>layout_02</title>
  <link rel="shortcut icon" href="../favicon.svg" type="image/svg" >
  <link rel="apple-touch-icon" href="../favicon.svg">
@@ -13,7 +18,16 @@
   <div id="wrap">
     <div id="headBox">
       <h1 class="main_heading">site name</h1>
-      <div class="search_bar">search</div>
+      <div class="navigation">
+        <!-- navigation -->
+        <ul class="clearfix">
+          <li>nav_01</li>
+          <li>nav_02</li>
+          <li>nav_03</li>
+          <li>nav_04</li>
+          <li>nav_05</li>
+        </ul>
+      </div>
       <div class="member">member</div>
     </div>
     <!-- // #headBox ============================== -->
@@ -24,23 +38,42 @@
         광고 내용
       </div>
       <div class="view_indicator">
-        광고 순서 확인
+        <!-- 광고 순서 확인 -->
+        <ol class="clearfix">
+          <li>ad_indi_01</li>
+          <li>ad_indi_02</li>
+          <li>ad_indi_03</li>
+          <li>ad_indi_04</li>
+          <li>ad_indi_05</li>
+          <li>ad_indi_06</li>          
+          <!-- <::after /> -->
+        </ol>
       </div>
     </div>
     <!-- // #adViewBox ============================== -->
 
     <div id="localNavBox">
+      <!-- local navigation -->
       <div class="local_nav_outer">
-        local navigation
+        <ul class="clearfix">
+          <li>local_nav_01</li>
+          <li>local_nav_02</li>
+          <li>local_nav_03</li>
+          <li>local_nav_04</li>
+          <li>local_nav_05</li>
+          <li>local_nav_06</li>
+        </ul>
       </div>
     </div>
     <!-- // #localNavBox ============================== -->
 
     <div class="content_area">
       <!-- content -->
-      <div id="populaContentBox">
+      <div id="popularContentBox">
         <h3>인기 내용</h3>
-        <div class="con_area pop_con_area"></div>
+        <div class="con_area pop_con_area">
+          
+        </div>
       </div>
       <!-- // #populaContentBox ========================== -->
       <div id="newContentBox">
@@ -60,10 +93,14 @@
       <!-- // #communityBox ============================== -->
     </div><!-- // .content_area -->
 
-    <div id="miniAdBox"></div>
+    <div id="miniAdBox">
+      <div class="mini_ad_outer"></div>
+    </div>
     <!-- // #miniAdBox ============================== -->
 
-    <div id="footBox"></div>
+    <div id="footBox">
+      <div class="foot_outer"></div>
+    </div>
     <!-- // #footBox ============================== -->
 
   </div> 
