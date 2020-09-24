@@ -111,11 +111,11 @@ ul,ol,li,dl,dt,dd {margin:0; padding:0; list-style:none;}
     height: auto; background-color: #bbb;  }
     /* #popularContentBox .con_area { min-height:470px; } */
     .pop_con_area { 
-      min-height:470px; 
+     /* min-height:470px; */
       padding:20px 63px; box-sizing: border-box;}
     .pop_card { 
       float:left; width:350px; height:430px;
-      margin-left:62px; padding:10px 8px;
+      margin-left:62px; padding:8px 10px;
       box-sizing: border-box;
       background-color: #fc7;
     }
