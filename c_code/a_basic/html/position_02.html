@@ -23,10 +23,38 @@
         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Officiis ipsam earum, laborum optio esse similique! Dolores, rem voluptatem. Fugiat, pariatur!</p>
       </div>
     </div>
+    <div class="side">우측에 붙이기</div>
+    <!-- ============================ -->
+    <div id="viewBox">
+      <h2>광고영역</h2>
+      <div class="view_indicator">인디케이터</div>
 
+      <div class="next_btn">다음</div>
+      <div class="prev_btn">이전</div>
+
+      <div class="view_area">
+        <div class="adv_01">adv_01</div>
+        <div class="adv_02">adv_02</div>
+        <div class="adv_03">adv_03</div>
+        <div class="adv_04">adv_04</div>
+        <div class="adv_05">adv_05</div>
+      </div>
+    </div>
+    <!-- ============================ -->
   </div>
 
   <!-- script -->
-  <script></script>
+  <script src="https://unpkg.com/jquery"></script>
+  <script>
+    // $('.modal_message').on('click', function(){
+    //   $('.modal_window').slideUp(300);
+    // }); 
+
+      var msg = document.getElementsByClassName('modal_message')[0];
+      var mwn = document.getElementsByClassName('modal_window')[0];
+      msg.addEventListener('click', function(){
+        mwn.style.display = 'none';
+      });
+  </script>
 </body>
 </html>
