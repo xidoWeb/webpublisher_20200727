@@ -1,0 +1,64 @@
+@charset "utf-8";
+/* position_01.css */
+
+/* reset.css */
+html,body {margin:0;}
+h1,h2,h3,h4,h5,h6,p {margin:0;}
+ul,li,ol,dl,dt,dd{ margin:0; padding:0; list-style:none;}
+
+/* common.css */
+.clearfix:after,
+.clearfix::after{ content:" "; display:block; clear:both; }
+
+/* layout.css */
+#wrap {
+  width:800px; height:5000px; margin:auto; 
+  background-color: rgba(230,230,230,0.5);
+  background-image:linear-gradient( rgba(230,230,230,0.5) , #ffccaa, #accfff);}
+
+.position {
+  width: 80%; height:150px; margin:auto; border:1px solid #333;}
+.position > ul { width: 100%; height:100%;}
+.position > ul > li {
+  float:left; width:100px; height:100px; border:2px solid #f50; box-sizing: border-box;
+  text-align: center; font-weight: bold; line-height: 100px; font-size: 1.2rem;}
+
+.default { background-color:#7DFD9F; }
+.static { background-color:#B86A78; }
+.fixed { background-color:#01F8E7; }
+.absolute { background-color:#47D24A; }
+.relative { background-color:#FA0; }
+
+/* --------------------------------------------- */
+/* position:
+ * static - 가장 기본형으로 top,left,right,bottom,z-index 모두 사용되지 않는다.
+ * position:fixed  
+    - 화면상에 고정처리된 것 처럼 표현하는 형태로, 기준은 브라우저이며,
+      top, left, right, bottom, z-index 모두 사용가능하며 가급적
+      top/bottm, left/right 처럼 반대개념으로 잡히는 경우는 주의해서 사용하자.
+
+ * position:absolute 
+    - 기준이 존재하지 않으면: 브라우저를 기준으로 위치하게 되며, 
+      기준이 존재하면(absolue, relative, fixed) : 해당 요소를 기준으로 위치하게 된다.
+      top,left,right,bottom,z-index 모두 사용이 가능
+
+ * position:relative 
+    - 자신을 기준으로 위치를 이동할 수 있으며, 주변요소에 영향이 미치지 않는다.
+      top,left,right,bottom,z-index 모두 사용이 가능
+
+ * z-index:n; 
+   - position요소의 앞/뒤의 위치를 잡아주는 형태로써, 
+     '-'값을 사용하면 선택하기 어려울 수 있다.
+     단, 기준이되는 요소에서 +/- 상황에 따라 내부에 요소는 z-index 값이 달라질 수 있다.
+ */
+
+.position > ul{ position:relative; z-index:-1; }
+
+ .static {
+  position:static; top:400px; left:5000px; z-index:-1000;}
+.fixed {
+  position:fixed; top:0; right:100px; z-index:100;}
+.absolute {
+  position: absolute; top: 250px; right: 50px; z-index:500;}
+.relative {
+  position: relative; top:150px; left:-230px; z-index:1;}
