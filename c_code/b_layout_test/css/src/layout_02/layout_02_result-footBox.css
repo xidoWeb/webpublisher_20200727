@@ -1,0 +1,8 @@
+/* layout_02_result-footBox.css */
+
+/* #footBox ========== */
+#footBox { margin-bottom:500px;
+  height:auto; padding:25px 0 30px; background-color: #aaa;  }
+  .foot_outer {
+    width:1300px; height:140px; margin:auto;
+    background-color:var(--step2-color); }

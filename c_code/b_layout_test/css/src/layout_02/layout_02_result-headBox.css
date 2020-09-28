@@ -1,0 +1,32 @@
+/* layout_02_result-headBox.css */
+
+/* #headBox ========== */
+#headBox { position:relative;
+  height:150px; padding:34px 50px 0; box-sizing:border-box;
+  background-color: #ddd;  }
+  .main_heading {
+    float:left; width:250px; height:80px; 
+    margin-right:75px;
+    background-color: var(--step2-color);}
+
+  .navigation {
+    /* float:left;  */
+    position:absolute; 
+    /* left:50%; margin-left:-425px; */
+    /* left:0; right:0; margin:auto; */
+    left:50%; transform:translate(-50%);
+    top:34px;
+    width:850px; height:auto; 
+    background-color: var(--step2-color);}
+
+    .navigation > ul {width: 100%; height:auto;}
+    .navigation li { 
+      float:left; width: 150px; height: 70px; 
+      margin:5px 10px;
+      background-color: #fc7;}
+
+    /* --- */
+  .member {
+    float:right; width:250px; height:80px; 
+    background-color: var(--step2-color);}
+  

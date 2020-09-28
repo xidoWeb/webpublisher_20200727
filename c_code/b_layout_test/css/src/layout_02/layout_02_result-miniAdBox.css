@@ -1,0 +1,9 @@
+/* layout_02_result-miniAdBox.css */
+/* #miniAdBox ========== */
+#miniAdBox {
+  height:auto; 
+  margin-bottom:80px; padding:40px 0;
+  background-color: #bbb; }
+  .mini_ad_outer {
+    width:1500px; height:300px; margin:auto;
+    background-color: var(--step2-color); }

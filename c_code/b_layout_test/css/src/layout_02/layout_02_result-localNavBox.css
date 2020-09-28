@@ -1,0 +1,29 @@
+/* layout_02_result-localNavBox.css */
+/* #localNavBox ========== */
+#localNavBox {
+  position: relative;
+  height:auto; 
+  margin-bottom:50px; padding:20px 0 30px; box-sizing:border-box;
+  background-color: #999;  }
+
+  .local_nav_btn {
+    position: absolute; 
+    top:50%; left:0; right:0; z-index:50;
+    width:1600px; height:0; padding:0 40px; box-sizing: border-box;
+    margin:auto; transform:translateY(-15px); }
+
+    .local_nav_btn > button {
+      width: 30px; height: 30px; font-size:30px; color:#fff;}
+    .next_local_btn{ float: right;}
+    .prev_local_btn{ float: left; }
+
+  .local_nav_outer { 
+    width:1500px; height:auto; margin:auto; 
+    padding:0 60px; box-sizing:border-box;
+    background-color: var(--step2-color);}
+  .local_nav_outer ul {
+    width:100%; height:auto; }
+  .local_nav_outer li {
+    float:left; width:200px; height:150px;
+    margin:25px 15px;
+    background-color: #fc7; }

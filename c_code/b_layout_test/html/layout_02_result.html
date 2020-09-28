@@ -4,7 +4,21 @@
 <head>
   <meta charset="UTF-8">
   <link rel="stylesheet" href="../fonts/fontawesome_5/css/all.css">
-  <link rel="stylesheet" href="../css/src/layout_02_result.css">
+  <link rel="stylesheet" href="../css/base/reset.css">
+  <link rel="stylesheet" href="../css/base/common.css">
+  <link rel="stylesheet" href="../css/base/layout_02_variable.css">
+
+  <!-- <link rel="stylesheet" href="../css/src/layout_02_result.css"> -->
+  
+  <link rel="stylesheet" href="../css/src/layout_02/layout_02_result-wrap.css">
+  <link rel="stylesheet" href="../css/src/layout_02/layout_02_result-headBox.css">
+  <link rel="stylesheet" href="../css/src/layout_02/layout_02_result-adViewBox.css">
+  <link rel="stylesheet" href="../css/src/layout_02/layout_02_result-localNavBox.css">
+  <link rel="stylesheet" href="../css/src/layout_02/layout_02_result-content_area.css">
+  <link rel="stylesheet" href="../css/src/layout_02/layout_02_result-miniAdBox.css">
+  <link rel="stylesheet" href="../css/src/layout_02/layout_02_result-footBox.css"> 
+      
+
   <!--[if IE]>
     <script src="../ie/modernizr-custom.js"></script>
     <link rel="shortcut icon" href="../favicon.png" type="image/png" >
@@ -37,23 +51,23 @@
       <div class="view_btn">
         <button type="button" class="next_view">
           <i class="fas fa-arrow-circle-right"></i>
-          <span class="hidden">다음 광고 내용 보기</span>
+          <span class="hidden_context">다음 광고 내용 보기</span>
         </button>
         <button type="button" class="prev_view">
           <i class="fas fa-arrow-circle-left"></i>
-          <span class="hidden">이전 광고 내용 보기</span>
+          <span class="hidden_context">이전 광고 내용 보기</span>
         </button>
       </div>
 
       <div class="view_indicator">
         <!-- 광고 순서 확인 -->
         <ol class="clearfix">
-          <li>ad_indi_01</li>
-          <li>ad_indi_02</li>
-          <li>ad_indi_03</li>
-          <li>ad_indi_04</li>
-          <li>ad_indi_05</li>
-          <li>ad_indi_06</li>          
+          <li><a href="#"><span class="hidden_context">광고 1의 간단 설명</span></a></li>
+          <li><a href="#"><span class="hidden_context">광고 2의 간단 설명</span></a></li>
+          <li><a href="#"><span class="hidden_context">광고 3의 간단 설명</span></a></li>
+          <li><a href="#"><span class="hidden_context">광고 4의 간단 설명</span></a></li>
+          <li><a href="#"><span class="hidden_context">광고 5의 간단 설명</span></a></li>
+          <li><a href="#"><span class="hidden_context">광고 6의 간단 설명</span></a></li>          
           <!-- <::after /> -->
         </ol>
       </div>
@@ -74,6 +88,18 @@
 
     <div id="localNavBox">
       <!-- local navigation -->
+      <div class="local_nav_btn">
+        <!-- button[type=button]*2>span.hidden_context{내용 보기} -->
+        <button type="button" class="next_local_btn">
+          <i class="fas fa-arrow-circle-right"></i>
+          <span class="hidden_context">다음 내용 보기</span>
+        </button>
+        <button type="button" class="prev_local_btn">
+          <i class="fas fa-arrow-circle-left"></i>
+          <span class="hidden_context">이전 내용 보기</span>
+        </button>
+      </div><!-- // .local_nav_btn -->
+
       <div class="local_nav_outer">
         <ul class="clearfix">
           <li>local_nav_01</li>

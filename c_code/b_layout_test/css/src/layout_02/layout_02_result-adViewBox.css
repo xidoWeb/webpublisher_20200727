@@ -1,0 +1,69 @@
+/* layout_02_result-adViewBox.css */
+
+/* #adViewBox ========== */
+#adViewBox { position:relative;
+  height:auto; min-height:750px; padding:28px 0; box-sizing:border-box;  background-color: #bbb;  }
+
+  .view_btn { 
+    position: absolute; top:300px; left:0; right:0;  z-index:50;
+    width:1400px; height:0; margin:auto; margin-top:-20px;}
+
+    .view_btn button{
+      width:40px; height:40px; font-size:2.5rem; 
+      color:#fff; text-shadow:0 0 5px rgba(0,0,0,0.5); }
+      /* 16px == 12pt == 100% == 1em == 1rem  */
+
+      .next_view{ float:right;}
+      .prev_view{ float:left; }
+
+  .view_indicator { position:absolute; bottom:28px; left:0; right:0; 
+    width:840px; height:auto; margin:auto; 
+    background-color: var(--step2-color);}
+    .view_indicator ol {
+      width:100%; height:auto;}
+    .view_indicator li {
+      float:left; width:120px; height:40px; margin:10px;}
+      .view_indicator a { 
+        position: relative; display:block; width: 100%; height:100%; 
+        border-radius:40px; background-color: #fff;}
+      .view_indicator a:hover,
+      .view_indicator a:focus { background-color: #ccc; outline:3px solid #f07;}
+
+      .view_indicator a:hover > span,
+      .view_indicator a:focus > span {  
+        /* display:block; position:absolute; z-index:-1; */
+        z-index:10; bottom:50px; left:50%; transform:translate(-50%);
+        width:150px; height:auto; padding:5px; background-color: #fc7;}
+
+  .view_outer { overflow: hidden;
+    position: relative;
+    width:1300px; height:600px; margin:auto;
+    background-color: var(--step2-color);}
+
+/* 1. 광고영역을 같은곳에 배치하여,처리  */
+/*
+.view_area { width: 100%; height: 100%;}
+.view_area > div {
+position: absolute; top: 0; left: 0;
+width:inherit; height:inherit; font-size:3rem; color:#fff;}
+
+.view_01 { z-index:6; background-color: #B1E44C;}
+.view_02 { z-index:5; background-color: #4720B0;}
+.view_03 { z-index:4; background-color: #EF1CB8;}
+.view_04 { z-index:3; background-color: #7CC3D6;}
+.view_05 { z-index:2; background-color: #ECB9E4;}
+.view_06 { z-index:1; background-color: #938D32;}
+*/
+
+/* 2. 가로형 슬라이드 배너  */
+.view_area { width:600%; height:100%; position:relative; left:0; top: 0;}
+.view_area > div {float:left; width:calc(100% / 6); height:100%;
+color:#fff; font-size: 4rem;}
+.view_area:after {content:" "; display: block; clear: both;}
+
+.view_01 { background-color: #B1E44C;}
+.view_02 { background-color: #4720B0;}
+.view_03 { background-color: #EF1CB8;}
+.view_04 { background-color: #7CC3D6;}
+.view_05 { background-color: #ECB9E4;}
+.view_06 { background-color: #938D32;}

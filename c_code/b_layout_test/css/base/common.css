@@ -1,0 +1,18 @@
+/* @charset "UTF-8"; */
+/* common.css : 
+  공통의 class이름을 설정하여, 웹페이지 제작에 용이 하도록 처리하는 기능 */
+
+.clearfix:after,
+.clearfix::after { content:" "; display:block; clear:both; }
+/* .clearfix
+  1. float을 정리하기위해서 마지막에 clear:both를 사용해야한다. 
+  2. li의 마지막에는 다른요소가 들어갈 수 없으므로, 가상의존재를 생성한다.
+  3. 가상의 존재는 ::after의 형태를 취하고, 
+  4. after는 반드시 content를 가지고있어야 한다.
+*/
+
+.hidden_context { 
+  display: block; 
+  position: absolute; z-index:-1;
+  width: 0; height: 0;
+  overflow: hidden;}
