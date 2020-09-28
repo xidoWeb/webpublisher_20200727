@@ -82,8 +82,24 @@ ul,ol,li,dl,dt,dd {margin:0; padding:0; list-style:none;}
         background-color: #fc7;}
 
     .view_outer { 
+      position: relative;
       width:1300px; height:600px; margin:auto;
       background-color: var(--step2-color);}
+
+/* 1. 광고영역을 같은곳에 배치하여,처리  */
+/*
+.view_area { width: 100%; height: 100%;}
+.view_area > div {
+  position: absolute; top: 0; left: 0;
+  width:inherit; height:inherit; font-size:3rem; color:#fff;}
+
+  .view_01 { z-index:6; background-color: #B1E44C;}
+  .view_02 { z-index:5; background-color: #4720B0;}
+  .view_03 { z-index:4; background-color: #EF1CB8;}
+  .view_04 { z-index:3; background-color: #7CC3D6;}
+  .view_05 { z-index:2; background-color: #ECB9E4;}
+  .view_06 { z-index:1; background-color: #938D32;}
+*/
 
 /* #localNavBox ========== */
   #localNavBox {
