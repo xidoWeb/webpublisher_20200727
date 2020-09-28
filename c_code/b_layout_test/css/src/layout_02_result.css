@@ -81,7 +81,7 @@ ul,ol,li,dl,dt,dd {margin:0; padding:0; list-style:none;}
         float:left; width:120px; height:40px; margin:10px;
         background-color: #fc7;}
 
-    .view_outer { 
+    .view_outer { overflow: hidden;
       position: relative;
       width:1300px; height:600px; margin:auto;
       background-color: var(--step2-color);}
@@ -100,6 +100,18 @@ ul,ol,li,dl,dt,dd {margin:0; padding:0; list-style:none;}
   .view_05 { z-index:2; background-color: #ECB9E4;}
   .view_06 { z-index:1; background-color: #938D32;}
 */
+
+/* 2. 가로형 슬라이드 배너  */
+.view_area { width:600%; height:100%; }
+.view_area > div {float:left; width:calc(100% / 6); height:100%;}
+.view_area:after {content:" "; display: block; clear: both;}
+
+  .view_01 { background-color: #B1E44C;}
+  .view_02 { background-color: #4720B0;}
+  .view_03 { background-color: #EF1CB8;}
+  .view_04 { background-color: #7CC3D6;}
+  .view_05 { background-color: #ECB9E4;}
+  .view_06 { background-color: #938D32;}
 
 /* #localNavBox ========== */
   #localNavBox {
