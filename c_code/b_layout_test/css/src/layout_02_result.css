@@ -16,11 +16,10 @@ ul,ol,li,dl,dt,dd {margin:0; padding:0; list-style:none;}
   --gray3:#bbb;
   --gray4:#777;
   --black:#333;
-  --max-width_01:1600px;
+  --max-width_01:100%;
 }
 
 /* common.css */
-
 /* 
   1. float을 정리하기위해서 마지막에 clear:both를 사용해야한다. 
   2. li의 마지막에는 다른요소가 들어갈 수 없으므로, 가상의존재를 생성한다.
@@ -37,16 +36,24 @@ ul,ol,li,dl,dt,dd {margin:0; padding:0; list-style:none;}
 #wrap > div { width:100%; }
 
 /* #headBox ========== */
-  #headBox { 
+  #headBox { position:relative;
     height:150px; padding:34px 50px 0; box-sizing:border-box;
     background-color: #ddd;  }
     .main_heading {
       float:left; width:250px; height:80px; 
       margin-right:75px;
       background-color: var(--step2-color);}
+
     .navigation {
-      float:left; width:850px; height:auto; 
+      /* float:left;  */
+      position:absolute; 
+      /* left:50%; margin-left:-425px; */
+      /* left:0; right:0; margin:auto; */
+      left:50%; transform:translate(-50%);
+      top:34px;
+      width:850px; height:auto; 
       background-color: var(--step2-color);}
+
       .navigation > ul {width: 100%; height:auto;}
       .navigation li { 
         float:left; width: 150px; height: 70px; 
@@ -59,15 +66,13 @@ ul,ol,li,dl,dt,dd {margin:0; padding:0; list-style:none;}
       background-color: var(--step2-color);}
     
 /* #adViewBox ========== */
-  #adViewBox {
+  #adViewBox { position:relative;
     height:auto; min-height:750px; 
     padding:28px 0; box-sizing:border-box;
     background-color: #bbb;  }
-    .view_outer { 
-      width:1300px; height:600px; margin:auto;
-      background-color: var(--step2-color);}
-    .view_indicator {
-      width:840px; height:auto; margin:auto; margin-top:28px;
+    
+    .view_indicator { position:absolute; bottom:28px; left:0; right:0; 
+      width:840px; height:auto; margin:auto; 
       background-color: var(--step2-color);}
       .view_indicator ol {
         width:100%; height:auto;}
@@ -76,6 +81,9 @@ ul,ol,li,dl,dt,dd {margin:0; padding:0; list-style:none;}
         float:left; width:120px; height:40px; margin:10px;
         background-color: #fc7;}
 
+    .view_outer { 
+      width:1300px; height:600px; margin:auto;
+      background-color: var(--step2-color);}
 
 /* #localNavBox ========== */
   #localNavBox {
