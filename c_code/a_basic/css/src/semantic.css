@@ -1,0 +1,47 @@
+@charset "UTF-8";
+/* reset */
+html,body{width:100%; height:100%; margin: 0; padding: 0;}
+h1,h2,h3,h4,h5,h6,p{margin: 0;padding: 0;}
+ul,ol,dl,dt,dd,li{margin: 0; padding: 0; list-style: none;}
+hr {margin: 0; padding: 0; width: 100%; height: 0; border-bottom:1px solid #777;}
+button { margin: 0; padding: 0; border:0; background-color: transparent; cursor:pointer;}
+a {color:inherit; text-decoration: none;}
+a:hover,a:focus {text-decoration: underline;}
+table,tr,th,td,thead,tbody,tfoot { 
+  margin:0; padding:0; border:1px solid #333; border-spacing:0; border-collapse: collapse;}
+
+header,section,article,nav,main,footer,aside,figure { display: block;}
+
+/* design */
+#wrap {
+  width: 960px; height:auto; min-height:1200px; 
+  margin:auto;
+  background-color: #ddd;}
+
+  #headBox { width: 100%; height: 100px;
+  background-color: #aaa;}
+
+  #adViewBox {width: 100%; height: 600px;
+  background-color: #ccf;}
+
+  .con_wrap {
+    width: 100%; height: auto;
+    padding:30px 0; 
+    background-color: #dfdfdf;}
+
+  #bestBox {
+    width: 80%; min-width:800px;
+    height:500px; margin:auto;
+    background-color: #77a;
+  }
+
+  #contentBox {
+    width: 100%; height: 1000px;
+    background-color: #fcc;
+  }
+
+  #footBox {
+    width: 100%; height: 150px;
+    background-color: #777;
+  }
+

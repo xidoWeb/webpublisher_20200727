@@ -1,0 +1,115 @@
+@charset "UTF-8";
+/* reset */
+html,body{width:100%; height:100%; margin: 0; padding: 0;}
+h1,h2,h3,h4,h5,h6,p{margin: 0;padding: 0;}
+ul,ol,dl,dt,dd,li{margin: 0; padding: 0; list-style: none;}
+hr {margin: 0; padding: 0; width: 100%; height: 0; border-bottom:1px solid #777;}
+button { margin: 0; padding: 0; border:0; background-color: transparent; cursor:pointer;}
+a {color:inherit; text-decoration: none;}
+a:hover,a:focus {text-decoration: underline;}
+table,tr,th,td,thead,tbody,tfoot { 
+  margin:0; padding:0; border:1px solid #333; border-spacing:0; border-collapse: collapse;}
+
+header,section,article,nav,main,footer,aside,figure { display: block;}
+
+/* common.css */
+.hidden_context { display: block; position: absolute; z-index: -1; 
+  width: 0; height: 0; overflow: hidden;}
+.clearfix:after,
+.clearfix::after{ content:" "; display: block; width: 0; height: 0; clear: both;}
+
+/* design.css */
+#wrap{position: relative;
+  width: 980px; height: 850px; 
+  margin:auto; padding-top: 30px; box-sizing:border-box;}
+
+/* #headBox ----------------------------------------------------- */
+#headBox{ 
+  float: left; width: 250px; height: 710px; 
+  padding:50px; padding-left: 40px;box-sizing: border-box;
+  background-color: #575757;}
+
+  h1 { width: 100%; height: 110px; background-color: #ccc; margin-bottom: 35px;}
+  h1 a {display: block; width: 100%; height: 100%;}
+
+  #navBox { width: 100%; height: auto; padding-right:20px; box-sizing: border-box;}
+  #navBox ul { width: 100%; height: auto;}
+  #navBox ul li { width: 100%; height: 40px; margin-bottom: 24px; }
+  #navBox ul li:nth-last-child(2) { margin-bottom: 10px; }
+  #navBox ul li:last-child { width:120px; height:120px;}
+  #navBox ul li a {
+    display: block; width: 100%; height: 100%;
+    border-bottom: 4px solid #fff; box-sizing: border-box;
+    text-decoration: none; text-indent:0.5rem; text-transform: uppercase; font-size: 1.5rem;  font-weight: bold;
+    background-color: #acc;}
+    #navBox ul li:last-child a { border-bottom: 0; border-radius:100%;}
+    #navBox ul li a i {
+      float:right; width: 20px; height: 20px;  
+      margin:10px;
+      background-color: #fff;}
+
+
+/* #sideBox ----------------------------------------------- */
+#sideBox{ position: absolute; top: 0; left: 0; width: 100%; height: 30px; background-color: #757575;}
+#sideBox ul {float:right; width:auto; height:30px;}
+#sideBox ul li {float:left; width:95px; height:30px;}
+#sideBox ul li:last-child {width:245px;}
+
+#sideBox ul li a {
+  display: block; width: 100%; height: 100%; 
+  text-align: center; line-height: 30px;
+  text-transform: uppercase; font-weight: bold; color:#fff; }
+
+#sideBox ul li:nth-child(1) a {background-color: inherit;}
+#sideBox ul li:nth-child(2) a {background-color: #555;}
+#sideBox ul li:nth-child(3) a {text-align: left; text-indent:0.5rem; color:#333; background-color: #fff30d;}
+#sideBox ul li:nth-child(3) a i {float: right; width: 100px; height: 15px; margin:7px; background-color: #fff;}
+#sideBox ul li a:hover,
+#sideBox ul li a:focus {background-color: #fff; color:#333;}
+#sideBox ul li:last-child a:hover,
+#sideBox ul li:last-child a:focus {background-color: #777; color:#fff;}
+
+
+/* #viewBox ----------------------------------------------- */
+#viewBox{position: relative; float: left; width:730px; height:710px; background-color: #dda;}
+.computer { 
+  position: absolute; top:120px; left:80px; z-index:200;
+  width:330px; height:520px; background-color: #afc;}
+.adv_narr { 
+  position: absolute; top:50px; right:40px; z-index:100;
+  width:360px; height:560px; background-color: #7af;}
+
+/* #footBox --------------------------------------------- */
+#footBox{ float: left; position: relative;  width: 100%; height: 110px;  
+  padding:16px 40px 25px; box-sizing: border-box;  background-color: #fad;}
+
+  
+  #footBox:after,
+  #footBox::after{
+    content:" "; display: block; position: absolute; top:0; left:0; z-index:200;
+    width:100%; height:1px; background-color: #333; }
+    
+  #footBox h2 { float: left; width: 75px; height: 50px; margin-right: 20px; background-color: #acc;}
+
+  .company_mini{ float: left;  margin-left:20px; padding-top: 10px; box-sizing:border-box; background-color: #acc;}
+  .company_mini ul {width: 100%; height:auto;}
+  .company_mini li {float:left; width:40px; height:40px;}
+  .company_mini li:first-child {margin-right: 10px;}
+  .company_mini li i {display: block; width: 100%; height: 100%; border-radius:100%; background-color: #fff;}
+
+  #footBox .addr{ 
+    float: left; width:340px; height:auto; 
+    margin-left:20px; padding-top:10px; }
+  
+  #footBox address{ font:normal normal 0.8rem sans-serif; }
+
+  .family_narr { 
+    position: absolute; top:-40px; right:40px; width: 300px; height:auto;}
+
+    .family_site {width: 100%; height: auto; margin-bottom: 15px;}
+    .family_narr dt {
+      float:left; width:90px; height:40px; background-color: #555; color:#fff;
+      text-indent:0.5rem; line-height:40px;}
+    .family_narr dd {
+      float:left; width:210px; height:40px; background-color: #fff30d; 
+      text-indent:0.5rem; line-height:40px;}
