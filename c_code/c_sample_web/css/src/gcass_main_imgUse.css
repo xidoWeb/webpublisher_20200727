@@ -54,39 +54,49 @@ header,section,article,nav,main,footer,aside,figure { display: block;}
   #navBox ul li:nth-child(6) a{ background-image: url("../../img/gcass/q_and_a.png");}
 
 /* #sideBox ----------------------------------------------- */
-#sideBox{ position: absolute; top: 0; left: 0; width: 100%; height: 30px; background-color: #757575;}
+#sideBox{ position: absolute; top: 0; left: 0; width: 100%; height: 30px; background-color: #888;}
 #sideBox ul {float:right; width:auto; height:30px;}
 #sideBox ul li {float:left; width:95px; height:30px;}
 #sideBox ul li:last-child {width:245px;}
 
-#sideBox ul li a {
-  display: block; width: 100%; height: 100%; 
-  text-align: center; line-height: 30px;
-  text-transform: uppercase; font-weight: bold; color:#fff; }
+#sideBox ul li a { background-position: 50% 50%;}
+#sideBox ul li:nth-child(1) a { background-image: url("../../img/gcass/aside_home.png");}
+#sideBox ul li:nth-child(2) a { background-image: url("../../img/gcass/aside_study.png");}
+#sideBox ul li:nth-child(3) a { background-image: url("../../img/gcass/aside_education.png");}
 
-#sideBox ul li:nth-child(1) a {background-color: inherit;}
-#sideBox ul li:nth-child(2) a {background-color: #555;}
-#sideBox ul li:nth-child(3) a {text-align: left; text-indent:0.5rem; color:#333; background-color: #fff30d;}
-#sideBox ul li:nth-child(3) a i {float: right; width: 100px; height: 15px; margin:7px; background-color: #fff;}
-#sideBox ul li a:hover,
-#sideBox ul li a:focus {background-color: #fff; color:#333;}
-#sideBox ul li:last-child a:hover,
-#sideBox ul li:last-child a:focus {background-color: #777; color:#fff;}
-
+#sideBox ul li:nth-child(1) a:hover,
+#sideBox ul li:nth-child(1) a:focus { 
+  background-image: url("../../img/gcass/aside_home_on.png");}
+#sideBox ul li:nth-child(2) a:hover,
+#sideBox ul li:nth-child(2) a:focus { 
+  background-image: url("../../img/gcass/aside_study_on.png");}
+#sideBox ul li:nth-child(3) a:hover,
+#sideBox ul li:nth-child(3) a:focus { 
+  background-image: url("../../img/gcass/aside_education_on.png");}
 
 /* #viewBox ----------------------------------------------- */
-#viewBox{position: relative; float: left; width:730px; height:710px; background-color: #dda;}
+#viewBox{
+  position: relative; float: left; width:730px; height:710px; background-color: #adadad;}
+
+#viewBox:before,
+#viewBox::before{content:" "; display:block; width: 100%; height:50px; 
+  background-image: url("../../img/gcass/view_pattern_bg.png");
+  background-repeat: repeat-x; opacity:0.3;}
+
 .computer { 
   position: absolute; top:120px; left:80px; z-index:200;
-  width:330px; height:520px; background-color: #afc;}
+  width:330px; height:520px; 
+  background-image: url("../../img/gcass/com.png");
+  background-repeat: no-repeat;  background-position: 50% 50%;}
 .adv_narr { 
   position: absolute; top:50px; right:40px; z-index:100;
-  width:360px; height:560px; background-color: #7af;}
+  width:360px; height:560px;
+  background-image: url("../../img/gcass/bg_text.png");
+  background-repeat: no-repeat; background-position: 50% 50%;}
 
 /* #footBox --------------------------------------------- */
 #footBox{ float: left; position: relative;  width: 100%; height: 110px;  
   padding:16px 40px 25px; box-sizing: border-box;  background-color: #fad;}
-
   
   #footBox:after,
   #footBox::after{
