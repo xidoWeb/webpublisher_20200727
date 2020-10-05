@@ -1,0 +1,107 @@
+@charset "UTF-8";
+/* background_01.css */
+
+/* reset.css */
+/* common.css */
+/* variable.css */
+/* design.css */
+#wrap { 
+  width: 960px; height:auto; 
+  margin:auto; margin-bottom:1000px; background-color:#dfdfdf;}
+h1 {padding:10px; background-color:#0ac; color:#fff; text-indent:20px;}
+h2 {width:100%; height:25px; 
+  font-size:20px; color:#171717; line-height:25px;
+  background-color:#ccc; }
+
+  .part {width:100%; height:500px; border-bottom:2px solid #333;}
+  h3{width:100%; height:15px; font-size:12px; margin:0; background-color:#ccf;}
+  .inner {width:95%; height:470px; margin:auto; border:1px solid #333;}
+  /* == */
+  .image .inner { font-size:3rem;
+    background-image:url("../../img/background_exam/i_01.png");    }
+
+  .repeat .inner {
+    background-image:url("../../img/background_exam/i_02.png");
+    background-repeat:no-repeat;
+  }
+
+  .position .inner {
+    background-image:url("../../img/background_exam/i_03.png");
+    background-repeat:no-repeat;
+    background-position:50% 50%;}
+
+  .size .inner {
+    background-image: url("../../img/background_exam/i_04.png");
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+    background-size:100% auto; 
+    transition:all 500ms ease;}
+  .size .inner:hover {  background-size:200% auto; }
+
+  .clip .inner {
+    background-image:url("../../img/background_exam/jonas-vincent.jpg");
+    background-repeat: no-repeat; background-position: 50% 50%; background-size:120% auto;
+    padding:40px; border:50px dotted #fa0; box-sizing: border-box;
+    font-size:5rem; font-weight:900; overflow: hidden;
+    -webkit-background-clip:text; 
+    -moz-background-clip:text; 
+    -ms-background-clip:text; 
+    -o-background-clip:text; 
+    background-clip:text; 
+    color:transparent;}
+
+  .attatchment .inner {
+    background-image: url("../../img/background_exam/karsten-winegeart.jpg");
+    background-repeat: no-repeat; background-position: 50% 50%; 
+    background-size: 200% auto;
+    font-size:3rem; color:#fff; text-indent:20px;
+    background-attachment:fixed;
+  }
+
+  /**img요소와 background-image 차이점 및 추가 설명
+  1. background-image는 반복요소의 기능을 가진다.
+  2. 내부요소와 배경이미지는 같이 중첩으로 사용이 가능하다
+  3. background-image는 이미지를 불러올경우 url() 함수를 사용
+  4. url()내부에는 css문서상의 상대경로로 이미지를 불러오며 ""내부에 작성 권장
+  5. background-image사용시 이미지는 반복처리되므로, 이를 수정가능
+     background-repeat: repeat | repeat-x | repeat-y | no-repeat;
+  
+  6. backgroud-position: 이미지의 위치를 설정하는 기능
+  7. top, left, right, bottom, center 등의 속성을 사용할 수 있다. - 권장 X
+  8. 0, 100%, 50% 등의 %수치값으로 위 위치에대한 설명을 대체 가능하다.
+     즉, background-position에서는 %좌표의 경우 배경요소의 크기비율과, 
+     이미지속성의 크기비율을 조합하여 배치한다.
+  9. 하지만 %이외의 수치를 가지고 있는 좌표의 경우는 
+     이미지속성의 왼쪽상단을 기준으로 좌표값을 가진다.
+
+  10. background-size: 이미지의 크기값으로 가로, 세로비율설정
+  11. background-size: auto | cover(이미지꽉차게) | contain(이미지전부보이기) | 값(100%) 값(auto);
+  12. hover,focus,active... 등의 기능을 사용시 전후의 값을 비교 가능하도록 자연스럽게 처리
+
+  13. background-clip: 배경이미지의 범위를 지정하는것
+  14. background-clip: content-box(선,패딩을제외한) | 
+                       padding-box(padding까지) | 
+                       border-box(외곽선까지);
+  
+  15. background-attatchment: 배경이미지를 스크롤에따라 고정/스크롤처리에 대한 설정
+  16. background-attatchment: scroll(기본,스크롤따라이미지가 따라다님) | fixed(이미지고정); 
+  */
+
+  /** 벤더프리픽스
+      프리픽스란? 아직 지원하지 않는 CSS 기능을 브라우저에 임시로 내장하였다면,
+      강제로 쓸 수 있도록 처리하는 것으로 속성의 앞에 벤더를 달고(-X-) 그내부에 
+      지원브라우저의 타입을 정의하여 사용하는 형태
+    
+      -webkit-background-clip:border-box;
+      background-image:-webkit-linear-gradient(#aaa, #a77);
+
+      작성요령은 -webkit-, -moz-, -ms-, -o-, 벤더가없는형태의 순으로 작업하게 되어있으며, 
+      표준으로 권고되면 프리픽스형태는 삭제하도록 처리되어 있다.
+
+      -webkit-box-sizing: border-box;
+         -moz-box-sizing: border-box;
+          -ms-box-sizing: border-box;
+           -o-box-sizing: border-box;
+              box-sizing: border-box;
+      
+  */
