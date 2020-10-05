@@ -18,12 +18,11 @@ h2 {width:100%; height:25px;
   .inner {width:95%; height:470px; margin:auto; border:1px solid #333;}
   /* == */
   .image .inner { font-size:3rem;
-    background-image:url("../../img/background_exam/i_01.png");    }
+    background-image:url("../../img/background_exam/i_01.png"); }
 
   .repeat .inner {
     background-image:url("../../img/background_exam/i_02.png");
-    background-repeat:no-repeat;
-  }
+    background-repeat:no-repeat;  }
 
   .position .inner {
     background-image:url("../../img/background_exam/i_03.png");
@@ -55,8 +54,7 @@ h2 {width:100%; height:25px;
     background-repeat: no-repeat; background-position: 50% 50%; 
     background-size: 200% auto;
     font-size:3rem; color:#fff; text-indent:20px;
-    background-attachment:fixed;
-  }
+    background-attachment:fixed;  }
 
   /**img요소와 background-image 차이점 및 추가 설명
   1. background-image는 반복요소의 기능을 가진다.
@@ -82,10 +80,12 @@ h2 {width:100%; height:25px;
   14. background-clip: content-box(선,패딩을제외한) | 
                        padding-box(padding까지) | 
                        border-box(외곽선까지);
+                       text(글자만큼 마스킹처리)도 존재하지만 현재는 사용이 어렵고 조건이존재
   
   15. background-attatchment: 배경이미지를 스크롤에따라 고정/스크롤처리에 대한 설정
-  16. background-attatchment: scroll(기본,스크롤따라이미지가 따라다님) | fixed(이미지고정); 
-  */
+  16. background-attatchment: scroll(기본,스크롤따라 요소에 붙어 다님) | 
+                              fixed(이미지가 브라우저에 붙어서 요소를 따라가지 않고 고정); 
+===================================================================================== */
 
   /** 벤더프리픽스
       프리픽스란? 아직 지원하지 않는 CSS 기능을 브라우저에 임시로 내장하였다면,

@@ -1,0 +1,53 @@
+@charset "UTF-8";
+/* ir_is.css */
+
+/* design.css */
+#wrap {
+  width: 900px; height:auto; min-height:1000px; margin:auto; background-color: #ddd;}
+
+  h1 { 
+    width: 100%; height: 30px; font-size: 1.5rem; background-color: #fa0;}
+  h2 {margin-bottom: 1rem;}
+
+  .part {
+    width: 90%; height:auto; padding:2rem; box-sizing: border-box; border:1px solid #333;}
+
+  .part ul { width: 100%; height: auto; margin:0; padding:0; list-style: none; }
+  .part ul li { 
+    width: 100px; height: 100px; margin-bottom:1rem; background-color: #0af;}
+  .part a { 
+    display: block; width: 100%; height: 100%; 
+    border-radius:100%; background-color: #fff; }
+
+    .ir li:nth-child(1) a{display: none;}
+    .ir li:nth-child(2) span{display: none;}
+
+    /* 글씨크기조정 : !important, js를통해 inline style설정으로 보여질 수 있음 */
+    .ir li:nth-child(3) a{ font-size:0; } /* font-size: 글씨크기 */
+
+    /* 첫줄 들여쓰기 : 현재 가장 많이 사용하는 기법 - 
+       브라우저가 커지고있는 현시점에는 다소 아쉬운  */   
+    .ir li:nth-child(4) a{ text-indent:-9999px; }/* text-indent: 첫줄 들여쓰기 */
+
+    /* 다양한 기법을 섞어쓰기 쉬운 기법 
+    - css를 제거하지 않으면 볼 수 없는 단점,
+    - 요소를 중첩해서 사용해야하는 불편함  */
+    .ir li:nth-child(5) span { 
+      display: block; position:absolute; z-index:-1;
+      width: 0; height: 0; overflow: hidden;}
+
+    .ir li a { 
+      background-image: url("../../img/background_exam/i_01.png");
+      background-repeat: no-repeat; background-position: 50% 50%; background-size: contain;}
+
+   /** IR기법이란, 글씨를 숨기고, 이미지로 그형태를 대처하여 사용하게 만드는 기법
+    1. 단순 글씨의 일부를 숨기는 방법  
+    2. 이미지를 사용하고, 글씨를 숨기는 방법 
+    3. 아이콘으로 대처하는 방법
+    4. 단, IR기법은 내용을 읽어주는 것을 기본 조건으로 본다.
+       display:none 형식은 읽을 수 없으며, 존재를 지워주는 형태로 인식하므로 사용 X
+    */
+
+    .hidden_text {
+      position: relative; z-index:-1; width: 0; height: 0;
+    }
