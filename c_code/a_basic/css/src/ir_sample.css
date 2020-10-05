@@ -23,11 +23,40 @@ hr { margin: 0; padding: 0; border-bottom: 1px solid #333;}
 
 .hidden_context { position: absolute; z-index:-1; width: 0; height: 0; overflow: hidden;}
 
+.hidden_wrap a {
+  display: block; width: 100%; height: 100%; 
+  background-repeat: no-repeat;}
+
+.hidden_wrap a>span{display: block;
+  position: absolute; z-index:-1; width: 0; height: 0; overflow: hidden;}
 
 /* design.css */
-#wrap{}
-#headBox{}
-#navBox{}
-#viewBox{}
-#contentBox{}
-#footBox{}
+#wrap{ 
+  width:1200px; height:auto; min-height:700px; 
+  margin:auto; background-color: #bbb;}
+#headBox{
+  width:100%; height:90px; padding:15px 20px; box-sizing:border-box; 
+  background-color: #aca;}
+  h1{float:left; width:150px; height:100%;  }
+  h1 a {
+    background-image: url("../../img/background_exam/i_02.png"); 
+    background-position: 50% 50%; background-size: 100% auto;}
+  #navBox{
+    float:right; width:800px; height:30px; margin-top:30px; background-color: #fff;}
+  #navBox ul{width: 100%; height:100%;}
+  #navBox ul li {float: left; width: 120px; height:100%; margin-right:10px;}
+  #navBox a {background-position:50% 50%; background-size: contain;}
+  #navBox li:nth-child(1) a{background-image:url("../../img/background_exam/i_01.png");}
+  #navBox li:nth-child(2) a{background-image:url("../../img/background_exam/i_02.png");}
+  #navBox li:nth-child(3) a{background-image:url("../../img/background_exam/i_03.png");}
+  #navBox li:nth-child(4) a{background-image:url("../../img/background_exam/i_04.png");}
+  #navBox li:nth-child(5) a{background-image:url("../../img/background_exam/i_05.png");}
+
+#viewBox{position: relative; z-index:100;
+  width:100%; height:750px; background-color: #fca;}
+#contentBox{
+  width:100%; max-width:900px; min-width:850px; height:800px; 
+  margin:auto; background-color: #fff;}
+#footBox{
+  width: 100%; height:150px; margin:auto;
+  padding:20px; box-sizing:border-box; background-color: #999;}
