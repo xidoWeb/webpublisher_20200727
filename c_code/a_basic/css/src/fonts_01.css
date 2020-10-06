@@ -1,5 +1,21 @@
 /* font_01.css */
+/* @font-face 서체정의 */
+@font-face { 
+  font-family:'hfb'; 
+  src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_20-07@1.0/HeirofLightBold.woff') format('woff'); 
+  font-weight: normal; 
+  font-style: normal; }
 
+  /** 웹에서 이해가능한 서체확장자
+    1. eot - IE하위버전용
+    2. woff - 대부분 브라우저 
+    3. woff2 ...
+
+    * @font-face 영역은 사용할 서체에관해 직접 내용을 설정/정의 하는 곳으로
+    굵기, 기울기, 서체명을 바꿀 수 있다.
+   */
+
+/* font에대한 설명 */
 .part { 
   width: 800px; height:auto; padding:16px; padding-left: 30px;
   background-color: #fcd;
@@ -25,6 +41,17 @@ ul { width: 100%; height: auto; }
 .fonts_01 li:nth-child(7) {
   font-family: 'Sansita Swashed', 'Black Han Sans', sans-serif;
 }
+.fonts_01 li:nth-child(7) span:nth-of-type(1) {font-weight:300; color:var(--color-white);}
+.fonts_01 li:nth-child(7) span:nth-of-type(2) {font-weight:400; color:var(--color-primary);}
+.fonts_01 li:nth-child(7) span:nth-of-type(3) {font-weight:700; color:var(--color-point);}
+
+.fonts_01 li:nth-child(8) {  font-family: hfb, sans-serif;  text-indent:-20px;}
+.fonts_01 li:nth-child(9) { letter-spacing:-1px; }
+.fonts_01 li:nth-child(9):first-letter { font-family:hfb; color:#f06; font-size:2rem; }
+.fonts_01 li:nth-child(10) { word-spacing:-5px; }
+.fonts_01 li:nth-child(10)::first-line { color:#fff; text-shadow:0 0 5px var(--color-primary); }
+
+
 /**font
   1. font-style 기울기를 설정하는 것으로 normal | italic
   2. font-weight 굵기를 설정하는 것으로 
@@ -39,4 +66,8 @@ ul { width: 100%; height: auto; }
   6. font-family 서체의 종류를 선택하는 기능일때, 우선순위를 명확하게 지정해야한다.
   7. font-face를 이용하여 사용하는 webFont는 
      내 컴퓨터에 저장되어있는 서체 대신, 별도의 관리하는 공간에서 쓰도록 처리된 기술
+  8. text-indent 첫줄 들여쓰기로 -값을 사용하면 왼쪽으로 이동한다.
+  9. letter-spacing 기본은 0 간격을 줄일때는 -값, 넓게할경우는 수치를 높이면 된다.
+  10. word-spacing  기본은 0 간격을 줄일때는 -값, 넓게할경우는 수치를 높이면 된다.
+
 */
