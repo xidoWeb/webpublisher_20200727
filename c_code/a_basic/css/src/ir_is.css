@@ -81,4 +81,19 @@
     .is li:nth-child(10) button { background-position: -1234px -488px;}
     /* .is li:nth-child(10) button { background-position: 100% 100%;} */
 
-    
+    .hidden_wrap a{display: block; width: 100%; height: 100%;}
+    .hidden_wrap a>span{display: block; width: 0; height: 0; overflow: hidden;}
+
+    .is2 li { float:left; width: 78px; height: 77px; margin:10px;}
+    .is2 li>a {
+      background-image: url("../../img/background_exam/ikonate2.png");
+      background-repeat: no-repeat; background-size: auto;  border-radius:10px;}
+      
+    .is2 li>a:hover,
+    .is2 li>a:focus { background-image: url("../../img/background_exam/ikonate2_black.png");}
+
+    .is2 li:nth-child(1) > a { background-position: -266px -11px; }
+    .is2 li:nth-child(2) > a { background-position: -475px -11px; }
+    .is2 li:nth-child(3) > a { background-position: -684px -11px; }
+    .is2 li:nth-child(4) > a { background-position: -371px -325px; }
+    .is2 li:nth-child(5) > a { background-position: -579px -430px; }
