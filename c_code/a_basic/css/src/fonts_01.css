@@ -1,0 +1,20 @@
+/* font_01.css */
+
+.part { 
+  width: 800px; height:auto; padding:16px; padding-left: 30px;
+  background-color: #fcd;
+}
+
+ul { width: 100%; height: auto; }
+.fonts_01 ul li{ list-style:decimal}
+
+.fonts_01 li:nth-child(1) { font-style: italic; }
+.fonts_01 li:nth-child(2) { font-weight:900;  }
+.fonts_01 li:nth-child(3) { font-size:16px;}
+
+/**font
+  1. font-style 기울기를 설정하는 것으로 normal | italic
+  2. font-weight 굵기를 설정하는 것으로 
+    normal(400) | lighter(200) | light(300) | bold(600) | bolder(800) | black(900)... 
+    이지만, 실제로는 normal, bold정도만 가지며 서체 디자인이 굵기를 가지고 있는 상태여야지만 사용가능
+*/
