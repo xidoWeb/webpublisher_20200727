@@ -76,7 +76,6 @@ header,section,article,nav,main,footer,aside,figure { display: block;}
 #sideBox ul li:nth-child(3) a:hover,
 #sideBox ul li:nth-child(3) a:focus {background-position-x: -192px;}
 
-
 /* #viewBox ----------------------------------------------- */
 #viewBox{
   position: relative; float: left; width:730px; height:710px; background-color: #adadad;}
