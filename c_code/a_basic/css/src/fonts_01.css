@@ -5,16 +5,38 @@
   background-color: #fcd;
 }
 
+h3 { 
+  width:300px; height:50px; 
+  line-height:50px; text-align: center;
+  background-color: #fff;}
+
 ul { width: 100%; height: auto; }
 .fonts_01 ul li{ list-style:decimal}
 
 .fonts_01 li:nth-child(1) { font-style: italic; }
 .fonts_01 li:nth-child(2) { font-weight:900;  }
 .fonts_01 li:nth-child(3) { font-size:16px;}
-
+.fonts_01 li:nth-child(4) {
+  background-color: #ff0; line-height:200%; }
+.fonts_01 li:nth-child(5) {
+  font-family:'malgun Gothic', dotum, '돋움', sans-serif;}
+.fonts_01 li:nth-child(6) {
+  font-family:'apple SD gothic','myriad pro', arial, 'malgun Gothic', serif;}
+.fonts_01 li:nth-child(7) {
+  font-family: 'Sansita Swashed', 'Black Han Sans', sans-serif;
+}
 /**font
   1. font-style 기울기를 설정하는 것으로 normal | italic
   2. font-weight 굵기를 설정하는 것으로 
     normal(400) | lighter(200) | light(300) | bold(600) | bolder(800) | black(900)... 
     이지만, 실제로는 normal, bold정도만 가지며 서체 디자인이 굵기를 가지고 있는 상태여야지만 사용가능
+  3. font-size 서체의 크기를 의미 (%, px, vw, vh ...)
+  4. line-height 줄간격을 의미, 첫줄부터적용이되며,   
+     해당높이값의 가운데 배치가 된다.
+  5. font-family 서체의 종류를 입력하며
+     띄어쓰기,특수글자는 "" 감싸서처리 하며 
+     우선순위의 서체를 먼저 작성 후 ','로 구분하여 다음 서체를 선정
+  6. font-family 서체의 종류를 선택하는 기능일때, 우선순위를 명확하게 지정해야한다.
+  7. font-face를 이용하여 사용하는 webFont는 
+     내 컴퓨터에 저장되어있는 서체 대신, 별도의 관리하는 공간에서 쓰도록 처리된 기술
 */
