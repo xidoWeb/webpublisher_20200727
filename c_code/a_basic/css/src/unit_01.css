@@ -1,0 +1,54 @@
+/* unit_01.css */
+:root { font-size:1.5em;}
+
+#wrap {
+  width: 1200px; height:auto; margin:auto; padding:30px; box-sizing: border-box; }
+
+.part {
+  width: 95%; height:300px; 
+  margin-bottom:30px; border-bottom:var(--border-line1);
+  padding:20px; box-sizing: border-box;
+  background-color: #fff; white-space: nowrap;}
+
+.outer { width:160px; height:160px; background-color: #ff7; color:#111;}
+  .inner_01 { background-color: #fa0;}
+  .inner_02 { background-color: #afa;}
+  p { background-color: #f7f;}
+  span { display: block; background-color: #acf;}
+  i { display: block; background-color: #f04;}
+
+/* base px 단위--------------------------------------------------------------- */
+.px_unit .inner_01 { width:80px; height:80px;}
+.px_unit .inner_02 { width:160px; height:160px;}
+.px_unit p { width:80px; height:80px; }
+.px_unit span { width:40px; height:40px; }
+.px_unit i { width:20px; height:20px; }
+
+/* pt 단위 16px == 12pt : (px값 / 16 * 12) ------------------------------------ */
+/* pt단위는 web수치로 사용하지 않는다. */
+.pt_unit .inner_01 { width:60pt; height:60pt;}
+.pt_unit .inner_02 { width:120pt; height:120pt;}
+.pt_unit p { width:60pt; height:60pt; }
+.pt_unit span { width:30pt; height:30pt; }
+.pt_unit i { width:15pt; height:15pt; }
+
+/* percent 단위 부모의 크기를 기준으로 처리--------------------------- */
+.percent_unit .inner_01 { width:50%; height:50%;}
+.percent_unit .inner_02 { width:200%; height:200%;}
+.percent_unit p { width:50%; height:50%; }
+.percent_unit span { width:50%; height:50%; }
+.percent_unit i { width:50%; height:50%; }
+
+/* em 단위 16px == 1em --------------------------------------------------------- */
+.em_unit .inner_01 { width:5em; height:5em;}
+.em_unit .inner_02 { width:10em; height:10em;}
+.em_unit p { width:5em; height:5em; }
+.em_unit span { width:2.5em; height:2.5em; }
+.em_unit i { width:1.25em; height:1.25em; }
+
+/* rem 단위 16px == 1em == 1rem ------------------------------------ */
+.rem_unit .inner_01 { width:5rem; height:5rem;}
+.rem_unit .inner_02 { width:10rem; height:10rem;}
+.rem_unit p { width:5rem; height:5rem; }
+.rem_unit span { width:2.5rem; height:2.5rem; }
+.rem_unit i { width:1.25rem; height:1.25rem; }
