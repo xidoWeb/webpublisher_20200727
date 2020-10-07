@@ -1,0 +1,50 @@
+@import url('https://fonts.googleapis.com/css2?family=Amatic+SC:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Dokdo&display=swap');
+/* @import url('../../fonts/noto_sans/noto_sans.css'); */
+
+@font-face { 
+  font-family: 'lab_digital'; 
+  src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_20-07@1.0/LAB디지털.woff') format('woff'); 
+  font-weight: normal; 
+  font-style: normal; 
+}
+
+/* fonts_02.css */
+
+#wrap { 
+  width: 80%; min-width:700px; height:auto; min-height:400px; 
+  margin:auto; background-color: #ddd;}
+
+  .part {
+    width: 96%; height:auto; 
+    margin:10px auto; padding:30px; box-sizing: border-box; 
+    border:2px solid #777; border-left-width:0; border-right-width:0;
+  }
+  h3 {color:#057;}
+  p { font-size:1.2rem; }
+
+  /* ------------------------------------------------------ */
+  .google_font p { font-family: 'Amatic SC', Dokdo, cursive; }
+  .noonu_font  p { font-family: lab_digital, sans-serif; }
+
+  .notoSansKR_font { font-family:serif; }
+  .notoSansKR_font span { font-family: notoSansKR; }
+
+  /* ------------------------------------------------------ */
+  .other { background-color: #fff;}
+  .other ul { width:100%; height:auto;}
+  .other li { width:200px; height:20px; margin-bottom:5rem; border:var(--border-line1);}
+
+  .other li:nth-child(1) { white-space:nowrap; }
+  .other li:nth-child(2) { word-break:keep-all;}
+  .other li:nth-child(3) { white-space:nowrap; overflow:hidden; text-overflow:ellipsis;}
+  .other li:nth-child(4) { text-transform:capitalize;}
+  .other li:nth-child(5) { width:100%; white-space:nowrap;}
+
+  /* 
+   * text-overflow는 넘치는 영역을 말줄임표시의 여부를 체크하는 기능
+   * 조건: 1. white-space:nowrap;
+           2. 감싸는 영역이 사이즈를 가질것 (block)
+           3. 감싸는 영역을 넘칠경우 숨김 ( overflow:hidden; )
+           4. text-overflow:ellipsis; 
+   */
