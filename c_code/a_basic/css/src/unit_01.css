@@ -1,16 +1,17 @@
 /* unit_01.css */
-:root { font-size:1.5em;}
+:root { font-size:16px; }
 
 #wrap {
   width: 1200px; height:auto; margin:auto; padding:30px; box-sizing: border-box; }
 
 .part {
-  width: 95%; height:300px; 
-  margin-bottom:30px; border-bottom:var(--border-line1);
+  width: 95%; height:600px; 
+  margin-bottom:50px; border-bottom:var(--border-line1);
   padding:20px; box-sizing: border-box;
   background-color: #fff; white-space: nowrap;}
 
-.outer { width:160px; height:160px; background-color: #ff7; color:#111;}
+.outer { width:480px; height:480px; font-size:48px;
+  background-color: #ff7; color:#111;}
   .inner_01 { background-color: #fa0;}
   .inner_02 { background-color: #afa;}
   p { background-color: #f7f;}
@@ -18,37 +19,58 @@
   i { display: block; background-color: #f04;}
 
 /* base px 단위--------------------------------------------------------------- */
-.px_unit .inner_01 { width:80px; height:80px;}
-.px_unit .inner_02 { width:160px; height:160px;}
-.px_unit p { width:80px; height:80px; }
-.px_unit span { width:40px; height:40px; }
-.px_unit i { width:20px; height:20px; }
+.px_unit .inner_01 { width:240px; height:240px; font-size:24px;}
+.px_unit .inner_02 { width:480px; height:480px; font-size:48px;}
+.px_unit p { width:240px; height:240px; font-size:24px;}
+.px_unit span { width:120px; height:120px; font-size:12px;}
+.px_unit i { width:60px; height:60px; font-size:6px;}
 
 /* pt 단위 16px == 12pt : (px값 / 16 * 12) ------------------------------------ */
 /* pt단위는 web수치로 사용하지 않는다. */
-.pt_unit .inner_01 { width:60pt; height:60pt;}
-.pt_unit .inner_02 { width:120pt; height:120pt;}
-.pt_unit p { width:60pt; height:60pt; }
-.pt_unit span { width:30pt; height:30pt; }
-.pt_unit i { width:15pt; height:15pt; }
+.pt_unit .inner_01 { width:180pt; height:180pt; font-size: 18pt;}
+.pt_unit .inner_02 { width:360pt; height:360pt; font-size: 36pt;}
+.pt_unit p { width:180pt; height:180pt; font-size: 18pt;}
+.pt_unit span { width:90pt; height:90pt; font-size: 9pt;}
+.pt_unit i { width:45pt; height:45pt; font-size: 4.5pt;}
 
 /* percent 단위 부모의 크기를 기준으로 처리--------------------------- */
-.percent_unit .inner_01 { width:50%; height:50%;}
-.percent_unit .inner_02 { width:200%; height:200%;}
-.percent_unit p { width:50%; height:50%; }
-.percent_unit span { width:50%; height:50%; }
-.percent_unit i { width:50%; height:50%; }
+.percent_unit .inner_01 { width:50%; height:50%; font-size:50%;}
+.percent_unit .inner_02 { width:200%; height:200%; font-size:200%;}
+.percent_unit p { width:50%; height:50%; font-size:50%;}
+.percent_unit span { width:50%; height:50%; font-size:50%;}
+.percent_unit i { width:50%; height:50%; font-size:50%;}
 
 /* em 단위 16px == 1em --------------------------------------------------------- */
-.em_unit .inner_01 { width:5em; height:5em;}
+/* 1. em단위는 최초의 설정에서 :root값을 기준으로 1em으로 처리되며, 
+   이후는 부모값을 기준으로 1em 으로 처리된다. 
+   2. 박스의 크기기준도 부모의 형태를 기준과 서체의 영향을 받는다.
+   3. 그래서 em을 사용시에는 반드시 서체의 크기와, 박스의 크기비율을 맞춰작업!!
+*/ 
+/* .outer {width:480px; height:480px; font-size:48px;} */
+/* .em_unit .inner_01 { width:5em; height:5em; }
 .em_unit .inner_02 { width:10em; height:10em;}
 .em_unit p { width:5em; height:5em; }
 .em_unit span { width:2.5em; height:2.5em; }
-.em_unit i { width:1.25em; height:1.25em; }
+.em_unit i { width:1.25em; height:1.25em; }  */
+
+.em_unit .inner_01 { width:10em; height:10em; font-size:0.5em;}
+.em_unit .inner_02 { width:10em; height:10em; font-size:2em;}
+.em_unit p         { width:10em; height:10em; font-size:0.5em}
+.em_unit span      { width:10em; height:10em; font-size:0.5em}
+.em_unit i         { width:10em; height:10em; font-size:0.5em} 
 
 /* rem 단위 16px == 1em == 1rem ------------------------------------ */
-.rem_unit .inner_01 { width:5rem; height:5rem;}
-.rem_unit .inner_02 { width:10rem; height:10rem;}
-.rem_unit p { width:5rem; height:5rem; }
-.rem_unit span { width:2.5rem; height:2.5rem; }
-.rem_unit i { width:1.25rem; height:1.25rem; }
+/* 사실 rem은 :root 값을 기준으로 처리 */
+/* :root{font-size: 14px;} */
+.rem_unit .outer {  width:480px; height:480px;}
+@supports (width:30rem){
+  .rem_unit .outer {width:30rem; height:30rem;}
+}
+
+.rem_unit .inner_01 { 
+  width:240px; height:240px; font-size:24px;
+  width:15rem; height:15rem; font-size:1.5rem; }
+.rem_unit .inner_02 { width:30rem; height:30rem; font-size:3rem; }
+.rem_unit p { width:15rem; height:15rem; font-size:1.5rem; }
+.rem_unit span { width:7.5rem; height:7.5rem; font-size: 0.75rem;}
+.rem_unit i { width:3.75rem; height:3.75rem; font-size: 0.375rem;}
