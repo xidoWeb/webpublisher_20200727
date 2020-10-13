@@ -1,0 +1,154 @@
+/* main.css */
+
+/* reset.css */
+* {
+    margin: 0; padding: 0;
+    border: 0; outline: 0;
+    list-style: none;
+    color: inherit;
+    text-decoration: none;}
+
+header, section, article,footer,
+main, nav, aside { display:block; }
+
+/* common.css */
+.hidden_context {
+    display: block; position: absolute; z-index: -1;
+    width: 0; height: 0; overflow: hidden;}
+
+/* design.css*/
+#wrap { width:100%; height: auto; min-height:500px; margin:auto;}
+.head_wrap {
+  width:100%; height:100px; background-color: #ccc;}
+#headBox {width:1200px; height:inherit; margin:auto; }
+
+  h1 {float:left; width:120px; height:100%; background-color: #acf;}
+  #navBox {
+    float:right; width:auto; min-width:400px; height:50px; 
+    margin-right:25px; margin-top:25px;}
+
+  #navBox > ul {width:auto; height:50px;}
+  #navBox > ul > li {
+    float:left; width:100px; height:auto;
+    padding-left:5px; box-sizing: border-box;}
+  #navBox > ul > li >a {
+    border:1px solid #333;
+    display:block; width:100%; height:50px;
+    text-align: center; line-height:50px; }
+  #navBox > ul > li > a:hover,
+  #navBox > ul > li > a:focus { 
+    background-color: #888; color:#fff;}
+
+/*  
+#navBox > ul > li:hover > ol {display: block;}
+*/
+
+  #navBox ol {
+    display: none;
+    width: 100%; height:auto;}
+  #navBox ol > li {
+    width: 100%; height:auto; margin-bottom:3px;}
+  #navBox ol > li > a {
+    display: block; width: 100%; height:30px;
+    text-align:left; text-indent:5px;
+    line-height:30px; font-size:0.875rem;
+    background-color: #fff;}
+
+#navBox ol > li a:focus {
+  background-color: #888; color:#fff}
+
+/*------------------------------*/
+#viewBox {
+width:1200px; height:300px; margin:auto; background-color: #fca;}
+
+/*------------------------------*/
+.content { width:1200px; height:200px; margin:auto;}
+
+.content h2 {
+  width:100px; height:50px;
+  margin-left:25px; background-color: #ccc;
+}
+.content h2 + div {
+  width:100%; height:130px;
+  margin-top:10px;
+  background-color:#fff;
+}
+.content_area {
+  padding:5px; box-sizing: border-box}
+
+.notice {
+  float:left; width:400px; height:100%; background-color:#faf;}
+
+
+.gallery {
+  float:left; width:400px; height:100%; background-color:#ffa;}
+
+
+.banner {
+  float:left; width:400px; height:100%; background-color:#aff;}
+
+.modal_window {
+  position: fixed; top:50%; left:50%; z-index:500;
+  width:800px; height:400px; 
+  margin-left:-400px; margin-top:-200px;
+  padding:20px; box-sizing: border-box; 
+  background-color:#fff; border:1px solid #888; }
+
+.modal_window h3{width: 100%; height: 20px;}
+.modal_window p{width: 100%; height: 300px;}
+.modal_window .close{
+  width: 100px; height:25px; background-color: #0cc; cursor:pointer; float:right;}
+.close span{ 
+  display:inline-block; position:relative;
+  width:15px; height:15px; margin-right:3px;
+  
+  background-color: #fff;}
+.close span:before,
+.close span:after {}
+
+
+.close span:before{
+  content:" "; display:block; position:absolute; 
+  top: 50%; left:50%; 
+  transform:translate(-50%, -50%) rotate(90deg);
+  width:15px; height:2px; border-radius:2px;
+  background-color:#333;}
+
+.close span:after{
+  content:" "; display:block; position:absolute; 
+  top: 50%; left:50%; 
+  transform:translate(-50%, -50%);
+  width:15px; height:2px; border-radius:2px;
+  background-color:#333;}
+
+/*------------------------------*/
+
+.foot_wrap {
+  width:100%; height:100px; background-color:#ccc;}
+#footBox {
+  width:1200px; height:100%; margin:auto;}
+
+#footBox h2 {
+  float:left; width:120px; height:100%; background-color: #acc;}
+address {
+  float:left; width: 960px; height: 100%; background-color: #cac;}
+.sns {
+  float:right; width:120px; height:100%; background-color: #fca;}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
