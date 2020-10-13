@@ -22,13 +22,21 @@ navBox.on('mouseleave', function(){
 });
 
 
+// ------------------------------------------
+// .banner_context를 이벤트처리(클릭)하면, 다음기능(function)을 수행
+var bannerContext = $('.banner_context');
+var modalWin = $('.modal_window');
 
+bannerContext.on('click', function(){
+  // .modal_window 를 나타나게 만들기
+  modalWin.fadeIn();
+});
 
-
-
-
-
-
+// .modal_window 자식인 .close버튼을 클릭시, 다음기능을 수행
+var closeBtn = modalWin.children('.close');
+closeBtn.on('click', function(){
+  modalWin.fadeOut();
+});
 
 
 

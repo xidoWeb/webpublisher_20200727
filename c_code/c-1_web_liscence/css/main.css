@@ -31,7 +31,7 @@ main, nav, aside { display:block; }
   #navBox > ul > li {
     float:left; width:100px; height:auto;
     padding-left:5px; box-sizing: border-box;}
-  #navBox > ul > li >a {
+  #navBox > ul > li > a {
     border:1px solid #333;
     display:block; width:100%; height:50px;
     text-align: center; line-height:50px; }
@@ -87,7 +87,7 @@ width:1200px; height:300px; margin:auto; background-color: #fca;}
 .banner {
   float:left; width:400px; height:100%; background-color:#aff;}
 
-.modal_window {
+.modal_window {display:none;
   position: fixed; top:50%; left:50%; z-index:500;
   width:800px; height:400px; 
   margin-left:-400px; margin-top:-200px;
@@ -98,28 +98,26 @@ width:1200px; height:300px; margin:auto; background-color: #fca;}
 .modal_window p{width: 100%; height: 300px;}
 .modal_window .close{
   width: 100px; height:25px; background-color: #0cc; cursor:pointer; float:right;}
+
 .close span{ 
   display:inline-block; position:relative;
-  width:15px; height:15px; margin-right:3px;
-  
-  background-color: #fff;}
-.close span:before,
-.close span:after {}
+  width:15px; height:15px; margin-right:3px;  
+  transform:rotate(45deg);
+  transition:all 500ms ease;}
 
+.close:hover > span, .close:focus > span { transform:rotate(405deg);}
+
+.close span:before,
+.close span:after {content:" "; display:block; position:absolute; 
+  top: 50%; left:50%; 
+  width:15px; height:2px; border-radius:2px;
+  background-color:#333;}
 
 .close span:before{
-  content:" "; display:block; position:absolute; 
-  top: 50%; left:50%; 
-  transform:translate(-50%, -50%) rotate(90deg);
-  width:15px; height:2px; border-radius:2px;
-  background-color:#333;}
+  transform:translate(-50%, -50%) rotate(90deg);}
 
 .close span:after{
-  content:" "; display:block; position:absolute; 
-  top: 50%; left:50%; 
-  transform:translate(-50%, -50%);
-  width:15px; height:2px; border-radius:2px;
-  background-color:#333;}
+  transform:translate(-50%, -50%);}
 
 /*------------------------------*/
 
