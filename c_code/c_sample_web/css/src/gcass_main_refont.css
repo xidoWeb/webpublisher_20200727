@@ -42,14 +42,17 @@ header,section,article,nav,main,footer,aside,figure { display: block;} */
     border-bottom: 4px solid #fff; box-sizing: border-box;
     text-decoration: none; text-indent:0.5rem; text-transform: uppercase; font-size: 1.5rem;
     line-height:36px; color:#fff;}
-    #navBox ul li:last-child a { border-bottom: 0; border-radius:100%;}
+    #navBox ul li:last-child a { border-bottom: 0; border-radius:100%;
+      background-image: url("../../img/gcass/q_and_a.png");
+      background-image: url("../../img/gcass/q_and_a.svg");
+      background-repeat: no-repeat; background-position: 50% 50%;}
+
     #navBox ul li a i {
       float:right; width: 20px; height: 100%; margin:10px; margin-top:0; 
       line-height:inherit;}
 
       #navBox ul li a:hover,
       #navBox ul li a:focus { color:#fff30d; border-color:#fff30d; outline:0;}
-
 
 /* #sideBox ----------------------------------------------- */
 #sideBox{ position: absolute; top: 0; left: 0; width: 100%; height: 30px; background-color: #757575;}
@@ -65,9 +68,9 @@ header,section,article,nav,main,footer,aside,figure { display: block;} */
 #sideBox ul li:nth-child(1) a {background-color: inherit;}
 #sideBox ul li:nth-child(2) a {background-color: #555;}
 #sideBox ul li:nth-child(3) a {text-align: left; text-indent:0.5rem; color:#333; background-color: #fff30d;}
-#sideBox ul li:nth-child(3) a i {float: right; width: 100px; height: 15px; margin:7px; background-color: #fff;}
+#sideBox ul li:nth-child(3) a i {float: right; width: 100px; height: 15px; margin:7px; }
 #sideBox ul li a:hover,
-#sideBox ul li a:focus {background-color: #fff; color:#333;}
+#sideBox ul li a:focus {color:#333;}
 #sideBox ul li:last-child a:hover,
 #sideBox ul li:last-child a:focus {background-color: #777; color:#fff;}
 
