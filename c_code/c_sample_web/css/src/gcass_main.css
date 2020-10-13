@@ -1,6 +1,6 @@
 @charset "UTF-8";
 /* reset */
-html,body{width:100%; height:100%; margin: 0; padding: 0;}
+/* html,body{width:100%; height:100%; margin: 0; padding: 0;}
 h1,h2,h3,h4,h5,h6,p{margin: 0;padding: 0;}
 ul,ol,dl,dt,dd,li{margin: 0; padding: 0; list-style: none;}
 hr {margin: 0; padding: 0; width: 100%; height: 0; border-bottom:1px solid #777;}
@@ -10,13 +10,13 @@ a:hover,a:focus {text-decoration: underline;}
 table,tr,th,td,thead,tbody,tfoot { 
   margin:0; padding:0; border:1px solid #333; border-spacing:0; border-collapse: collapse;}
 
-header,section,article,nav,main,footer,aside,figure { display: block;}
+header,section,article,nav,main,footer,aside,figure { display: block;} */
 
 /* common.css */
-.hidden_context { display: block; position: absolute; z-index: -1; 
+/* .hidden_context { display: block; position: absolute; z-index: -1; 
   width: 0; height: 0; overflow: hidden;}
 .clearfix:after,
-.clearfix::after{ content:" "; display: block; width: 0; height: 0; clear: both;}
+.clearfix::after{ content:" "; display: block; width: 0; height: 0; clear: both;} */
 
 /* design.css */
 #wrap{position: relative;
@@ -40,13 +40,10 @@ header,section,article,nav,main,footer,aside,figure { display: block;}
   #navBox ul li a {
     display: block; width: 100%; height: 100%;
     border-bottom: 4px solid #fff; box-sizing: border-box;
-    text-decoration: none; text-indent:0.5rem; text-transform: uppercase; font-size: 1.5rem;  font-weight: bold;
-    background-color: #acc;}
+    text-decoration: none; text-indent:0.5rem; text-transform: uppercase; font-size: 1.5rem; background-color: #acc; color:#fff;}
     #navBox ul li:last-child a { border-bottom: 0; border-radius:100%;}
     #navBox ul li a i {
-      float:right; width: 20px; height: 20px;  
-      margin:10px;
-      background-color: #fff;}
+      float:right; width: 20px; height: 20px; margin:10px; }
 
 
 /* #sideBox ----------------------------------------------- */

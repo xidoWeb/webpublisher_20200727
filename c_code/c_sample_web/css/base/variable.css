@@ -1,0 +1,18 @@
+@charset "UTF-8";
+/* variable.css */
+
+:root{
+  --var: 100%;
+
+  --color-white:#fff;
+  --color-black:#333;
+  --color-primary:#f06;
+  --color-font1:#333;
+  --color-point:#f70;
+
+  --size-title1:40px;
+  --size-title2:36px;
+  --size-title3:24px;
+
+  --border-line1:1px solid #333;
+}
