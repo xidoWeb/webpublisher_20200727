@@ -1,0 +1,13 @@
+/* form_01.cs */
+
+#wrap {
+  width: 960px; height: auto; margin:auto; padding:30px 0;
+  background-color: #ddd;}
+
+.form_area {
+  width:95%; height:auto; min-height:300px; margin:auto; background-color: #ccc;
+  box-shadow:0 0 5px rgba(12, 9, 9, 0.5);
+}
+
+form { width: 100%; height:auto; min-height:400px; background-color: #fff;
+       padding:30px;  box-sizing: border-box;}
