@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="ko-KR">
+<head>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="../css/base/reset.css">
+  <!--[if IE]>
+    <script></script>
+  <![endif]-->
+  <title>Document</title>
+  <style></style>
+
+  <script>
+    // 1번째 script 작성하는 위치: 바로동작하지 x, 
+    // 브라우저내용이 실행 후에 동작하도록 추가 내용을 작성해야한다.
+    document.addEventListener('DOMContentLoaded', function(){
+      var wrap = document.getElementById('wrap');
+      wrap.style.backgroundColor = "#caf";
+    });
+  </script>
+</head>
+<body>
+  <div id="wrap">
+    <header id="headBox">
+      <h1><a href="./content.html">javascript</a></h1>
+    </header>
+    <script>
+      // 2번째 script 작성하는 위치
+      // 매번 하나의 요소가 끝날때 마다 작성해야하고, html요소가 아닌 다른언어를 포함하여,
+      // 다소 구분하기 어렵다.
+      var headBox = document.getElementById('headBox');
+      headBox.style.backgroundColor = "#fac";
+    </script>
+    <section id="viewBox">
+      <h2>section</h2>
+    </section>
+    <article id="contentBox"></article>
+  </div>
+
+  <!-- script ============================================= -->
+  <script>
+    // 3번째 script 작성하는 위치
+    // 2번내용처럼 html문서내부에 작성하므로, 매우복잡해 보인다는 단점
+    var viewBox = document.getElementById('viewBox');
+    viewBox.style = "background-color:#777; color:#fff;";
+  </script>
+  <!-- script작성 4번째방법
+       script요소에 src속성을 사용하여 외부의 파일을 불러오는 형식
+       단, 외부에서 불러올 경우에는 script내부에 글을 작성하면 동작하지 않는다. -->
+  <script src="../js/js_insert.js"></script>
+</body>
+</html>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<!-- js_02_dataType.html -->
+<html lang="ko-KR">
+<head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    var a = 2020;
+    var b = 'p20a20';
+    var c = parseInt(b); // 강제로 숫자변환
+    // console.log(a + 1);
+    // console.log(b + 1);
+    // console.log(c + 1);
+    console.log( typeof(a), a );
+    console.log( typeof(b), b );
+    console.log( typeof(c), c );
+
+    var d = String(a);
+    var typeD = typeof(d);
+    console.log( typeD, d ); 
+
+    // partsInt()는 강제로 숫자로 변환하는 기능
+    // 숫자처리가 가능한 부분만 변환을 한다.
+    // 처음부터 숫자로 변환이 되지 않으면 값이 도출되지 않는다.
+    // 값을 도출할 수 없는 숫자가 생성( NaN )
+
+    // ---------------------------------------------------------------------
+  </script>
+</body>
+</html>
