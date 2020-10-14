@@ -13,13 +13,14 @@
     // console.log(a + 1);
     // console.log(b + 1);
     // console.log(c + 1);
-    console.log( typeof(a), a );
-    console.log( typeof(b), b );
-    console.log( typeof(c), c );
+
+    // console.log( typeof(a), a );
+    // console.log( typeof(b), b );
+    // console.log( typeof(c), c );
 
     var d = String(a);
     var typeD = typeof(d);
-    console.log( typeD, d ); 
+    // console.log( typeD, d ); 
 
     // partsInt()는 강제로 숫자로 변환하는 기능
     // 숫자처리가 가능한 부분만 변환을 한다.
@@ -27,6 +28,84 @@
     // 값을 도출할 수 없는 숫자가 생성( NaN )
 
     // ---------------------------------------------------------------------
+    var t = false; 
+    // console.log( typeof(t),  t);
+
+    var n = 0;
+    // console.log( !!n );
+
+    var nn = typeof(n) == 'number';
+    // console.log( nn );
+
+    // !는 반대를 의미 true앞에 !를 사용하면 false
+    // 숫자는 0은 false, 1은 true를 의미하기도 한다.
+    // ==은 같다를 의미하여 비교할때 사용하는 형태
+  // ---------------------------------------------------
+
+  var myName;
+  // console.log( myName ); // 값이 정해진 것이 없으므로 미정의되었다.
+  // console.log( typeof(myName) ); // 형타입 자체가 undefined
+
+  myName = 100;
+  // console.log( myName ); 
+  // console.log( typeof(myName) ); 
+  
+  myName = '문자로 변경하여 대체';
+  // console.log( myName ); 
+  // console.log( typeof(myName) ); 
+
+  myName = null;  
+  // console.log( myName ); 
+  // console.log( typeof(myName) ); 
+  // --------------------------------------------------------
+
+  var arr = ['포도', '사과', '키위'];
+  arr[3] = '딸기';
+  arr[0] = '바나나';
+  // console.log( arr[3] ); 
+  var arr2 = [ 
+              ['귤', '달래', '포도'], 
+              ['오렌지', '키위', '거봉'],
+              1, 
+              100, 
+              null, 
+              false, 
+              ['배고파!']
+            ];
+  // console.log( arr2[0][2] );
+  // ---------------------------------------
+  var obj = {
+             '귤'   : '주황색',
+             '키위' : '녹색',
+             '포도' : '보라색',
+             'my Color' : '#f06',
+             'lunch' : '13:20'
+            };            
+  // console.log( obj['귤'] );
+  // console.log( obj['my Color'] );
+  // console.log( obj.launch );
+
+  // object형태는 순서가 존재하지 않는다.
+// -----------------------------------------------------------------
+// 함수는 형태를 먼저 만들고, 이를 호출하며 호출방법은 같다
+var myFn = function(){};  // 함수 표현식
+function myFn2(){}        // 함수 선언식
+
+var FnTest = function(){
+  var n3 = 7;
+  return n3; // 결과를 도출(반환) 하는 명령어
+};
+var nResult = FnTest();
+var F2 = function(){
+  return (7 + 10 + 8) * 2;
+};
+// console.log( F2() );
+var per = function(rel, base){
+  return rel / base * 100 + ' %'; 
+};
+console.log( per(5, 50) );
+console.log( per(255, 54321) );
+
   </script>
 </body>
 </html>
