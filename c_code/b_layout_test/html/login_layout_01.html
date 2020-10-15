@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<!-- login_layout_01.html -->
+<html lang="ko-KR">
+<head>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="../fonts/fontawesome_5/css/all.css">
+  <link rel="stylesheet" href="../fonts/noto_sans/noto_sans.css">
+
+  <!--[if IE]>
+  <script src="../ie/modernizr-custom.js"></script>
+  <script src="../ie/ie11CustomProperties.js"></script>
+  <[endif]-->
+
+  <link rel="stylesheet" href="../css/base/reset.css">
+  <link rel="stylesheet" href="../css/base/common.css">
+  <link rel="stylesheet" href="../css/src/login_layout_01.css">
+  <title>로그인페이지 만들기1</title>
+ <link rel="shortcut icon" href="../favicon.png" type="image/png">
+ <link rel="apple-touch-icon" href="../favicon.png">
+</head>
+<body>
+  <!-- layout -->
+  <h1>로그인페이지 만들기</h1>
+  <div id="wrap">
+    <form action="#" method="post">
+      <fieldset class="social_login">
+        <legend class="hidden_context">소셜 로그인</legend>
+        <h2>소셜 로그인</h2>
+        <!-- ul>li*3>button[type="button"]>span -->
+        <ul class="hidden_wrap">
+          <li><button type="button">
+            <span>네이버 계정 로그인</span>
+          </button></li>
+          <li><button type="button">
+            <span>페이스북 계정 로그인</span>
+          </button></li>
+          <li><button type="button">
+            <span>구글 계정 로그인</span>
+          </button></li>
+        </ul>
+      </fieldset>
+
+      <fieldset class="member_login">
+        <legend class="hidden_context">멤버 로그인</legend>
+        <div class="user_sign">
+          <label for="userId" class="hidden_context">
+            사용자 아이디 또는 이메일을 입력하세요.</label>
+          <input type="text" id="userId" name="userId" value="" 
+                 placeholder="아이디 / 이메일" />
+
+          <label for="userPw" class="hidden_context">
+            사용자 계정에 따른 비밀번호를 입력하세요.</label>
+          <input type="password" id="userPw" name="userPw" value="" 
+                 placeholder="사용자 비밀번호" />
+        </div>
+        <div class="user_confirm">
+          <!-- <button type="submit"></button> -->
+          <input type="submit" value="로그인">
+        </div>
+      </fieldset>
+
+      <fieldset class="join_and_find">
+        <legend class="hidden_context">가입 및 계정찾기</legend>
+        <a href="#">회원가입</a>
+        <a href="#">아이디 비밀번호 찾기</a>
+      </fieldset>
+    </form>
+  </div>
+  <!-- script -->
+  <script></script>
+</body>
+</html>
