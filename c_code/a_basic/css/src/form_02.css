@@ -13,3 +13,8 @@ form { width: 100%; height:auto; min-height:400px; background-color: #fff;
 
 fieldset { height:auto; min-height:100px; margin-bottom:20px; padding:10px; box-sizing: border-box;
           background-color: #cdf;}
+
+
+/* 1. form내부에 들어가는 input, label.... inline-block
+   2. form내부에 p, hn, dl, ul, ol ... 다 가능~
+*/

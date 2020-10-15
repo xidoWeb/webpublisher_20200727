@@ -13,14 +13,80 @@
       <form action="#" method="POST">
         <fieldset>
           <legend>01. 입력의 기본형</legend>
+          <ul>
+            <li>
+              <label for="userId">ID 입력</label>
+              <input type="text" name="userId" id="userId" 
+                     maxlength="7" placeholder="ID" value="" required="required" />
+            </li>
+            <li>
+              <label for="usePw">비밀번호</label>
+              <input type="password" name="usePw" id="usePw" 
+                     placeholder="비밀번호" maxlength="12" value="" required />
+            </li>
+            <li><label for="searchBar">검색할 내용을 입력하세요.</label>
+              <input type="search" name="searchBar" id="searchBar" value=""
+                     placeholder="검색">
+            </li>
+            <li><label for="inputTel">사용자의 연락처를 입력하세요.</label>
+              <input type="tel" name="inputTel" id="inputTel" value=""
+                     placeholder="연락처">
+            </li>
+            <li><label for="userMail">이메일 주소를 입력하세요.</label>
+              <input type="email" name="userMail" id="userMail" value=""
+                     placeholder="이메일">
+            </li>
+            <li><label for="linkPage">웹페이지 주소를 입력하세요.</label>
+              <input type="url" name="linkPage" id="linkPage" value=""
+                     placeholder="웹 주소">
+            </li>
+            <li><label for="countNum">구입할 수량을 입력하세요</label>
+              <input type="number" name="countNum" id="countNum" value=""
+                     placeholder="수량" min="0" max="20" step="2">
+            </li>
+          </ul>
         </fieldset>
         <!-- ===================================================== -->
         <fieldset>
           <legend>02. 입력의 기본형2 - 구형브라우저에서 제한</legend>
+          <ul>
+            <li>
+              <label for="date">날짜선택</label>
+              <input type="date" name="date" id="date" value="" />
+            </li>
+            <li>
+              <label for="time">시간선택</label>
+              <input type="time" name="time" id="time" value="" />
+            </li>
+            <li>
+              <label for="week">주 선택</label>
+              <input type="week" name="weeek" id="week" value="" />
+            </li>
+          </ul>
         </fieldset>
         <!-- ===================================================== -->
         <fieldset>
           <legend>03. 체크</legend>
+          <h3>선택입력사항</h3>
+          <p>다음중 집에갈 수 있는 교통수단은?</p>
+          <ul>
+            <li>              
+              <input type="checkbox" name="movingType" id="movingType" value="working" />
+              <label for="movingType">도보</label>
+            </li>
+            <li>
+              <input type="checkbox" name="movingType" id="movingType2" value="bycle" />
+              <label for="movingType2">자전거</label>
+            </li>
+            <li>
+              <input type="checkbox" name="movingType" id="movingType3" value="metro" />
+              <label for="movingType3">지하철</label>
+            </li>
+            <li>
+              <input type="checkbox" name="movingType" id="movingType4" value="bus" />
+              <label for="movingType4">버스</label>
+            </li>
+          </ul>
         </fieldset>
         <!-- ===================================================== -->
         <fieldset>
@@ -33,6 +99,7 @@
         <!-- ===================================================== -->
         <fieldset>
           <legend>06. 멀티기능을 가진 형태 및 기타</legend>
+          <button type="submit">확인 및 전송</button>
         </fieldset>
         <!-- ===================================================== -->
         <fieldset>
