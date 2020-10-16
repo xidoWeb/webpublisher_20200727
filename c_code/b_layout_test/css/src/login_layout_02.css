@@ -37,6 +37,13 @@
   .login_info ul>li:last-child{margin-bottom: 0;}
 
   .input_wrap {width: 100%; height:auto; border:1px solid #777; box-sizing:border-box;}
+  .data_narr {display: none;
+    width: 100%; height:auto; margin-top:10px;
+    font-size:0.875rem; font-weight:300; text-indent:0.5rem; }
+
+  .error { border-color:#f22;}
+  .error + .data_narr { display:block; color:#f22;}
+
   .login_info label:first-of-type{ 
     float:left; width:45px; height:48px; 
     border-right:1px solid #777; background-color: #ddd;
@@ -55,7 +62,6 @@
   /* #checkPw:checked + label { background-color: #acf; } */
   #checkPw:checked + label > i:before,
   #checkPw:checked + label > i::before {content:"\f070";}
-
 
   .login_check label { float:left; height:24px; line-height:24px;}
   .login_check p{float:right;  height:24px; line-height:24px; color:#0074e9; }
