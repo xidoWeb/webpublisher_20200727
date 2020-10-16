@@ -33,6 +33,42 @@
       <h2 class="hidden_context">
         로그인 페이지 만들기
       </h2>
+      <form action="#" method="post">
+        <fieldset class="login_info">
+          <legend>로그인 정보 입력</legend>
+          <ul>
+            <li>
+              <div class="input_wrap clearfix">
+                <label for="userId">
+                  <span class="hidden_context">
+                    로그인할 사용자의 아이디 또는 이메일을 입력하세요.</span></label>
+                <input type="text" id="userId" value="" name="userId" 
+                      required placeholder="아이디(이메일)" />
+              </div>
+            </li>
+            <li>
+              <div class="input_wrap clearfix">
+                <label for="userPw">
+                  <span class="hidden_context">
+                    입력한 계정의 비밀번호를 입력하세요.</span></label>
+                <input type="password" id="userPw" value="" name="userPw" 
+                      required placeholder="비밀번호" />
+              </div>
+            </li>
+          </ul>
+        </fieldset>
+        <fieldset class="login_check">
+          <legend>회원 정보 관리</legend>
+        </fieldset>
+        <fieldset class="login_confirm">
+          <legend>회원 로그인 확인</legend>
+        </fieldset>
+      </form>
+      <hr />
+
+      <div class="join_link">
+        <a href="#">회원가입</a>
+      </div>
     </article><!-- // #loginBox -->
 
     <footer id="footBox">
