@@ -1,0 +1,28 @@
+/* log_layout_02.css */
+
+#wrap {
+  width: 580px; height:auto; min-height:300px;
+  margin:auto; padding-top:42px; 
+  background-color: #ccc; }
+
+  /* #headBox======================== */
+  #headBox{ 
+    width:100%; height:54px; margin-bottom:10px;}
+  h1 { 
+    width: 202px; height:100%; margin:auto;}
+  h1 > a {
+    background-image: url("../../img/coupang/logo-coupang.png");
+    background-image: url("../../img/coupang/logo-coupang.svg");
+    background-position: 50% 50%; background-size: 99% auto;}
+
+  /* #loginBox======================== */
+  #loginBox{
+    width:460px; height:auto; min-height:200px;
+    margin:auto; margin-bottom:20px;
+    background-color: #fff;}
+
+  /* #footBox======================== */
+  #footBox{
+    width: 100%; height:auto; min-height:50px;}
+  #footBox > p {
+    width: 100%; height: auto; text-align: center;}

@@ -82,3 +82,5 @@ input::placeholder { color:#fac; }
   }
   .join_and_find a:first-of-type {
     margin-right:15px;  }
+
+    #testCheck:checked + label > i{color:#f07;}
