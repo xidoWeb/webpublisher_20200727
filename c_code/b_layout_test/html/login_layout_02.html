@@ -62,9 +62,27 @@
             </li>
           </ul>
         </fieldset>
-        <fieldset class="login_check">
+        <!-- =========================== -->
+        <fieldset class="login_check clearfix">
           <legend>회원 정보 관리</legend>
+          <input type="checkbox" id="rememberLogin" 
+                 name="" value="remember login" class="hidden_context">
+          <label for="rememberLogin">
+            <i>*</i> 
+            <span class="hidden_context">사용자 계정에 대한</span> 
+            자동로그인 
+            <span class="hidden_context">체크 유무</span> 
+          </label>
+          <p>
+            <a href="#">
+              <span class="hidden_context">계정을 읽어버렸다면</span>
+              아이디(이메일)/비밀번호 찾기
+              <span class="hidden_context">링크를 통해 확인해 주세요.</span>
+              &gt;
+            </a>
+          </p>
         </fieldset>
+        <!-- =========================== -->
         <fieldset class="login_confirm">
           <legend>회원 로그인 확인</legend>
         </fieldset>

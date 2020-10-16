@@ -50,6 +50,8 @@
     float:right; width:46px; height:48px; cursor:pointer; background-color: #fcc; }
   #checkPw:checked + label { background-color: #acf; }
 
+  .login_check label { float:left; height:24px; line-height:24px;}
+  .login_check p{float:right;  height:24px; line-height:24px; color:#0074e9; }
   /* -------------- */
 
   .join_link {
