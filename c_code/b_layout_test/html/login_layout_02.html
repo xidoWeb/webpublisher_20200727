@@ -40,6 +40,7 @@
             <li>
               <div class="input_wrap clearfix">
                 <label for="userId">
+                  <i class="fas fa-envelope"></i>
                   <span class="hidden_context">
                     로그인할 사용자의 아이디 또는 이메일을 입력하세요.</span></label>
                 <input type="text" id="userId" value="" name="userId" 
@@ -49,6 +50,7 @@
             <li>
               <div class="input_wrap clearfix">
                 <label for="userPw">
+                  <i class="fas fa-lock"></i>
                   <span class="hidden_context">
                     입력한 계정의 비밀번호를 입력하세요.</span></label>
                 <input type="password" id="userPw" value="" name="userPw" 
@@ -56,6 +58,7 @@
 
                 <input type="checkbox" id="checkPw" name="checkPw" value="비밀번호 보이게처리 유무" class="hidden_context" />
                 <label for="checkPw"> 
+                  <i class="fas"></i>
                   <span class="hidden_context">비밀번호 보이게처리 유무</span>
                 </label>
               </div>
@@ -68,7 +71,7 @@
           <input type="checkbox" id="rememberLogin" 
                  name="" value="remember login" class="hidden_context">
           <label for="rememberLogin">
-            <i>*</i> 
+            <i class="far"></i>
             <span class="hidden_context">사용자 계정에 대한</span> 
             자동로그인 
             <span class="hidden_context">체크 유무</span> 
@@ -85,6 +88,8 @@
         <!-- =========================== -->
         <fieldset class="login_confirm">
           <legend>회원 로그인 확인</legend>
+          <input type="submit" value="로그 인">
+          <!-- <button type="submit">로그 인</button> -->
         </fieldset>
       </form>
       <hr />

@@ -3,7 +3,7 @@
 #wrap {
   width: 580px; height:auto; min-height:300px;
   margin:auto; padding-top:42px; 
-  background-color: #ccc; }
+  font-family:notoSansKR, sans-serif;}
 
   /* #headBox======================== */
   #headBox{ 
@@ -27,9 +27,7 @@
     margin-bottom:18px; } 
 
   fieldset { 
-    width:100%; height:auto; min-height:20px;
-    margin-bottom:14px;
-    background-color: #fff;}
+    width:100%; height:auto; min-height:20px; margin-bottom:14px;}
   fieldset:last-of-type {margin-bottom: 0;}
 
   .login_info ul{ width: 100%; height:auto; }
@@ -41,17 +39,38 @@
   .input_wrap {width: 100%; height:auto; border:1px solid #777; box-sizing:border-box;}
   .login_info label:first-of-type{ 
     float:left; width:45px; height:48px; 
-    border-right:1px solid #777; background-color: #ddd;}
+    border-right:1px solid #777; background-color: #ddd;
+    text-align: center; line-height: 55px; color:#555; font-size:1.2rem;}
+
   .login_info input:first-of-type {
      float:left; height:48px; border:0; }
   .login_info ul>li:nth-child(1) input{ width:410px; }
   .login_info ul>li:nth-child(2) input{ width:365px; }
   label[for="checkPw"]{ 
-    float:right; width:46px; height:48px; cursor:pointer; background-color: #fcc; }
-  #checkPw:checked + label { background-color: #acf; }
+    float:right; width:46px; height:48px; cursor:pointer; 
+    font-size:1.2rem; line-height:55px; text-align: center; }
+  label[for="checkPw"] > i:before,
+  label[for="checkPw"] > i::before {content:"\f06e";}
+
+  /* #checkPw:checked + label { background-color: #acf; } */
+  #checkPw:checked + label > i:before,
+  #checkPw:checked + label > i::before {content:"\f070";}
+
 
   .login_check label { float:left; height:24px; line-height:24px;}
   .login_check p{float:right;  height:24px; line-height:24px; color:#0074e9; }
+
+  label[for="rememberLogin"] > i:before,
+  label[for="rememberLogin"] > i::before{ content:"\f0c8"; color:#777; }
+  #rememberLogin:checked + label > i:before,
+  #rememberLogin:checked + label > i::before { content:"\f14a"; color:#0074e9; }
+
+
+   .login_confirm > input {
+     width: 100%; height:50px; border-radius:2px;
+     color:#fff; font-weight: 900; font-size:1.125rem;
+     word-spacing:-0.4rem;
+     box-shadow:0 2px 0 #059; background-color: #0074e9;}
   /* -------------- */
 
   .join_link {
