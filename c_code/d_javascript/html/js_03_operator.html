@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<!-- js_03_operator.html -->
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+</head>
+<body>
+  <h1><a href="./content.html">자바스크립트 기초</a></h1>
+  <label for="year">태어난 해</label>
+  <select id="year"></select>
+  <!-- script -->
+  <script src="../js/js_03_operator.js"></script>
+  <script src="http://unpkg.com/jquery"></script>
+  <script>
+    var y = $('#year');
+    var n = 2020;
+    
+    for(; n>1900; n--){
+      y.append('<option value="'+ n +'">'+ n +'</option>');
+    }
+
+  </script>
+</body>
+</html>
