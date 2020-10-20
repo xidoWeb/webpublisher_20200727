@@ -24,7 +24,30 @@
   <div id="wrap">
     <header id="headBox">
       <div class="head_area" role="banner">
-        <h1>서울 디자인 페스티벌</h1>
+        <h1><a href="#"><span class="hidden_context">서울 디자인 페스티벌</span></a></h1>
+        <nav id="gnbBox">
+          <h2 class="hidden_context">global navigation</h2>
+          <!-- ul.title_link>li*6>a+(ul.sub_link>li*4>a) -->
+          <ul class="title_link clearfix">
+            <li><a href="#" class="vertical_center"><span><b>서울디자인페스티벌</b></span></a>
+                <ul class="sub_link">
+                  <li><a href="#">전시개요</a></li>
+                  <li><a href="#">SDF 2020</a></li>
+                  <li><a href="#">지난 전시회</a></li>
+                  <li><a href="#">주최사 소개</a></li>
+                </ul>
+            </li>
+            <li><a href="#">전시구성</a></li>
+            <li><a href="#">참가안내</a></li>
+            <li><a href="#">관람안내</a></li>
+            <li><a href="#">디자인 세미나</a></li>
+            <li><a href="#">뉴스</a></li>
+          </ul>
+        </nav>
+        <nav id="unbBox">
+          <h2 class="hidden_context">utility navigation</h2>
+          <!-- ul.clearfix.hidden_wrap>li*4>a>span -->
+        </nav>
       </div>
       <div class="people_lang_area"></div>
     </header>
@@ -109,6 +132,22 @@
   </div>
 
   <!-- script -->
-  <script></script>
+  <script>
+    // var MyT = function(){
+    //   var time = new Date();
+    //   // console.log( time );
+    //   // var yy = time.getFullYear();
+    //   var hh = time.getHours();
+    //   var mm = time.getMinutes();
+    //   var ss = time.getSeconds();
+    //   var mytime =  hh + ' : ' + mm + ' : ' + ss ;
+    //   return mytime;
+    // };
+
+    // setInterval(function(){  
+    //   var now = MyT();
+    //   console.log(now);
+    //  }, 1000);
+  </script>
 </body>
 </html>
