@@ -1,0 +1,7 @@
+/* sdf_web/a_main_wrap.css */
+
+
+/* #wrap ============================================================= */
+#wrap{
+  position: relative;
+  width:100%; min-width:1200px;min-width:75rem; height:auto; min-height:31.25rem;}

@@ -1,41 +1,7 @@
 /* sdf_web.css */
 
-/* #wrap ============================================================= */
-#wrap{
-  position: relative;
-  width:100%; min-width:75rem; height:auto; min-height:31.25rem;}
-
-/* #headBox ============================================================= */
-#headBox{
-  position: absolute; top: 0; left: 0; z-index:1000;
-  width: 100%; height:8rem; background-color: #aaa;}
-
-/* #viewBox ============================================================= */
-#viewBox{
-  width: 100%; height: 48.4375rem; background-color: #777;}
-
-/* #festivalBox ============================================================= */
-#festivalBox{
-  width:100%; min-width:75rem; max-width:100rem; height:auto; min-height:18.75rem;
-  margin:auto; padding:5.625rem 2.125rem 4.0625rem; box-sizing: border-box;}
-
-/* #cardImageBox ============================================================= */
-#cardImageBox{
-  width: 100%; height:auto; min-height:18.75rem; background-color: #777;}
-
-/* #otherBox ============================================================= */
-#otherBox{
-  width: 75rem; height:auto; min-height:12.5rem; margin:auto; padding-top:2.1875rem; background-color: #999;}
-
-/* #sponsorBox ============================================================= */
-#sponsorBox{
-  width: 100%; min-width:75rem; max-width:100rem; height:auto; min-height:31.25rem;
-  margin:auto; padding-bottom:5rem; background-color: #ccc;}
-
-/* #newsSearBox ============================================================= */
-#newsSearBox{
-  width: 100%; height:15.625rem; background-color: #aaa;}
-
-/* #footBox ============================================================= */
-#footBox{
-  width: 100%; height:25.3125rem; background-color: #e50112;}
+@import url("./sdf_web/a_main_wrap.css");
+@import url("./sdf_web/b_header.css");
+@import url("./sdf_web/c_view_content.css");
+@import url("./sdf_web/d_sponsor.css");
+@import url("./sdf_web/e_footer.css");

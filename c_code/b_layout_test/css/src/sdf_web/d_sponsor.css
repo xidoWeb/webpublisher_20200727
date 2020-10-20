@@ -1,0 +1,10 @@
+/* sdf_web/d_sponsor.css */
+
+/* #otherBox ============================================================= */
+#otherBox{
+  width: 75rem; height:auto; min-height:12.5rem; margin:auto; padding-top:2.1875rem; background-color: #999;}
+
+/* #sponsorBox ============================================================= */
+#sponsorBox{
+  width: 100%; min-width:75rem; max-width:100rem; height:auto; min-height:31.25rem;
+  margin:auto; padding-bottom:5rem; background-color: #ccc;}

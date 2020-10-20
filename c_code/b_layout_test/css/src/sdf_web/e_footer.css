@@ -1,0 +1,9 @@
+/* sdf_web/e_footer.css */
+
+/* #newsSearBox ============================================================= */
+#newsSearchBox{
+  width: 100%; height:15.625rem; background-color: #aaa;}
+
+/* #footBox ============================================================= */
+#footBox{
+  width: 100%; height:25.3125rem; background-color: #e50112;}
