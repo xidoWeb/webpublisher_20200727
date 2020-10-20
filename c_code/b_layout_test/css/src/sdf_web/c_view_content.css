@@ -9,6 +9,19 @@
   width:100%; min-width:75rem; max-width:100rem; height:auto; min-height:18.75rem;
   margin:auto; padding:5.625rem 2.125rem 4.0625rem; box-sizing: border-box;}
 
+  .festival_summary_area{ 
+    float:right; width:65%; min-width:48.75rem; height:22.5rem; background-color:#fa0;}
+  .festival_attach_area{ 
+    float:left; width:22.5%; min-width:16.875rem; height:22.5rem; background-color:#fcf;}
+
 /* #cardImageBox ============================================================= */
 #cardImageBox{
-  width: 100%; height:auto; min-height:18.75rem; background-color: #777;}
+  position: relative;
+  width: 100%; height:auto; min-height:18.75rem; overflow-x: hidden;
+  background-color: #777;}
+
+.card_indicator_area{
+  position: absolute; bottom:3.125rem; left:50%; transform:translateX(-50%);
+  width: 17.1875rem; height: 1.25rem; background-color: #fff;}
+.card_image_area{
+  width: 300%; height:154px; background-color: #f7a;}

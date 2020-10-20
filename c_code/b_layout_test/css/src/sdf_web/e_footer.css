@@ -2,8 +2,34 @@
 
 /* #newsSearBox ============================================================= */
 #newsSearchBox{
-  width: 100%; height:15.625rem; background-color: #aaa;}
+  width: 100%; height:auto; padding-top: 3.9375rem; padding-bottom:4.375rem; background-color: #aaa;}
+  .news_area{
+    width:31.5625rem; height:7.5rem; margin:auto;}
+    #newsSearchBox h2{
+      width: 100%; height: 2.5rem; margin-bottom: 1.6875rem; 
+      text-align: center; font-size:1.5rem; color:#fff; font-weight: 700; line-height:2.5rem;}
+    .search_part{
+      width: 100%; height:54px; padding:2px; box-sizing: border-box;}
+
+    .search_part form,
+    .search_part fieldset{width: 100%; height: 100%;}
+
+      #myEmail{float:left; width:384px; height:100%;
+        border:2px solid #777; border-right:0; box-sizing: border-box;
+        background-color:#373737; cursor:text; color:#fff; font-size: 1.2rem;
+        text-indent:1.2rem;
+        border-top-left-radius:25px; border-bottom-left-radius:25px;}
+      #myEmail::placeholder{color:#aaa;}
+      .search_part input[type="submit"]{float:left; width:116px; height:100%;
+        border:2px solid #777; border-left:0; box-sizing: border-box;
+        background-color: #e50112; color:#fff; cursor: pointer; font-weight: bold;
+        border-top-right-radius:25px; border-bottom-right-radius:25px;}
+        /* border-radius:0 25px 25px 0; */
 
 /* #footBox ============================================================= */
 #footBox{
-  width: 100%; height:25.3125rem; background-color: #e50112;}
+  width: 100%; height:25.3125rem; padding:34px; padding-bottom: 50px; box-sizing: border-box;
+  background-color: #e50112;}
+  .info_area{ float:left; width:240px; height:100%; margin-right:36px;  background-color: #faf;}
+  .address_otherlink_area{ float:left; width:510px; height:100%;  background-color: #faf;}
+  .individual_area{float:right; width:290px; height:100%;  background-color: #faf;}

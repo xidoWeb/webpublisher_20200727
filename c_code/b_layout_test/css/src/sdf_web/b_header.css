@@ -4,4 +4,13 @@
 /* #headBox ============================================================= */
 #headBox{
   position: absolute; top: 0; left: 0; z-index:1000;
-  width: 100%; height:8rem; background-color: #aaa;}
+  width: 100%; height:8rem; padding-top:2.75rem; box-sizing:border-box; background-color: #aaa;}
+
+  .head_area{
+    width: 100%; height:5.25rem; background-color: #000; }
+  h1{}
+  
+  .people_lang_area{
+    position: absolute; top: 0; left: 0;
+    width:100%; height:2.75rem; border-bottom:0.0625rem solid #a4a4a4; box-sizing: border-box;
+    background-color: #fa0;}

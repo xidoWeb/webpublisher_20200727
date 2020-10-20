@@ -2,9 +2,18 @@
 
 /* #otherBox ============================================================= */
 #otherBox{
-  width: 75rem; height:auto; min-height:12.5rem; margin:auto; padding-top:2.1875rem; background-color: #999;}
+  width: 75rem; height:auto; min-height:12.5rem; margin:auto; padding:35px 34px 50px; box-sizing: border-box;
+  background-color: #999;}
+
+.pr_area{
+   float:left; width:35.375rem; height:12.1875rem; background-color: #fff;}
+.pr_list_area{ 
+  float:right; width:32.125rem; height:12.1875rem; background-color: #fff;}
 
 /* #sponsorBox ============================================================= */
 #sponsorBox{
   width: 100%; min-width:75rem; max-width:100rem; height:auto; min-height:31.25rem;
-  margin:auto; padding-bottom:5rem; background-color: #ccc;}
+  margin:auto; padding:0 2.125rem 5rem; box-sizing:border-box; background-color: #ccc;}
+#sponsorBox dl { width: 100%; height: 122px; border-top:1px solid #a4a4a4; }
+#sponsorBox dt { float:left; width:15%; height:100%; margin-right:5%;  background-color: #fff;}
+#sponsorBox dd { float:left; width:80%; height:100%; background-color: #fff;}

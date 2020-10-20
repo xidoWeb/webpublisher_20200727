@@ -35,11 +35,11 @@
     </section>
     <!-- #viewBox -->
 
-    <article id="festivalBox">
+    <article id="festivalBox" class="clearfix">
       <div class="festival_summary_area">
         <h2>제19회 서울페스티벌 일정 내용</h2>
       </div>
-      <div clss="festival_attach_area"></div>
+      <div class="festival_attach_area"></div>
     </article>
     <!-- #festivalBox -->
 
@@ -50,7 +50,7 @@
     </article>
     <!-- // #cardImageBox -->
 
-    <aside id="otherBox">
+    <aside id="otherBox" class="clearfix">
       <div class="pr_area">
         <h2>서울디자인페스티벌과 함께하는 브랜드 기업과 디자이너</h2>
       </div>
@@ -84,7 +84,16 @@
     <article id="newsSearchBox">
       <div class="news_area">
         <h2>함께해요! 뉴스레터 구독하기</h2>
-        <div class="search_part"></div>
+        <div class="search_part">
+          <form action="#" method="post">
+            <fieldset>
+              <legend>뉴스레터 구독 이메일 작성</legend>
+              <label for="myEmail" class="hidden_context">구독할 이메일 주소를 입력하세요.</label>
+              <input type="text" id="myEmail" value="" name="myEmail" placeholder="이메일" />
+              <input type="submit" value="구독하기" />
+            </fieldset>
+          </form>
+        </div>
       </div>
     </article>
     <!-- // #newsSearchBox -->
