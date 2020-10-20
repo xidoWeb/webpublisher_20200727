@@ -1,0 +1,21 @@
+/* multimedia.css */
+
+#wrap {
+  width:100%; min-width:960px; height:auto; min-height:500px;
+  margin:auto; background-color: #ddd;
+}
+
+.part {
+  width:90%; max-width:1600px; height:auto; min-height:100px;
+  margin:auto; margin-bottom:50px; background-color: #acf;
+}
+
+.part div {
+  width:100%; height:auto; border-top:1px solid #777;
+}
+
+.audio_import {height:50px;}
+.video_import {height:500px;}
+
+audio{width: 100%;}
+video{width: 100%;}

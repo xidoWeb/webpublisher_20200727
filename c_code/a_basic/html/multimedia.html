@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<!-- multimedia.html -->
+<html lang="ko-KR">
+<head>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="../fonts/fontawesome/css/all.css">
+  <link rel="stylesheet" href="../fonts/noto_sans/noto_sans.css">
+
+  <!--[if IE]>
+  <script src="../ie/modernizr-custom.js"></script>
+  <script src="../ie/ie11CustomProperties.js"></script>
+  <[endIf]-->
+
+  <link rel="stylesheet" href="../css/base/reset.css">
+  <link rel="stylesheet" href="../css/base/common.css">
+  <link rel="stylesheet" href="../css/src/multimedia.css">
+  <title>Document</title>
+ <link rel="shortcut icon" href="../favicon.png" type="image/png">
+ <link rel="apple-touch-icon" href="../favicon.png">
+</head>
+<body>
+  <!-- layout -->
+  <div id="wrap">
+    <h1><a href="./contents.html">웹기초</a></h1>
+    <h2>멀티미디어 파일 불러오기</h2>
+    <div class="part">
+      <h3>audio</h3>
+      <div class="audio_import">
+        <!-- 웹에서 불러올 수 있는 음성: mp3, ogg, webM -->
+        <audio controls>
+          <source src="../multi/bensound-dubstep.webm" type="audio/webm">
+          <source src="../multi/bensound-dubstep.ogg" type="audio/ogg">
+          <source src="../multi/bensound-dubstep.mp3" type="audio/mp3">
+          <p>현재 사용하고 있는 브라우저는 최신버전이 아닙니다.<br />
+           <a href="http://google.com/chrome">최신브라우저</a>를 설치하여 사용해주세요.</p>
+        </audio>
+      </div>
+    </div>
+    <hr />
+    <div class="part">
+      <h3>video</h3>
+      <div class="video_import"><!-- autoplay -->
+        <video controls muted loop preload poster="../img/icon_02.jpg">
+          <source src="../multi/video.webm" type="video/webm" />
+          <source src="../multi/video.ogg" type="video/ogg" />
+          <source src="../multi/video.mp4" type="video/mp4" />
+          <p>현재 사용하고 있는 브라우저는 최신버전이 아닙니다.<br />
+            <a href="http://google.com/chrome">최신브라우저</a>를 설치하여 사용해주세요.</p>
+        </video>
+      </div>
+    </div>
+  </div>
+
+  <!-- script -->
+  <script></script>
+</body>
+</html>
