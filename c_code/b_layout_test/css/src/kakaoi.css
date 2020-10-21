@@ -1,0 +1,44 @@
+/* kakaoi.css */
+/* 브라우저의 가로값의 넓이를 기준으로 %로 분할하여 사용하는 단위값: vw */
+/** 브라우저 1440크기 기준으로 작성 */
+
+html, body{ height: 100%;}
+
+#wrap{
+  width: 100%; min-width:1440px; 
+  height:100%; min-height:800px; 
+  margin:auto; background-color: #ccc;}
+#headBox{
+  position: fixed; top: 0; left: 0; z-index:1000;
+  width: 100%; height:35px; background-color: #aaa;
+}
+#viewBox{
+  width:100%; 
+  /* height:100%; min-height:600px;  */
+  height:70vw; min-height:700px;
+  margin-bottom:25px; background-color: #ffd200;}
+#smartKakaoBox{
+  width: 100%; /* height:100%; min-height:700px;*/ height:auto;
+  padding:20px; box-sizing: border-box; background-color: #0cf;}
+#smartKakaoBox:after{content:""; display: block; clear: both;}
+
+  .ai_area{ float:left; 
+    width:47.916667vw; /* 690/1440*100=47.916667vw */ 
+    height:29.861111vw; /* 430 / 1440 * 100 = 29.861111vw */
+    min-width:690px; min-height:430px; background-color: #caa;}
+  .hei_area{ float:right; width:47.916667vw; height:29.861111vw;
+    min-width:690px; min-height:430px; background-color: #caa;}
+
+#heiKaKaoBox{
+  width: 100%; height:100%; min-height:700px; margin-bottom:25px;
+  padding:20px; box-sizing: border-box;
+  background-color: #aaa;}
+  .inner_wrap{width: 100%; height: 100%; background-color: #fa0;}
+#sendBox{
+  width: 100%; height: 180px; margin-bottom:45px; 
+  background-color: #acf;}
+#contentBox{
+  width: 100%; height: 350px; margin-bottom:45px; 
+  background-color: #fca;}
+#footBox{
+  width: 100%; height: 130px; background-color: #cca;}
