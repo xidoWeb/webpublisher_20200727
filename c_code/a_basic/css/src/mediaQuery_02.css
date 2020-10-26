@@ -1,0 +1,50 @@
+/* mediaQuery_02.css */
+:root{
+  --color-black:#333;
+  --color-deep-green:#547D77;
+  --color-green:#33B88F;
+}
+
+/* 공통내용 */
+html,body {width: 100%; height: 100%;}
+#wrap { 
+  width: 100%; min-width:15rem; height:auto; min-height:125rem; 
+  background-image:linear-gradient(45deg, #fa0 30%, #3af); }
+
+.headBox_wrap{
+  position: fixed; top: 0; left: 0; right:0; z-index:1000;
+  width: 100%; height:auto; background-color:var(--color-black);}
+
+#headBox {color:#fa0;  
+  width: 100%; max-width:75rem; height:2.5rem; 
+  margin:auto; padding:0.25rem 0.75rem; box-sizing: border-box;}
+/* #headBox::before { 
+  content:" "; display: block; 
+  position:absolute; top:0; left:50%; z-index:-1; transform:translate(-50%);
+  width:100vw; height:inherit; background-color:inherit; } */
+
+  h1{float:left; width:6.25rem; height:100%; background-color:var(--color-deep-green);}
+  #navBox{float:right; width:3.75rem; height:100%; background-color: #fff;}
+
+/* mob_v.css */
+@media screen and (max-width:29.9375rem) {
+  /* 브라우저 320가로폭 기준으로 작업 */
+  #headBox{ height:12.5vw; min-height:2.5rem; padding:1.25vw 3.75vw 1.875vw; }
+  h1{width: 31.25vw;}
+  #navBox{width:18.75vw;}
+}/* // mob_v.css ---------- */
+
+/* mob_h.css */
+@media screen and (min-width:30rem) and (max-width:47.9375rem) {
+  #headBox {height: 3.75rem;}
+}/* // mob_h.css ------------ */
+
+/* tab.css */
+@media screen and (min-width:48rem) and (max-width:59.9375rem) {
+  #headBox {height: 3.75rem;}
+}/* // tab.css ------------ */
+
+/* pc.css */
+@media screen and (min-width:60rem) {
+  #headBox {height: 3.75rem;}
+} /* // pc.css ------------ */
