@@ -2,7 +2,7 @@
 var btnEl = document.getElementsByClassName('btn')[0];
 // console.log(btnEl);
 var btnChildButton = btnEl.children[0];
-console.log(btnChildButton);
+// console.log(btnChildButton);
 
 var resultBox = document.getElementsByClassName('result')[0];
 // console.log(resultBox);
