@@ -1,0 +1,152 @@
+/* transition.css */
+
+#wrap {
+  width: 60rem; height:auto; min-height:30rem;
+  margin:auto; background-color: #dfdfdf;}
+
+  .part {
+    width: 90%; height:400px; margin:auto;
+    border:1px solid #333; box-sizing:border-box;}
+
+.move_01 { 
+  width:200px; height:200px; background-color:#fa0;
+  box-sizing: border-box;
+  border-radius:100%; 
+  transition:all 500ms ease;}
+.move_01:hover {
+  background-color: #07a;
+  color:#fff; font-size: 1.5rem; font-weight: bold;
+  border:10px solid #afc;
+  transition:all 1500ms linear;}
+
+.verticle_center {
+  position:relative; text-align: center;}
+.verticle_center span{
+  position: absolute; top: 50%;
+  display: block; width: 100%; height:0;}
+.verticle_center span u{
+  transform:translateY(-50%);
+  display: block; text-decoration: none;}
+
+.tr_01 {width: 100%; height:auto; background-color: #fff;}
+.tr_01 > li {
+  float:left; width:150px; height:50px;
+  margin:10px;
+  border:1px solid #07f; box-sizing: border-box;
+  border-radius:50px; text-align: center;
+  background-color: #fff;}
+
+.tr_01 > li:nth-child(1){
+  transition-property:background-color, color;
+  transition-duration:500ms;
+  transition-timing-function:ease; }
+
+.tr_01 >li:nth-child(1):hover{
+  background-color:#f74;
+  color:#fff; font-size:2rem;}
+
+/* 
+  :(하나짜리-의사전달행동) - hover, focus, visited, linked, checked
+  ::(두개짜리-처음부터처리된) - before, after, first-letter, first-line, placeholder, maker
+*/
+
+.tr_01 > li:nth-child(2){
+  transition-property:border;
+  transition-duration:300ms; 
+  transition-timing-function: ease;
+}
+
+.tr_01 > li:nth-child(2):hover{
+  border:10px solid #333;
+  background-color: #f9a;
+}
+
+.tr_01 > li:nth-child(3):hover{
+  width:50px;
+  transition-property: width;
+  transition-duration:1000ms;
+  transition-timing-function: linear;}
+
+  .tr_01 > li:nth-child(4):hover{
+    height:200px;
+    transition-property: height;
+    transition-duration:1.5s;
+    transition-timing-function: ease-out;
+  }
+
+  .tr_01 > li:nth-child(5):hover{
+    background-color: #531;
+    width:30px; height:300px;
+    transition-property:background-color, width;
+    transition-duration:2s;
+    transition-timing-function: ease-in;}
+
+    .tr_01 > li:nth-child(6):hover{
+      width:500px; height:200px; 
+      transition-property:width, height;
+      transition-duration:1000ms;
+      transition-timing-function:ease;
+      transition-delay:500ms;
+    }
+
+    .tr_01 > li:nth-child(7):hover{
+      width:500px; height:200px;
+      background-color: khaki;
+      transition:all 500ms ease-in 800ms;
+    }
+
+/* 
+  - 속도를 처리하는 형태를 timing-function;
+    ease: 자연스럽게(약간빨라지다가 조금천천히)
+    ease-in: 점점 빠르게
+    ease-out: 점점 느리게
+    ease-in-out: 점점빨라지다가 후반부에 느려지게
+    linear: 일정한속도
+    cubic-bezier()
+*/
+
+.tr_01 li:last-child:hover{
+  height:300px;
+  /* transition:all 2000ms cubic-bezier(1,1.71,.29,-0.8); */
+  transition:all 2000ms ease;
+}
+
+.box {
+  position: relative;  width:400px; height:500px; margin:20px auto; background-color: #acf;}
+.box span{  position: absolute;   --size1:30px;}
+.box .n_1{
+  top: 0; left: 0;  width:0; height:var(--size1); background-color: #57f;
+  transition:all 500ms linear 1500ms;}
+.box .n_2{
+  top: 0; right: 0;  width: var(--size1); height: 100%; background-color: #f75;}
+.box .n_3{
+  bottom: 0; right: 0;  width: 100%; height:var(--size1); background-color: #75f;}
+.box .n_4{
+  bottom: 0; left: 0;  width:var(--size1); height: 100%; background-color: #775;}
+
+.box:hover .n_1{  width:100%;  transition:all 500ms linear 0ms;}
+
+/* -------------------------------------------- */
+.bg{ 
+  position: relative;
+  width:600px; height:400px; margin:auto; margin-bottom:400px; border:3px solid #057; background-color: #aaf;
+  background-image: url('../../img/background_exam/domenico-loia.jpg');
+  background-repeat: no-repeat; background-size:auto 110%; background-position: 50% 50%;}
+.bg:before{ content:" "; display: block; position: absolute; 
+  width: 100%; height: 100%; background-color: rgba(51,51,51,0);}
+
+.bg > dl{ opacity: 0;
+  position: absolute; z-index:100; top: 50%; transform:translateY(-50%); left:0; 
+  width:100%; height:auto; text-align: center; font-weight: bold; 
+  text-transform: uppercase; color:#fff;}
+  .bg > dt{ tab-size:2.5rem;}
+  .bg > dd{ tab-size:2rem;}
+
+  :root{ --transition: all 1000ms ease; }
+  .bg, 
+  .bg:before, 
+  .bg dl{transition:var(--transition);}
+
+  .bg:hover{  background-size:auto 130%;}
+  .bg:hover:before{ background-color: rgba(51,51,51,0.7);}
+  .bg:hover dl{opacity: 1;}
