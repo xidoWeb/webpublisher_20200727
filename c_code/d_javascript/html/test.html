@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    html,body{margin: 0;}
+    #wrap{
+      width: 400px; height:200px; background-color:#fcf; margin:10px; padding:20px;
+    }
+    .box{width:100px; padding:50px; border:5px solid #aaa; margin:20px;}
+  </style>
+</head>
+<body>
+  <div id="wrap">
+    <div class="box"><a href="#">box</a></div>
+  </div>
+
+  <script>
+    var body = document.querySelector('body');
+    var box = document.querySelector('.box');
+    var borderWidth = box.offsetWidth; // border + padding + width
+    var padWidth = box.clientWidth; // padding + width
+    var marginL = box.clientLeft;
+    var marginR = box.getBoundingClientRect();
+    console.log(marginL, marginR)
+    // var boxWidth = box.getBoundingClientRect();
+    var boxWidth = box.getBoundingClientRect();
+
+    // console.log( borderWidth );
+    // console.log(padWidth);
+    // console.log(boxWidth);
+    // console.log( box.style.margin )
+    var cloneBox = box.cloneNode(true);
+    
+    // body.prepend(cloneBox)
+  </script>
+</body>
+</html>
