@@ -1,0 +1,41 @@
+/* monfee_main.css */
+/* 
+  @import url('./monfee/);
+*/
+
+html::-webkit-scrollbar,
+body::-webkit-scrollbar {display: none;} /* 크롬,사파리 스크롤바제거*/
+html, body {
+  -ms-overflow-style:none;/* ie, edge 스크롤바제거*/
+  scrollbar-width: none; /* firefox스크롤바 제거*/}
+
+
+#wrap {
+  width:100%; min-width:940px; height:auto; min-height:5000px; 
+  margin:auto; background-color: #dfdfdf;}
+
+/* #headBox ---------------------------------------------------------- */
+.els_wrap{width: 100%; height:auto; background-color: #fff;}
+.headBox_wrap {
+  position:fixed; top:0; left:0; z-index:1000; box-shadow:0 3px 5px rgba(0,0,0,0.5); }
+#headBox{width: 940px; height:120px; margin:auto; background-color: #ffa;}
+
+/* #viewBox ---------------------------------------------------------- */
+#viewBox{width: 100%; height:100vh; min-height:800px; background-color: #fa8;}
+
+/* #bestNewsBox ---------------------------------------------------------- */
+#bestNewsBox{width:940px; height:1080px; margin:auto; background-color: #acf;}
+
+/* #issueBox ---------------------------------------------------------- */
+#issueBox{width:100%; height:auto; min-height:1340px;}
+  .issue_text{width:100%; height:860px; background-color: #caa;}
+  .issue_icon{width:100%; max-width:1260px; height:480px; margin:auto; background-color: #aca;}
+
+/* #conBox ---------------------------------------------------------- */
+#conBox{width:100%; height:auto; min-height:1880px;}
+  .content_text{width: 100%; height: 600px; background-color: #add;}
+  .material_icon{width: 100%; height: 200px;background-color: #fdd;}
+  #location{width:100%; height:1080px; background-color: #F1C252;}
+
+/* #footBox ---------------------------------------------------------- */
+#footBox{width:100%; height:396px; background-color: #1CA5D2;}
