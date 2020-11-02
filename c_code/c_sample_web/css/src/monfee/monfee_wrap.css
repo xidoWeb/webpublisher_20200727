@@ -1,0 +1,11 @@
+/* monfee_wrap.css */
+/* #wrap ---------------------------------------- */
+html::-webkit-scrollbar,
+body::-webkit-scrollbar {display: none;} /* 크롬,사파리 스크롤바제거*/
+html, body {
+  -ms-overflow-style:none;/* ie, edge 스크롤바제거*/
+  scrollbar-width: none; /* firefox스크롤바 제거*/}
+
+#wrap {
+  width:100%; min-width:940px; height:auto; min-height:5000px; 
+  margin:auto; background-color: #dfdfdf;}
