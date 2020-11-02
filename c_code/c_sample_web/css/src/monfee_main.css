@@ -15,10 +15,45 @@ html, body {
   margin:auto; background-color: #dfdfdf;}
 
 /* #headBox ---------------------------------------------------------- */
-.els_wrap{width: 100%; height:auto; background-color: #fff;}
+.els_wrap{width: 100%; height:auto; background-color: var(--color-monfee-white);}
 .headBox_wrap {
   position:fixed; top:0; left:0; z-index:1000; box-shadow:0 3px 5px rgba(0,0,0,0.5); }
-#headBox{width: 940px; height:120px; margin:auto; background-color: #ffa;}
+#headBox{position: relative;
+  width: 940px; height:auto; min-height:120px; margin:auto;}
+#headBox::before{ content:" "; display: block; position: absolute; top:0; left:0; z-index:-1;
+  width: 100%; height:120px; background-color:var(--color-monfee-white);}
+
+  h1{ float:left; position:relative; z-index:100; width:220px; height:120px; }
+  h1 a{ 
+    background-image: url('../../img/monfee/h1_logo.png');
+    background-position: 50% 50%;  background-color: var(--color-monfee-primary);}  
+  #navBox{float:right; width: 620px; height:auto;}  
+  #navBox::before{content:" "; display: block; 
+    position: absolute; bottom: 0; right:0; z-index:-2;
+    width: 100%; height:100%; 
+    background-color: rgba(164,51,0, 0.7);}
+  #navBox ul{width: 100%; height:auto;}
+  #navBox ul::before{content:" "; display:block; position: absolute; bottom:25px; left:20px;
+    width: 180px; height: 150px;
+    background-image: url('../../img/monfee/character.svg'); background-size: contain;
+    background-repeat: no-repeat; background-position: 50% 50%; }
+
+  #navBox li{float: left; width: 25%; height:auto;}
+  #navBox dl{width: 100%; height:auto;}
+  #navBox dt{position:relative; width: 100%; height:120px;}
+  #navBox dt>a::after{content:""; display:block;
+    position: absolute; top:50%; margin-top:16px; left:50%; transform:translate(-50%);
+    width:0; height:3px; background-color: var(--color-monfee-primary);
+    transition: all 300ms ease; }
+    #navBox dt>a:hover::after{width:80%;}
+
+  #navBox dt>a{font-size:1.8rem; text-transform:uppercase;
+    display: block; width: 100%; height: 100%; text-align: center; line-height: 120px;}
+  #navBox dd{ width: 100%; height:auto; padding:16px 0;
+    text-align:left; text-indent:32px; color:var(--color-monfee-white);}
+  #navBox dd>a{display: block; 
+    width: 100%; height:auto; padding:5px; margin-bottom: 5px;} 
+
 
 /* #viewBox ---------------------------------------------------------- */
 #viewBox{width: 100%; height:100vh; min-height:800px; background-color: #fa8;}
