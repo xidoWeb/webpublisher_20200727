@@ -2,10 +2,8 @@
  
   @import url('./monfee/monfee_wrap.css');
   @import url('./monfee/monfee_headBox.css');
+  @import url('./monfee/monfee_viewBox.css');
 
-
-/* #viewBox ---------------------------------------------------------- */
-#viewBox{width: 100%; height:100vh; min-height:800px; background-color: #fa8;}
 
 /* #bestNewsBox ---------------------------------------------------------- */
 #bestNewsBox{width:940px; height:1080px; margin:auto; background-color: #acf;}

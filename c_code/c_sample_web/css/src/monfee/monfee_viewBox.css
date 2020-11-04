@@ -1,0 +1,45 @@
+/* monfee/monfee_viewBox.css */
+
+/* #viewBox ---------------------------------------------------------- */
+#viewBox{position:relative; width: 100%; height:100vh; min-height:800px; 
+  padding-top:120px; box-sizing: border-box; background-color: #fa8;}
+  .slide_btn{
+    position: absolute; top:50%; left:50%; z-index:900;
+    transform:translateX(-50%);
+    width:98%; max-width:1600px; height:0; background-color: rgba(51,51,51,0.5);}
+    .slide_btn>button{
+      float:left; width: 85px; height: 175px; 
+      transform:translateY(-50%); background-color: #77a;}
+    .slide_btn>button:first-of-type{ float:right; }
+
+  .slide_indicator{
+    position: absolute; bottom:20px; left:50%; z-index:800;
+    width: 360px; height: 40px; margin-left:90px; padding:5px; border-radius:50px;
+    background-color: var(--color-monfee-deep-gray);}
+  .slide_indicator>ul{ width: 100%; height:auto; }
+  .slide_indicator>ul>li{ 
+    float:left; width:40px; height:40px; margin-right:40px; }
+  .slide_indicator>ul>li:last-child {margin-right: 0; }
+  .slide_indicator a { border-radius:100%; box-sizing: border-box; transform:rotate(-45deg);
+    border-bottom:20px solid rgba(255,255,255,0.3);
+    background-color:var(--color-monfee-light-gray);}
+  .slide_indicator li.action a {background-color:var(--color-monfee-primary);}
+
+  .view_area{position: relative; width:100%; height:100%; background-color: #fff;}
+    .text_part{position: absolute; top: 0; left: 0; z-index:500;
+      width:50%; height:100%; background-color: var(--color-monfee-primary-opacity);}
+    .text_part dl{ position: absolute; top: 20%; right: 50px; width:380px; height:auto;}
+    .text_part dt{ 
+      width: 100%; height:150px; background-image: url('../../../img/monfee/monfee_logo.png');
+      background-repeat: no-repeat; background-position: 50% 50%; background-size: contain;}
+    .text_part dd{ width: 100%; height:auto; font-size:1.2rem; color:#fff;}
+
+    .back_image {position:relative; z-index:100; width:500%; /*  width: 600%; */ height:100%; /* margin-left:-100%; */ background-color: #acd;}
+    .back_image li { 
+      float:left;width: 20%; /*  width:16.666667%; */ height:100%; 
+      font-size:3rem; text-align: right; box-sizing: border-box; padding-top: 100px; padding-right: 50px; color:#fff;}
+    .back_image li.view_01{ background-color: #BCBE49;}
+    .back_image li.view_02{ background-color: #4B584E;}
+    .back_image li.view_03{ background-color: #BC09F1;}
+    .back_image li.view_04{ background-color: #3ACAF3;}
+    .back_image li.view_05{ background-color: #038025;}

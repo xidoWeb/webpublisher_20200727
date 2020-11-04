@@ -7,7 +7,10 @@
   // jQuery
   
   var headBox = $('#headBox');
+  var viewBox = $('#viewBox');
+
   headBox.load('./monfee/headBox.html');
+  viewBox.load('./monfee/viewBox.html');
 
 })(jQuery);
 
