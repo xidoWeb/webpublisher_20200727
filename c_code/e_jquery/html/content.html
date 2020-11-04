@@ -17,6 +17,9 @@
   <title>Document</title>
  <link rel="shortcut icon" href="../favicon.png" type="image/png">
  <link rel="apple-touch-icon" href="../favicon.png">
+ <!-- <style>
+   #wrap{height:1000px; padding:50px;}
+ </style> -->
 </head>
 <body>
   <!-- layout -->
@@ -35,6 +38,18 @@
   </div>
 
   <!-- script -->
-  <script></script>
+  <script src="../js/base/jquery-3.5.1.js"></script>
+  <script>
+    var wrap = $('#wrap');
+    wrap.css({width:'800px', margin:'auto', backgroundColor:'#acc'});
+
+    var head = $('head');
+    head.append('<style></style>');
+    var style = $('style');
+    style.append('#wrap{height:1000px; padding:50px;}');
+    style.append('#wrap::before{ content:"안녕하세요!"; color:#fa0; }');
+
+    
+  </script>
 </body>
 </html>
