@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<!-- jq_01_selector.html -->
+<html lang="ko-KR">
+<head>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="../fonts/fontawesome/css/all.css">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;400;700&display=swap" rel="stylesheet">
+
+  <!--[if IE]>
+  <script src="../ie/modernizr-custom.js"></script>
+  <script src="../ie/ie11CustomProperties.js"></script>
+  <![endif]-->
+
+  <!-- <link rel="stylesheet" href="../css/base/reset.css"> -->
+  <link rel="stylesheet" href="../css/base/common.css">
+  <link rel="stylesheet" href="../css/src/jq_01_selector.css">
+  <title>Document</title>
+ <link rel="shortcut icon" href="../favicon.png" type="image/png">
+ <link rel="apple-touch-icon" href="../favicon.png">
+</head>
+<body>
+  <!-- layout -->
+  <div id="wrap">
+    <h1><a href="./content.html">jQuery 기초</a></h1>
+    <div class="part">
+      <h2>선택자 기본형, 간단한 CSS</h2>
+      <div id="box">가로100, 높이 100, 색상 노란색</div>
+      <div class="box_two">가로 300, 높이 50, 외곽선 하늘색</div>
+      <ul class="list_three">
+        <li>list 목록</li>
+        <li>list 목록</li>
+        <li>list 목록
+          <ol>
+            <li>순서 목록</li>
+            <li>순서 목록</li>
+          </ol>
+        </li>
+      </ul>
+    </div>
+    <div class="part"></div>
+    <div class="part"></div>
+    <div class="part"></div>
+  </div>
+
+  <!-- script -->
+  <script src="../js/base/jquery-3.5.1.js"></script>
+  <script src="../js/base/jquery-ui.js"></script>
+  <script src="../js/src/jq_01_selector.js"></script>
+</body>
+</html>

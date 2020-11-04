@@ -1,0 +1,54 @@
+@charset "UTF-8";
+@import url("./variable.css");
+
+/* reset.css */
+html,body { 
+  width:100%; height:100%;
+  margin: 0; padding: 0; border: 0; 
+  font-family:'Noto Sans KR', Roboto, sans-serif; font-weight: 400;
+  color:#333;}
+
+h1,h2,h3,h4,h5,h6,
+p,pre,blockquote,q,abbr,address,
+ul,ol,li,dl,dt,dd,
+button, img, hr,
+header, nav, section, article, footer, aside, main, figure, figcaption { 
+  margin: 0; padding: 0; border: 0; outline: 0;}
+
+ul,ol,li { list-style:none; }
+table,thead,tbody,tfoot,th,td { 
+  border:1px solid #333; border-spacing: 0; border-collapse: collapse;}
+
+header, nav, section, article, footer, aside, main, figure, figcaption{
+  display: block;
+}
+
+a { text-decoration: none; color:inherit; }
+button { background-color:transparent; cursor: pointer;}
+hr {border:none; border-bottom:1px solid #333;}
+
+a:hover, a:focus,
+button:hover, button:focus { 
+  position: relative; z-index:500; outline:3px solid #f70; }
+
+/* variable 지원여부 파악 */
+@supports (--color-white:#fff) {
+  html,body { color: var(--color-font1); }
+  hr { border-bottom: var(--border-line1); }
+  a:hover, a:focus,
+  button:hover, button:focus {
+    outline:3px solid var(--color-point);
+  }
+}  
+
+/*일반 언어형태
+
+if( text ){ text기능을 수행}else{ text이외의 기능수행 } */
+
+/*css형태
+  일단 text이외의 기능 수행
+
+  @supports (text수행여부확인){
+    수행이가능하면 text기능 수행
+  }
+*/

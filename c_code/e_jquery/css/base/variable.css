@@ -1,0 +1,30 @@
+@charset "UTF-8";
+/* variable.css */
+
+:root{
+  --var: 100%;
+
+  --color-white:#fff;
+  --color-black:#333;
+  --color-primary:#f06;
+  --color-font1:#333;
+  --color-point:#f70;
+
+  --size-title1:40px;
+  --size-title2:36px;
+  --size-title3:24px;
+
+  --border-line1:1px solid #333;
+
+
+  --color-monfee-primary:#aa3300;
+  --color-monfee-primary-opacity:rgba(164,51,0,0.7);
+  --color-monfee-red:#cc0000;
+  --color-monfee-yellow:#ffaf00;
+  --color-monfee-mint:#33dddd;
+  --color-monfee-black:#171717;
+  --color-monfee-deep-gray:#656565;
+  --color-monfee-light-gray:#bbbbbb;
+  --color-monfee-white:#ffffff;
+
+}
