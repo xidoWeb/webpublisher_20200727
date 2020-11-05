@@ -1,5 +1,43 @@
 // monfee_viewBox.js
+
+
+// var count = 0;
+// setTimeout(function(){},시간);
+// setInterval(functino(){},시간);
+// clearInterval(setInterval함수이름);
+
+// var Go = setInterval(function(){
+//   count += 1;
+//   console.log(count);
+//   if(count > 20){
+//     clearInterval( Go );
+//   }
+// },1000);
+
+
+
 (function($){
+/*
+  var count = 0;
+  var Start;
+  var MyCount = function(){
+    Start = setInterval(function(){
+      count += 1;
+      console.log( count );
+    }, 500);
+  };
+
+  MyCount();
+
+  $('h1').on('mouseenter', function(){
+    clearInterval( Start );
+  });
+  $('h1').on('mouseleave', function(){
+    // count = 0;
+    MyCount();
+  });
+*/
+
   var viewBox = $('#viewBox');
   viewBox.css({'overflow':'hidden'});
   var backImg = viewBox.find('.back_image');
