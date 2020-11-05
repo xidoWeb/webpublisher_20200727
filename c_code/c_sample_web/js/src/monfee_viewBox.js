@@ -63,7 +63,10 @@
   var nextSlideBtn = slideBtn.children('button').eq(0); // next버튼
   var prevSlideBtn = slideBtn.children('button').eq(1); // prev버튼
   // console.log(nextSlideBtn , prevSlideBtn);
-  var slideN = 0;
+  var slideN = 0;  // 최초의 값 
+  var timed = 2000;  // 일정시간마다 처리하게하는 시간
+
+// 다음버튼 클릭----------------------------------------------
   nextSlideBtn.on('click', function(e){
     // a, button 요소처럼 이벤트기능이 이미 내장된 요소는 미리 해당기능을 제거할 필요가 있다.
     e.preventDefault();
@@ -87,6 +90,7 @@
     }
   });
 
+// 이전버튼 클릭----------------------------------------------
   prevSlideBtn.on('click', function(e){
     e.preventDefault();
     if( permission ){
@@ -103,7 +107,8 @@
       indiLi.eq(slideN).addClass('action');
     }
   });
-// ---------------------------
+
+// 인디케이터 클릭---------------------------
 indiLi.on('click', function(e){
   e.preventDefault();
   var its = $(this);
@@ -114,7 +119,8 @@ indiLi.on('click', function(e){
   indiLi.eq(slideN).siblings().removeClass('action');
   indiLi.eq(slideN).addClass('action');
 });
-//--------------------------------
+
+// 인디케이터 포커스 처리 --------------------------------
 indiLi.children('a').on('focus', function(e){
   e.preventDefault();
   var its = $(this);
@@ -123,6 +129,45 @@ indiLi.children('a').on('focus', function(e){
   indiLi.eq(slideN).siblings().removeClass('action');
   indiLi.eq(slideN).addClass('action');
 });
+
+// 광고영역 일정시간마다 자동수행/마우스올릴경우 일시정지 ---------------------------
+var startInterval;
+var Start = function(){
+  startInterval = setInterval(function(){
+    //1. trigger() 기능 - 대신처리하는 방아쇠역할
+    // nextSlideBtn.trigger('click');
+
+    // 2. 직접 카운트 처리하여 수행
+    slideN += 1;
+    backImg.stop().animate({'left':slideN * -100 + '%'}, function(){
+      if(slideN >= backLi.length-1){
+        slideN = -1;
+        backImg.stop().css({'left':slideN * -100 + '%'});
+      }      
+    });
+    indiLi.eq(slideN).siblings().removeClass('action');
+    indiLi.eq(slideN).addClass('action');
+  }, timed);
+};
+Start();
+
+var StopSlide = function(){
+  clearInterval( startInterval );
+};
+
+// 1. viewBox 마우스 올리면 일시정지
+// viewBox.on('mouseenter', function(){  StopSlide(); });
+// 2. viewBox 마우스 벗어나면 재실행
+// viewBox.on('mouseleave', function(){  Start(); });
+
+// 1,2번기능 통합
+viewBox.on({
+  'mouseenter': StopSlide,
+  'mouseleave': Start
+});
+
+
+// jQuery End
 })(jQuery);
 
 
