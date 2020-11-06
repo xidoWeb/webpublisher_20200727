@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<!-- jq_03_makeRemove.html -->
+<html lang="ko-KR">
+<head>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="../fonts/fontawesome/css/all.css">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;400;700&display=swap" rel="stylesheet">
+
+  <!--[if IE]>
+  <script src="../ie/modernizr-custom.js"></script>
+  <script src="../ie/ie11CustomProperties.js"></script>
+  <![endif]-->
+
+  <link rel="stylesheet" href="../css/base/reset.css">
+  <link rel="stylesheet" href="../css/base/common.css">
+  <link rel="stylesheet" href="../css/src/jq_03_makeRemove.css">
+  <title>Document</title>
+ <link rel="shortcut icon" href="../favicon.png" type="image/png">
+ <link rel="apple-touch-icon" href="../favicon.png">
+</head>
+<body>
+  <!-- layout -->
+  <div id="wrap">
+    <h1><a href="./content.html">jQuery</a></h1>
+    <hr />
+    <div class="part">
+      <h2>생성</h2>
+      <p class="text">내용을 글자를 바꾸기</p>
+      <p class="html">내용글자 대신 a요소삽입, 주소입력, 내용변경</p>
+      <p class="wrap">감싸는 요소 .box 생성</p>
+      <div class="preto"></div>
+      <p class="prepend">내부에 앞에 span요소 삽입</p>
+      <p class="append">내부에 뒤에 span요소 삽입</p>
+      <p class="context"><span>p내부에 a를 생성후 span을 삽입</span></p>
+      <p class="before">현재 요소 이전에 div를생성</p>
+      <p class="after" title="말풍선 만들기">현재 요소 다음에 div를생성</p>
+    </div>
+    <div class="fix">
+      스크롤처리시 상단에 고정하기!
+    </div>
+  </div>
+
+  <!-- script -->
+  <script src="../js/base/jquery-3.5.1.js"></script>
+  <script src="../js/base/jquery-ui.js"></script>
+  <script src="../js/src/jq_03_makeRemove.js"></script>
+  <script src="../js/src/jq_03-1_scroll.js"></script>
+</body>
+</html>

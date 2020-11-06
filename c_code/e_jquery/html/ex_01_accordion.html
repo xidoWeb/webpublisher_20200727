@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<!-- ex_01_accordion.html -->
+<html lang="ko-KR">
+<head>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="../fonts/fontawesome/css/all.css">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;400;700&display=swap" rel="stylesheet">
+
+  <!--[if IE]>
+  <script src="../ie/modernizr-custom.js"></script>
+  <script src="../ie/ie11CustomProperties.js"></script>
+  <![endif]-->
+
+  <link rel="stylesheet" href="../css/base/reset.css">
+  <link rel="stylesheet" href="../css/base/common.css">
+  <link rel="stylesheet" href="../css/src/ex_01_accordion.css">
+  <title>Document</title>
+ <link rel="shortcut icon" href="../favicon.png" type="image/png">
+ <link rel="apple-touch-icon" href="../favicon.png">
+</head>
+<body>
+  <!-- layout -->
+  <div id="wrap">
+    <h1><a href="./content.html">jQuery</a></h1>
+    <div class="part">
+      <h2>아코디언메뉴 세로형 만들기</h2>
+      <div class="accordion_01">
+        <dl>
+          <dt>
+            <button type="button">
+              아코디언 제목 01 
+              <i class="fas fa-arrow-circle-down"></i>
+            </button>
+          </dt>
+          <dd>내용 01 을 담는곳</dd>
+        </dl>
+        <dl>
+          <dt><button type="button">아코디언 제목 02 <i class="fas fa-arrow-circle-down"></i></button></dt>
+          <dd>내용을 01 담는곳</dd>
+          <dd>내용을 02 담는곳</dd>
+        </dl>
+        <dl>
+          <dt><button type="button">아코디언 제목 03 <i class="fas fa-arrow-circle-down"></i></button></dt>
+          <dd>내용을 01 담는곳</dd>
+          <dd>내용을 02 담는곳</dd>
+          <dd>내용을 03 담는곳</dd>
+        </dl>
+        <dl>
+          <dt><button type="button">아코디언 제목 04 <i class="fas fa-arrow-circle-down"></i></button></dt>
+          <dd>내용을 01 담는곳</dd>
+        </dl>
+      </div>
+    </div>
+  </div>
+
+  <!-- script -->
+  <script src="../js/base/jquery-3.5.1.js"></script>
+  <script src="../js/base/jquery-ui.js"></script>
+  <script src="../js/src/ex_01_accordion.js"></script>
+</body>
+</html>
