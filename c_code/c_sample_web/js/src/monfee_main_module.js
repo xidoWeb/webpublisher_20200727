@@ -9,10 +9,14 @@
   var headBox = $('#headBox');
   var viewBox = $('#viewBox');
   var bestNewsBox = $('#bestNewsBox');
+  var issueBox = $('#issueBox');
 
   headBox.load('./monfee/headBox.html');
   viewBox.load('./monfee/viewBox.html');
   bestNewsBox.append('<script src="../js/src/monfee_bestNewsBox.js"></script>');
+  issueBox.load('./monfee/issueBox.html', function(){
+    $(this).append('<script src="../js/src/monfee_issueBox.js"></script>');
+  });
 
 })(jQuery);
 

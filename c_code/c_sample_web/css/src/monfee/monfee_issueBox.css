@@ -1,0 +1,48 @@
+/* monfee_issueBox.css */
+
+
+/* #issueBox ---------------------------------------------------------- */
+#issueBox{width:100%; height:auto; min-height:1340px;}
+  .issue_text{position:relative; width:100%; height:auto; box-sizing: border-box; 
+    padding-top:265px; padding-bottom:75px;
+    background-image: url("../../../img/monfee/issueBanner/issue_banner_02.png"); 
+    background-repeat: no-repeat; background-position:50% 50%;
+    background-size: cover;}
+
+  .issue_indicator{
+    position: absolute; bottom:90px; right:120px;
+    width:250px; height:36px; }
+    .auto_slide_btn{ float:right; width:75px; height:100%; }
+    .auto_slide_btn>button{ width:34px; height:100%; 
+      text-align: center; font-size:1.875rem; color:var(--color-monfee-white);}
+    .auto_slide_btn>button.fa-play{font-size:1.5rem;}
+    .auto_slide_btn>button.action{color:var(--color-monfee-primary);}
+
+    .check_indi{ float:left; width:175px; height:100%; 
+      padding-top:3px; box-sizing: border-box;}
+    .check_indi li{
+      float:left; width:38px; height:30px; padding:0 4px; box-sizing: border-box;}
+    .check_indi li a{ border-radius:40px; background-color:var(--color-monfee-white);}
+    .check_indi li.action a{background-color: var(--color-monfee-primary);}
+
+  .issue_text_area{width:87.3vw; height:auto; min-height:200px; 
+    margin:auto; padding:60px 3vw;
+    background-color:var(--color-monfee-mint-opacity);}
+    .issue_text_area .issue_wrap{overflow:hidden;  width: 100%; height:auto;}
+    .issue_text_area ul{width: 400%; height:auto;}
+    .issue_text_area li{float:left; width:25%; height:auto; min-height:200px;}
+      .issue_text_area dl{width: 100%; height:auto;}
+      .issue_text_area dt{font-weight: bold; color:var(--color-monfee-white);
+        font-size:1.8rem; text-decoration: underline; margin-bottom:0.7rem;}
+      .issue_text_area dd{
+        margin-bottom:1rem; font-size:1rem; color:var(--color-monfee-white);}
+      .issue_text_area dd:last-of-type{
+        width:150px; height:40px; margin-bottom:0; color:#fff; font-weight: bold;}      
+      .issue_text_area a{ 
+        display: block; border-radius:0.3rem;
+        width: 100%; height: 100%; line-height:40px; text-align: center;
+        background-color:var(--color-monfee-red);}
+
+  /* ----------------------------- */
+  .issue_icon{width:100%; max-width:1260px; height:480px; margin:auto; background-color: #aca;}
+
