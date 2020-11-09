@@ -8,4 +8,6 @@ html, body {
 
 #wrap {
   width:100%; min-width:940px; height:auto; min-height:5000px; 
-  margin:auto; background-color: #dfdfdf;}
+  margin:auto; 
+  /* background-color: #dfdfdf; */
+}
