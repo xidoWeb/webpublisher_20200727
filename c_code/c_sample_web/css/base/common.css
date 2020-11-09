@@ -14,6 +14,7 @@
 .hidden_wrap button>span { 
   display: block; width: 0; height: 0; overflow: hidden;}
 
+.clearfix{width: 100%; height: auto;}
 .clearfix:after,
 .clearfix::after {content:" "; display: block; clear: both; }
 

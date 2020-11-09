@@ -8,9 +8,11 @@
   
   var headBox = $('#headBox');
   var viewBox = $('#viewBox');
+  var bestNewsBox = $('#bestNewsBox');
 
   headBox.load('./monfee/headBox.html');
   viewBox.load('./monfee/viewBox.html');
+  bestNewsBox.append('<script src="../js/src/monfee_bestNewsBox.js"></script>');
 
 })(jQuery);
 

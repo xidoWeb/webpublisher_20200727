@@ -3,10 +3,10 @@
   @import url('./monfee/monfee_wrap.css');
   @import url('./monfee/monfee_headBox.css');
   @import url('./monfee/monfee_viewBox.css');
+  @import url('./monfee/monfee_bestNewsBox.css');
 
 
-/* #bestNewsBox ---------------------------------------------------------- */
-#bestNewsBox{width:940px; height:1080px; margin:auto; background-color: #acf;}
+
 
 /* #issueBox ---------------------------------------------------------- */
 #issueBox{width:100%; height:auto; min-height:1340px;}
