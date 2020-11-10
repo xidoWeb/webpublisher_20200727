@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<!-- ex_02_slideBtnBanner.html -->
+<html lang="ko-KR">
+<head>
+  <meta charset="UTF-8">
+<!-- font -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="../fonts/fontawesome/css/all.css">
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;400;700&display=swap" rel="stylesheet">
+
+<!-- IE -->
+<!--[if IE]>
+<script src="../ie/modernizr-custom.js"></script>
+<script src="../ie/ie11CustomProperties.js"></script>
+<![endif]-->
+
+<!-- css -->
+  <link rel="stylesheet" href="../css/base/reset.css">
+  <link rel="stylesheet" href="../css/base/common.css">
+  <link rel="stylesheet" href="../css/src/ex_02_slideBtnBanner.css">
+
+<!-- favicon -->
+  <link rel="apple-touch-icon" href="../favicon.png">
+  <link rel="shortcut icon" href="../favicon.png" type="image/png">
+  <title>jQuery-slidebanner만들기</title>
+</head>
+<body>
+  <!-- layout -->
+<div id="wrap">
+  <h1><a href="./">jQuery</a></h1>
+
+  <hr />
+  <div class="part slide_01">
+    <h2>좌,우 슬라이드 배너 만들기</h2>
+    <div class="slide_btn">
+      <button type="button" class="next"><span class="hidden_context">다음내용</span>
+        <i class="fas fa-chevron-circle-right"></i></button>
+      <button type="button" class="prev"><span class="hidden_context">이전내용</span>
+        <i class="fas fa-chevron-circle-left"></i></button>
+    </div>
+    <div class="slide_wrap">
+      <ul>
+        <li class="cake_01"><a href="#">상품명_01</a></li>
+        <li class="cake_02"><a href="#">상품명_02</a></li>
+        <li class="cake_03"><a href="#">상품명_03</a></li>
+        <li class="cake_04"><a href="#">상품명_04</a></li>
+        <li class="cake_05"><a href="#">상품명_05</a></li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+  <!-- script -->
+  <script src="../js/base/jquery-3.5.1.js"></script>
+  <script src="../js/base/jquery-ui.js"></script>
+  <script src="../js/src/ex_02_slideBtnBanner.js"></script>
+</body>
+</html>

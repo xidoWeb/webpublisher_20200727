@@ -1,0 +1,32 @@
+/* ex_02_slideBtnBanner.css */
+
+#wrap{ 
+  width: 60rem; height:auto; min-height:500px;
+  margin:auto; background-color: #dfdfdf;}
+
+   .part{position:relative;
+     width: 400px; height:auto; margin:auto;
+     padding:0.5rem; background-color: #fac;}
+
+    .slide_btn {
+      position: absolute; top:50%; left:50%; transform:translate(-50%);
+      width: 480px; height: 0;}
+      .slide_btn > button {
+        float:left; width:30px; height:30px; font-size:30px; line-height:30px; text-align: center;
+        transform:translateY(-50%);}
+      .slide_btn > button.next{float:right;}
+
+    .slide_wrap { 
+      width:400px; height:300px; border:1px solid #333;}
+      .slide_wrap ul {
+        width:500%; height:100%;}
+      .slide_wrap li {
+        float:left; width:20%; height:100%;}
+      .slide_wrap a{ 
+        background-repeat: no-repeat; background-position: 50% 50%; background-size: contain;}
+
+        .cake_01 > a{ background-image: url("../../img/cake/tj_minicake_001.jpg");}
+        .cake_02 > a{ background-image: url("../../img/cake/tj_minicake_002.jpg");}
+        .cake_03 > a{ background-image: url("../../img/cake/tj_minicake_003.jpg");}
+        .cake_04 > a{ background-image: url("../../img/cake/tj_minicake_004.jpg");}
+        .cake_05 > a{ background-image: url("../../img/cake/tj_minicake_005.jpg");}
