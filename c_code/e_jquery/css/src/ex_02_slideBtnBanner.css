@@ -16,17 +16,21 @@
         transform:translateY(-50%);}
       .slide_btn > button.next{float:right;}
 
-    .slide_wrap { 
+    .slide_wrap { /* overflow: hidden; */
       width:400px; height:300px; border:1px solid #333;}
       .slide_wrap ul {
         width:500%; height:100%;}
       .slide_wrap li {
-        float:left; width:20%; height:100%;}
+        float:left; width:20%; height:100%; background-color: #fff;
+        background-repeat: no-repeat; background-position: 50% 20%; background-size:50% auto;
+        padding-top:220px; box-sizing: border-box; border-right:1px solid #333; 
+        text-align: center;}
       .slide_wrap a{ 
-        background-repeat: no-repeat; background-position: 50% 50%; background-size: contain;}
+        padding:0.3rem 1.5rem; border-radius:2rem;
+        text-shadow:0.05rem 0.05rem 0 #333; color:#fff; background-color: #f07; }
 
-        .cake_01 > a{ background-image: url("../../img/cake/tj_minicake_001.jpg");}
-        .cake_02 > a{ background-image: url("../../img/cake/tj_minicake_002.jpg");}
-        .cake_03 > a{ background-image: url("../../img/cake/tj_minicake_003.jpg");}
-        .cake_04 > a{ background-image: url("../../img/cake/tj_minicake_004.jpg");}
-        .cake_05 > a{ background-image: url("../../img/cake/tj_minicake_005.jpg");}
+        .cake_01 { background-image: url("../../img/cake/tj_minicake_001.jpg");}
+        .cake_02 { background-image: url("../../img/cake/tj_minicake_002.jpg");}
+        .cake_03 { background-image: url("../../img/cake/tj_minicake_003.jpg");}
+        .cake_04 { background-image: url("../../img/cake/tj_minicake_004.jpg");}
+        .cake_05 { background-image: url("../../img/cake/tj_minicake_005.jpg");}
