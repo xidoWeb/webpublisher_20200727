@@ -20,30 +20,54 @@ var re_s_01_li = s_01_Ul.children('li');
 s_01_Ul.css({ 'width': re_s_01_li.length *  100 +'%', 'position':'relative', 'left':'-100%' });
 re_s_01_li.css({ 'width': 100 / re_s_01_li.length + '%'});
 
-//공통변수
+//공통변수, 공통허용기능
 var slideN = 0; 
+var permission = true;
+var timed = 500;
 // button 클릭시 해당 요소 파악하기
 
 // 1. 각각의 버튼을 분리하여, 따로따로 처리하는 방법
-/*
+// 다음내용 버튼 클릭
+
 s_01_btn.children('.next').on('click', function(e){
   e.preventDefault();
-  var it = $(this);
-  slideN += 1;
-  s_01_Ul.animate({marginLeft:slideN * -100 + '%'}, function(){
+  if(permission){
+    permission = false;
     if(slideN >= before_s_01_Li.length -1){ 
       slideN = -1; 
       s_01_Ul.css({marginLeft:slideN * -100 + '%'});
     }
-  });
+    slideN += 1;
+    s_01_Ul.stop().animate({marginLeft:slideN * -100 + '%'}, function(){
+      setTimeout(function(){
+        permission = true;
+      }, timed);
+    });
+  }// if(permission)End
 });
-*/
-/*
-s_01_btn.children('.prev').on('click', function(e){});
-*/
+
+// 이전내용 버튼 클릭
+s_01_btn.children('.prev').on('click', function(e){
+  e.preventDefault();
+  if(permission){
+    permission = false;
+    slideN -= 1;
+    s_01_Ul.stop().animate({marginLeft:slideN * -100 + '%'},function(){
+      if(slideN <= -1){ 
+        slideN = before_s_01_Li.length -1; 
+        s_01_Ul.css({marginLeft:slideN * -100 + '%'});
+      }
+      setTimeout(function(){
+        permission = true;
+      }, timed);
+    });
+  } // if(permission)End
+});
+
+
 
 // 2. 동일한 역할을 하는 버튼을 묶어서 그 기능에따라 처리하도록 하는 방법
-
+/*
 s_01_button.on('click', function(e){
   e.preventDefault();
   var it = $(this);
@@ -51,23 +75,26 @@ s_01_button.on('click', function(e){
 
   if(itClass === 'next'){
     // 다음버튼 클릭시
-    slideN += 1;
-    s_01_Ul.animate({marginLeft:slideN * -100 + '%'}, function(){
-      if(slideN >= before_s_01_Li.length -1){ 
-        slideN = -1; 
-        s_01_Ul.css({marginLeft:slideN * -100 + '%'});
-      }
-    });
+    if(slideN >= before_s_01_Li.length -1){ 
+      slideN = -1; 
+      s_01_Ul.css({marginLeft:slideN * -100 + '%'});
+    }
 
+    slideN += 1;
+    s_01_Ul.animate({marginLeft:slideN * -100 + '%'}, function(){});
 
   }else if(itClass === 'prev'){
     // 이전버튼 클릭시
-    slideN -= 1;
-    if(slideN <= -1){ slideN = before_s_01_Li.length -1; }
+     slideN -= 1;
+    s_01_Ul.animate({marginLeft:slideN * -100 + '%'},function(){
+      if(slideN <= -1){ 
+        slideN = before_s_01_Li.length -1; 
+      }
+      s_01_Ul.css({marginLeft:slideN * -100 + '%'});
+    });
   }
-
-  console.log(slideN);
 });
+*/
 
 
 // jQuery end-----------------------------

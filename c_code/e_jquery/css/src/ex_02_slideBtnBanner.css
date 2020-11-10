@@ -16,7 +16,7 @@
         transform:translateY(-50%);}
       .slide_btn > button.next{float:right;}
 
-    .slide_wrap { /* overflow: hidden; */
+    .slide_wrap {  overflow: hidden; 
       width:400px; height:300px; border:1px solid #333;}
       .slide_wrap ul {
         width:500%; height:100%;}
