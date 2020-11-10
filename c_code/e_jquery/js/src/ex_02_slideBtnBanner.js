@@ -28,7 +28,7 @@ var timed = 500;
 
 // 1. 각각의 버튼을 분리하여, 따로따로 처리하는 방법
 // 다음내용 버튼 클릭
-
+/*
 s_01_btn.children('.next').on('click', function(e){
   e.preventDefault();
   if(permission){
@@ -41,7 +41,7 @@ s_01_btn.children('.next').on('click', function(e){
     s_01_Ul.stop().animate({marginLeft:slideN * -100 + '%'}, function(){
       setTimeout(function(){
         permission = true;
-      }, timed);
+      }, timed/5);
     });
   }// if(permission)End
 });
@@ -59,42 +59,53 @@ s_01_btn.children('.prev').on('click', function(e){
       }
       setTimeout(function(){
         permission = true;
-      }, timed);
+      }, timed/5);
     });
   } // if(permission)End
 });
-
+*/
 
 
 // 2. 동일한 역할을 하는 버튼을 묶어서 그 기능에따라 처리하도록 하는 방법
-/*
+
 s_01_button.on('click', function(e){
   e.preventDefault();
-  var it = $(this);
-  var itClass = it.attr('class');
-
-  if(itClass === 'next'){
-    // 다음버튼 클릭시
-    if(slideN >= before_s_01_Li.length -1){ 
-      slideN = -1; 
-      s_01_Ul.css({marginLeft:slideN * -100 + '%'});
-    }
-
-    slideN += 1;
-    s_01_Ul.animate({marginLeft:slideN * -100 + '%'}, function(){});
-
-  }else if(itClass === 'prev'){
-    // 이전버튼 클릭시
-     slideN -= 1;
-    s_01_Ul.animate({marginLeft:slideN * -100 + '%'},function(){
-      if(slideN <= -1){ 
-        slideN = before_s_01_Li.length -1; 
+  if(permission){
+    permission = false;
+    var it = $(this);
+    var itClass = it.attr('class');
+    if(itClass === 'next'){
+      // 다음버튼 클릭시
+      if(slideN >= before_s_01_Li.length -1){ 
+        slideN = -1; 
+        s_01_Ul.css({marginLeft:slideN * -100 + '%'});
       }
-      s_01_Ul.css({marginLeft:slideN * -100 + '%'});
+      slideN += 1;
+      // s_01_Ul.animate({marginLeft:slideN * -100 + '%'}, function(){});
+    }else if(itClass === 'prev'){
+      // 이전버튼 클릭시
+      slideN -= 1;
+      // s_01_Ul.animate({marginLeft:slideN * -100 + '%'},function(){
+      //   if(slideN <= -1){ 
+      //     slideN = before_s_01_Li.length -1; 
+      //   }
+      //   s_01_Ul.css({marginLeft:slideN * -100 + '%'});
+      // });
+    }// else if(itClass === 'prev') End ----------------
+
+    // 통합기능
+    s_01_Ul.animate({marginLeft:slideN * -100 + '%'}, function(){
+      if(slideN <= -1){ 
+          slideN = before_s_01_Li.length -1; 
+          s_01_Ul.css({marginLeft:slideN * -100 + '%'});
+        }
+      setTimeout(function(){
+        permission = true;
+      }, timed/5);
     });
-  }
+
+  }// if(permission) End -------------------
 });
-*/
 
 
 // jQuery end-----------------------------
