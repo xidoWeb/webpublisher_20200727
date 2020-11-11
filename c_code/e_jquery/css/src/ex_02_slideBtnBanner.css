@@ -2,7 +2,7 @@
 
 #wrap{ 
   width: 60rem; height:auto; min-height:500px;
-  margin:auto; background-color: #dfdfdf;}
+  margin:auto; margin-bottom:2000px; background-color: #dfdfdf;}
 
    .part{position:relative;
      width: 400px; height:auto; margin:auto; margin-bottom:2rem;
@@ -16,15 +16,17 @@
         transform:translateY(-50%);}
       .slide_btn > button.next{float:right;}
 
-    .slide_wrap {  /* overflow: hidden; */
+    .slide_wrap {  overflow: hidden;
       width:400px; height:300px; border:1px solid #333;}
       .horizontal_slide ul {
         width:500%; height:100%;}
-      .horizontal_slide li {
-        float:left; width:20%; height:100%; background-color: #fff;
+      .slide_wrap li {
+        height:100%; background-color: #fff;
         background-repeat: no-repeat; background-position: 50% 20%; background-size:50% auto;
         padding-top:220px; box-sizing: border-box; border-right:1px solid #333; 
         text-align: center;}
+
+      .horizontal_slide li {float:left; width:20%; }
       .slide_wrap a{ 
         padding:0.3rem 1.5rem; border-radius:2rem;
         text-shadow:0.05rem 0.05rem 0 #333; color:#fff; background-color: #f07; }
@@ -47,9 +49,17 @@
           position:relative; z-index:50; width: 100%; height: 100%;}
         .index_slide li{
           /* display: none; */
-          position: absolute; top: 0; left: 0;
-          width: 100%; height: 100%; background-color: #fff;
-          background-repeat: no-repeat; background-position: 50% 20%; background-size:50% auto;
-          padding-top:220px; box-sizing: border-box; border-right:1px solid #333; 
-          text-align: center;}
+          position: absolute; top: 0; left: 0; width: 100%; }
           .index_slide li.action {z-index:100;}
+
+/* ---------------------------------------------- */
+.indicator_horizontal_slide{ position: relative; padding-bottom:3.5rem; }
+.indicator {
+  position: absolute; bottom:0.5rem; left:50%; transform:translate(-50%);
+  width: 100%; height:1.5rem; text-align: center;}
+.indicator li{ display:inline-block; width:1.5rem; height:1.5rem; margin:0 0.5rem; }
+.indicator li a{display: block; width: 100%; height: 100%; border-radius:100%; background-color: #fff;}
+.indicator li.action a{background-color: #333;}
+
+.indicator_horizontal_slide .slide_wrap ul{width: 500%; height: 100%;}
+.indicator_horizontal_slide .slide_wrap li{float: left; width: 20%;}
