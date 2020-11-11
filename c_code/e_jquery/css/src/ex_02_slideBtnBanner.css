@@ -5,7 +5,7 @@
   margin:auto; background-color: #dfdfdf;}
 
    .part{position:relative;
-     width: 400px; height:auto; margin:auto;
+     width: 400px; height:auto; margin:auto; margin-bottom:2rem;
      padding:0.5rem; background-color: #fac;}
 
     .slide_btn {
