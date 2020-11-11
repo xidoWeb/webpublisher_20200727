@@ -9,6 +9,10 @@
   var slideLi = indexSlide.find('li');
   var liLen = slideLi.length;
 
+  var indexN = 0;
+  var permission = true;
+  var timed = 500;
+
   slideLi.not( $('.action') ).hide();
   /*
   slideLi.hide();
@@ -29,49 +33,59 @@
  } // MyActionIndex()
  // -------------------------------------------------
  var SlideAction = function(){
-  slideLi.eq(indexN).show();
-  slideLi.eq(actionIndex).fadeOut(function(){
+  slideLi.eq(indexN).stop().show();
+  slideLi.eq(actionIndex).stop().fadeOut(timed/2, function(){
     slideLi.eq(indexN).siblings().removeClass('action');
     slideLi.eq(indexN).addClass('action');
+
+    setTimeout(function(){
+      permission = true;
+    }, timed/5);
+
   }); // fadeOut()
  }; // SlideAction()
 
  // -------------------------------------------------
- var indexN = 0;
+
+
  slideBtn.on('click', function(e){
   e.preventDefault();
   MyActionIndex();
-  var it = $(this).attr('class');
 
-  if(it === 'next'){
-    indexN += 1;
-    if(indexN >= liLen ){
-      indexN = 0;
-    } // if()
+  if(permission){
+    permission = false; 
+    var it = $(this).attr('class');
 
-    // slideLi.eq(indexN).show();
-    // slideLi.eq(actionIndex).fadeOut(function(){
-    //   slideLi.eq(indexN).siblings().removeClass('action');
-    //   slideLi.eq(indexN).addClass('action');
-    // }); // fadeOut()
-    SlideAction();
+    if(it === 'next'){
+      indexN += 1;
+      if(indexN >= liLen ){
+        indexN = 0;
+      } // if()
 
-  }else if( it === 'prev'){
-    indexN -= 1;
-    // slideLi.eq(indexN).show();
-    //   slideLi.eq(actionIndex).fadeOut(function(){
-    //     slideLi.eq(indexN).siblings().removeClass('action');
-    //     slideLi.eq(indexN).addClass('action');
-    // }); // fadeOut()
-    SlideAction();
+      // slideLi.eq(indexN).show();
+      // slideLi.eq(actionIndex).fadeOut(function(){
+      //   slideLi.eq(indexN).siblings().removeClass('action');
+      //   slideLi.eq(indexN).addClass('action');
+      // }); // fadeOut()
+      SlideAction();
 
-    if(indexN <= -1){
-      indexN = liLen -1;      
-    }// if()
+    }else if( it === 'prev'){
+      indexN -= 1;
+      // slideLi.eq(indexN).show();
+      //   slideLi.eq(actionIndex).fadeOut(function(){
+      //     slideLi.eq(indexN).siblings().removeClass('action');
+      //     slideLi.eq(indexN).addClass('action');
+      // }); // fadeOut()
+      SlideAction();
 
-  }// if( it === 'prev') End ------------------
-  
-  console.log( indexN );
+      if(indexN <= -1){
+        indexN = liLen -1;      
+      }// if()
+
+    }// if( it === 'prev') End ------------------
+    
+    console.log( indexN );
+  } // if(permission)
 
  }); // slideBtn.on('click') End
 
