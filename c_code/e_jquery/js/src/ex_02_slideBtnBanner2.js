@@ -28,7 +28,15 @@
     return actionIndex;
  } // MyActionIndex()
  // -------------------------------------------------
- 
+ var SlideAction = function(){
+  slideLi.eq(indexN).show();
+  slideLi.eq(actionIndex).fadeOut(function(){
+    slideLi.eq(indexN).siblings().removeClass('action');
+    slideLi.eq(indexN).addClass('action');
+  }); // fadeOut()
+ }; // SlideAction()
+
+ // -------------------------------------------------
  var indexN = 0;
  slideBtn.on('click', function(e){
   e.preventDefault();
@@ -37,20 +45,30 @@
 
   if(it === 'next'){
     indexN += 1;
-    slideLi.eq(indexN).show();
-    slideLi.eq(actionIndex).fadeOut(function(){
-      slideLi.eq(indexN).siblings().removeClass('action');
-      slideLi.eq(indexN).addClass('action');
-    });
+    if(indexN >= liLen ){
+      indexN = 0;
+    } // if()
 
-    if(indexN >= liLen -1 ){
-      indexN = -1;
-    }
+    // slideLi.eq(indexN).show();
+    // slideLi.eq(actionIndex).fadeOut(function(){
+    //   slideLi.eq(indexN).siblings().removeClass('action');
+    //   slideLi.eq(indexN).addClass('action');
+    // }); // fadeOut()
+    SlideAction();
+
   }else if( it === 'prev'){
     indexN -= 1;
-    if(indexN < 0){
-      indexN = liLen -1;
-    }
+    // slideLi.eq(indexN).show();
+    //   slideLi.eq(actionIndex).fadeOut(function(){
+    //     slideLi.eq(indexN).siblings().removeClass('action');
+    //     slideLi.eq(indexN).addClass('action');
+    // }); // fadeOut()
+    SlideAction();
+
+    if(indexN <= -1){
+      indexN = liLen -1;      
+    }// if()
+
   }// if( it === 'prev') End ------------------
   
   console.log( indexN );
