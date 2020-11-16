@@ -18,7 +18,7 @@
   slideLiLink.attr({'tabIndex':'-1'});
 
   // indicator클릭시 ul이동 -> a에 focus처리로 변경하고, 실제 배너에 a는 별도로 focus처리
-  indiLi.children('a').on('focus click', function(e){
+  indiLi.children('a').on('mouseenter focus click', function(e){
     e.preventDefault();
     
     var it = $(this);
@@ -26,7 +26,7 @@
     indiLi.eq(indiSlN).addClass('action');
     indiLi.eq(indiSlN).siblings().removeClass('action');       
 
-    if(e.type === 'focus'){
+    if(e.type === 'focus' || e.type === 'mouseenter'){
       slideUl.stop().animate({'marginLeft': indiSlN * -100 + '%'}, timed);
     }else if(e.type = 'click'){
       setTimeout(function(){

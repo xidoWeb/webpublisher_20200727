@@ -63,3 +63,9 @@
 
 .indicator_horizontal_slide .slide_wrap ul{width: 500%; height: 100%;}
 .indicator_horizontal_slide .slide_wrap li{float: left; width: 20%;}
+
+/* ------------------------------------------------------ */
+.indicator_fade_slide { padding-bottom: 3rem;}
+.indicator_fade_slide .slide_wrap ul{position: relative; width: 100%; height: 100%;}
+.indicator_fade_slide .slide_wrap li {display: none; position: absolute; top: 0; left: 0; width: 100%; height: 100%;}
+.indicator_fade_slide .slide_wrap li.action {z-index:100;}
