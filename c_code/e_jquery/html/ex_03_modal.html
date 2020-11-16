@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<!-- ex_03_modal.html -->
+<html lang="ko-KR">
+<head>
+  <meta charset="UTF-8">
+<!-- font -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="../fonts/fontawesome/css/all.css">
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;400;700&display=swap" rel="stylesheet">
+
+<!-- IE -->
+<!--[if IE]>
+<script src="../ie/modernizr-custom.js"></script>
+<script src="../ie/ie11CustomProperties.js"></script>
+<![endif]-->
+
+<!-- css -->
+  <link rel="stylesheet" href="../css/base/reset.css">
+  <link rel="stylesheet" href="../css/base/common.css">
+  <link rel="stylesheet" href="../css/src/ex_03_modal.css">
+
+<!-- favicon -->
+  <link rel="apple-touch-icon" href="../favicon.png">
+  <link rel="shortcut icon" href="../favicon.png" type="image/png">
+  <title>페이지이름-</title>
+</head>
+<body>
+  <!-- layout -->
+<div id="wrap">
+  <h1><a href="./">페이지이름</a></h1>
+
+  <div class="modal_01">
+    <h2>modal window</h2>
+    <ul class="clearfix">
+      <li data-big="cake_01.jpg"><button type="button"><span>이미지_01</span></button></li>
+      <li data-big="cake_02.jpg"><button type="button"><span>이미지_02</span></button></li>
+      <li data-big="cake_03.jpg"><button type="button"><span>이미지_03</span></button></li>
+      <li data-big="cake_04.jpg"><button type="button"><span>이미지_04</span></button></li>
+    </ul>
+  </div>
+
+
+  <div class="gallery_box">
+    <div class="gallery_area">
+      <div class="close"><button type="button"><span>닫기</span></button></div>
+      <div class="big_img">
+        <!-- background-image -->
+        <p>narration</p>
+      </div>
+    </div>
+  </div> 
+
+
+</div>
+
+  <!-- script -->
+  <script src="../js/base/jquery-3.5.1.js"></script>
+  <script src="../js/base/jquery-ui.js"></script>
+  <script src="../js/src/ex_03_modal.js"></script>
+</body>
+</html>

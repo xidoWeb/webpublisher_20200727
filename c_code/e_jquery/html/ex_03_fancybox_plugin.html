@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<!-- ex_03_fancybox_plugin.html -->
+<html lang="ko-KR">
+<head>
+  <meta charset="UTF-8">
+<!-- font -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="../fonts/fontawesome/css/all.css">
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;400;700&display=swap" rel="stylesheet">
+
+<!-- IE -->
+<!--[if IE]>
+<script src="../ie/modernizr-custom.js"></script>
+<script src="../ie/ie11CustomProperties.js"></script>
+<![endif]-->
+
+<!-- css -->
+  <link rel="stylesheet" href="../css/base/reset.css">
+  <link rel="stylesheet" href="../css/base/common.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css" />
+
+  <!-- <link rel="stylesheet" href="../css/src/ex_03_fancybox_plugin.css"> -->
+
+<!-- favicon -->
+  <link rel="apple-touch-icon" href="../favicon.png">
+  <link rel="shortcut icon" href="../favicon.png" type="image/png">
+  <title>페이지이름-</title>
+</head>
+<body>
+  <!-- layout -->
+<div id="wrap">
+  <h1><a href="./">페이지이름</a></h1>
+  <!-- <div class="gallery_box">
+    <button type="button">닫기</button>
+    <div class="big_img">
+      <img src="" alt="">
+    </div>
+  </div> -->
+
+  <!-- <div class="fancy_banner">
+    <a data-fancybox="gallery" href="../img/cake/tj_minicake_001.jpg">
+      <img src="../img/cake/tj_minicake_005.jpg" alt="image 갤러리 설명....">
+    </a>
+    <a data-fancybox="gallery" href="../img/cake/tj_minicake_002.jpg">
+      <img src="../img/cake/tj_minicake_006.jpg" alt="image 갤러리 설명....">
+    </a>
+    <a data-fancybox="gallery" href="../img/cake/tj_minicake_003.jpg">
+      <img src="../img/cake/tj_minicake_007.jpg" alt="image 갤러리 설명....">
+    </a>
+    <a data-fancybox="gallery" href="../img/cake/tj_minicake_004.jpg">
+      <img src="../img/cake/tj_minicake_008.jpg" alt="image 갤러리 설명....">
+    </a>
+  </div> -->
+
+  <div class="modal_01">
+    <ul>
+      <li data-big="cake_01.jpg"><button type="button"><span>이미지_01</span></button></li>
+      <li data-big="cake_02.jpg"><button type="button"><span>이미지_02</span></button></li>
+      <li data-big="cake_03.jpg"><button type="button"><span>이미지_03</span></button></li>
+      <li data-big="cake_04.jpg"><button type="button"><span>이미지_04</span></button></li>
+    </ul>
+  </div>
+</div>
+
+  <!-- script -->
+  <script src="../js/base/jquery-3.5.1.js"></script>
+  <script src="../js/base/jquery-ui.js"></script>
+  <script src="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js"></script>
+
+  <!-- <script src="../js/src/ex_03_fancybox_plugin.js"></script> -->
+</body>
+</html>

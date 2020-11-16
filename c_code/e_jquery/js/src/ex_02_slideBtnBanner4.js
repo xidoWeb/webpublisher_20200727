@@ -30,7 +30,7 @@
         slideLi.eq(itIndex).stop().fadeIn(function(){
           slideLi.not(actionLi).stop().hide();
         }); 
-      }
+      }// if(itIndex !== actionLi.index() )
   });
 
 })(jQuery);
