@@ -44,7 +44,7 @@
   for(; i<data.length; i+=1){
     modalUl.append(modaInCode);
     temLi = modalUl.children('li').eq(-1);
-    // temLi.attr({'data-big':data[i].bigImg, 'data-narr':data[i].content});
+    temLi.attr({'data-big':data[i].bigImg, 'data-narr':data[i].content});
     
     modalBtn = temLi.find('button');
     modalBtn.css({
@@ -69,8 +69,8 @@
     var it = $(this).parent('li');
     var itI = it.index();
     indexChdek = itI;
-    // var thisBig = it.attr('data-big');
-    // var thisNarr = it.attr('data-narr');
+    var thisBig = it.attr('data-big');
+    var thisNarr = it.attr('data-narr');
 
     bigImg.css({backgroundImage: 'url(' + url + thisBig +')'});
     bigNarr.text(thisNarr);
