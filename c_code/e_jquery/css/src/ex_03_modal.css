@@ -36,13 +36,13 @@
     .gallery_area .close {
       position: absolute; top: -.5rem; right: -2.5rem; width: 2rem; height: 2rem;}
     .gallery_area button {width: 100%; height: 100%; border-radius: 100%; box-sizing:border-box; border:0.3rem solid #333; background-color: #fff; font-size:0.7rem;}
-    .big_img {
+    .big_img {overflow: hidden; position: relative;
       width: 100%; height: 100%;
       background-image: url("../../img/modal/juice_big_05.jpg");
       background-repeat: no-repeat; background-position: 50% 50%; background-size: cover;}
 
     .big_img p {
-      position: absolute; left: 0; bottom: 0; width: 100%; height:auto; box-sizing: border-box; padding: 1rem;
+      position: absolute; left: 0; bottom: 0; transform:translateY(105%); width: 100%; height:auto; box-sizing: border-box; padding: 1rem;
       background-color:rgba(0,0,0,0.7); color:#fff;
-      border-bottom-right-radius:0.5rem; border-bottom-left-radius:0.5rem;
-  }
+      border-bottom-right-radius:0.5rem; border-bottom-left-radius:0.5rem;}
+    .big_img p.action{ transform:translateY(0);  transition:all 300ms ease;}

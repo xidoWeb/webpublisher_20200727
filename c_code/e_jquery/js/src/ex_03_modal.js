@@ -6,7 +6,9 @@
   var gallery = $('.gallery_box');
   var galleryClose = gallery.find('.close');
   var bigImg = gallery.find('.big_img');
+  var bigNarr = bigImg.children('p');
 
+  var timed = 500;
   var url = "../../img/modal/";
   var indexChdek;
   mLiBtn.on('click', function(e){
@@ -15,15 +17,23 @@
     var itI = it.index();
     indexChdek = itI;
     var thisBig = it.attr('data-big');
+    var thisNarr = it.attr('data-narr');
+
+    bigImg.css({backgroundImage: 'url(' + url + thisBig +')'});
+    bigNarr.text(thisNarr);
     gallery.stop().fadeIn(function(){
       galleryClose.children('button').focus();
+      setTimeout(function(){
+        bigNarr.addClass('action');
+      }, timed/2)
     });
-    bigImg.css({backgroundImage: 'url(' + url + thisBig +')'});
   });
 
   galleryClose.on('click', function(e){
     e.preventDefault();
     gallery.stop().fadeOut();
     modalLi.eq(indexChdek).find('button').focus();
+    bigNarr.removeClass('action');
   });
+
 })(jQuery);
