@@ -1,0 +1,42 @@
+/* ex_04_onepageScroll.css */
+
+body{overflow-x: hidden;}
+
+#wrap{
+  width: 90%; min-width:60rem; height:auto; min-height:62.5rem; margin:auto; background-color: #dfdfdf;}
+
+.popup_dp { position: relative;
+  width: 100vw; min-width:inherit; height:auto; left:50%; transform:translateX(-50%);
+  padding:1.5rem 5rem; box-sizing: border-box; background-color: #ddd;}
+  
+.popup_dp .close { 
+  position: absolute; top: 50%; right: 2rem; width: 50px; height: 50px; 
+  transform:translateY(-50%); background-color: #fff;}
+.close button {width: 100%; height: 100%; }
+  
+#headBox{
+  position: relative; left:50%; transform: translate(-50%);
+  width:100vw; min-width:inherit; height:7.5rem; 
+  padding:0.625rem 1.25rem; box-sizing:border-box; background-color: #fa7; }
+  h1{
+    float: left; width: 6.25rem; height: 6.25rem;  background-color: #07a; color:#fff; font-size:1.5rem;}
+
+  #navBox{
+   float:right; width: 40rem; height:3rem; margin-top:3rem;}
+   #navBox>h2{width: 0; height: 0; overflow: hidden;}
+   #navBox ul{width: 100%; height: 100%; }
+   #navBox li{float: left; margin-right:3rem;}
+   #navBox li:last-child{margin-right: 0;}
+   #navBox li a{ padding:0.9rem; background-color: #fff;}
+
+
+#viewBox{
+  width:100%; height:800px; border-bottom:1px solid #07a; background-color: #479; color:#fff; font-size: 4rem;}
+#conBox_01{
+  width:100%; height:1600px; border-bottom:1px solid #07a; background-color: #fff; 
+  background-image:linear-gradient(60deg, #fa0, #acf, #fac);}
+#conBox_02{
+  width:100%; height:500px; border-bottom:1px solid #07a; 
+  background-color: #faa; margin-top: 2rem;}
+#footBox{
+  width:100%; height:300px; background-color: #333; color:#fff; padding:2rem; box-sizing: border-box;}
