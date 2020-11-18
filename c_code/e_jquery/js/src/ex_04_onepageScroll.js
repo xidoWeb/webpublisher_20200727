@@ -47,28 +47,29 @@
       (winSt >= 500) ? topBtn.stop().fadeIn() : topBtn.stop().fadeOut();
     }); // win.on('scroll')
 // -------------------------------------------------------------------
-    topBtn.on('click', ['a'], function(e){
-      e.preventDefault();
-      var it = $(this).find('a');
-
-      // a요소의 연결된 선택자 파악
-      var itAttr = it.attr('href'); 
-
-      // a요소의 href값이 상단에서 떨어져있는 양 체크
-      var itOffset = $(itAttr).offset().top; 
-
-      // 브라우저를 이동시켜라(스크롤) -> itOffset의로 파악된 크기만큼
-      console.log(itOffset);
-      $('html, body').animate({ scrollTop: itOffset });
+// 클릭시 처리되는 내용을 별도의 함수로 처리
+var liScrollMove = function(e){
+  e.preventDefault();
+  var it = $(this).find('a');
+  // a요소의 연결된 선택자 파악
+  var itAttr = it.attr('href'); 
+  // a요소의 href값이 상단에서 떨어져있는 양 체크
+  var itOffset = $(itAttr).offset().top; 
+  // 브라우저를 이동시켜라(스크롤) -> itOffset의로 파악된 크기만큼
+  $('html, body').animate({ scrollTop: itOffset });
+}; // liScrollMove();
+// -------------------------------------------------------------------
+    // topBtn.on('click', ['a'], liScrollMove);
+    // navBtn.on('click', ['a'], liScrollMove);
+    // 배열.forEach(function(배열요소각각, 해당배열요소순서){});
+    // $.each(배열, function(배열요소순서, 순서에맞는배열요소각각){});
+    
+    // 동일한기능을 처리, 하나의함수를 수행함으로인하여, 기능을 하나로 묶어주기
+    var btnCollection = [topBtn, navBtn];
+    $.each(btnCollection, function(i, btn){
+      btn.on('click', ['a'], liScrollMove);
     });
-// ------------------------------------------------
-    navBtn.on('click', ['a'], function(e){
-      e.preventDefault();
-      var it = $(this).find('a');
-      var itAttr = it.attr('href'); 
-      var itOffset = $(itAttr).offset().top; 
-      $('html, body').animate({ scrollTop: itOffset });
-    });
+
 // ------------------------------------------------
 // 2번기능
 var popupDp = $('.popup_dp');
