@@ -35,6 +35,27 @@ body{overflow-x: hidden;}
   width:100%; height:1600px; 
   padding-top:10rem; border-bottom:1px solid #07a;  background-color: #fff; 
   background-image:linear-gradient(60deg, #fa0, #acf, #fac);}
+#conBox_01 h2{
+    width: 90%; margin:auto; margin-bottom: 2rem; 
+    border-bottom:1px solid #fff; text-align: center; color:#fff;}
+
+.tab_li{width: 80%; height: 40px; margin:auto; background-color: #fff;}
+.tab_li ul{ width: 100%; height: 100%; text-align: center;}
+.tab_li ul li{position: relative; display:inline-block; margin:0 2rem; width:auto; height: 100%;}
+.tab_li ul li:after{
+  content:" "; display: block; position: absolute; right:-2rem; top: 10%;
+  width: 1px; height: 80%; background-color: #333;}
+.tab_li ul li:last-child:after{display: none;}
+.tab_li a{ display:block; width:120px; height:100%; line-height: 40px;}
+
+.tab_content{width: 90%; height:500px; margin:auto;
+  margin-top:2rem; padding:1rem; box-sizing: border-box;
+  border:1px solid #333; }
+.tab_content div{display: none;
+  width: 100%; height: 100%; padding:1rem; box-sizing:border-box; background-color: #fff;}
+.tab_content p{ padding-top: 1rem; color:#077;}
+.tab_content  .tab_con_01{ display: block;}
+
 #conBox_02{
   width:100%; height:500px; 
   padding-top:10rem; border-bottom:1px solid #07a; 

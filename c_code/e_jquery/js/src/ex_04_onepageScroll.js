@@ -79,6 +79,22 @@ popupBtn.on('click', function(e){
   popupDp.remove();
 });
 
+// -------------------------------------------------
+// 3. tab메뉴 
+var tab = $('.tab_li');
+var tabLi = tab.find('li');
+var tabConWrap = $('.tab_content');
+var tabCon = tabConWrap.find('div');
+
+
+tabLi.on('click',['a'], function(e){
+  e.preventDefault();
+  var it = $(this);
+  var itI = it.index();
+
+  tabCon.eq(itI).show();
+  tabCon.eq(itI).siblings().hide();
+});
 
   // jQuery end
 })(jQuery);
