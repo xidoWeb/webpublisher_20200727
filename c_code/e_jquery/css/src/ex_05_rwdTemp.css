@@ -1,0 +1,20 @@
+ /* ex_05_rwdTemp.css */
+
+ #wrap{ 
+   width: 100%; height:auto; min-height:500px; min-height:31.25rem; margin:auto; padding:2rem 0 10rem; 
+   background-color: rgba(220,220,255,0.7);}
+h1{text-align: center; margin-bottom: 3rem; }
+
+#viewBox{ margin-top: 3rem; width:80%; height:50rem; margin:auto; 
+  border-radius:0.5rem; border:2px solid #7aa; padding:2rem; box-sizing: border-box;}
+  #viewBox img{position:absolute; width:100%; height: auto;}
+
+  .mobile{position:relative;
+    width:50%; height:100%; border-radius:5rem; overflow: hidden; border:0.625rem solid #f00;}
+
+  .tablet{position:relative;
+    width:80%; height:100%;  border-radius:3rem; overflow: hidden; border: 2rem dashed #06f; }
+
+  .pc{position:relative;
+    width:18.75rem; height:18.75rem; border-radius:100%; 
+    overflow: hidden; box-shadow:1rem 1rem 0 rgba(0,0,0,0.5); }
