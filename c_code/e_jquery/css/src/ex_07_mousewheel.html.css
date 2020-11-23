@@ -1,0 +1,17 @@
+#wrap{position: relative; width: 100%; height:auto;
+      text-align: center; }
+#headBox{
+  position: absolute; width: 80%; height: 40px; 
+  background-color: #fff;
+  left:0; right:0; top:0; margin:auto; }
+#viewBox{ width: 100%; height:100vh;
+  padding-top:60px;
+  background-color: rgb(26, 168, 33);}
+#conBox_01{ width: 100%; height:100vh;
+  background-color: rgb(54, 209, 196);}
+#conBox_02{ width: 100%; height:100vh;
+  background-color: rgb(23, 68, 136);}
+#conBox_03{ width: 100%; height:100vh;
+  background-color: rgb(252, 170, 255);}
+#footBox{ width: 100%; height:400px;
+  background-color: rgb(214, 154, 43);}
