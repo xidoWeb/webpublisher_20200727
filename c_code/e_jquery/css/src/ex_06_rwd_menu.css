@@ -1,0 +1,36 @@
+/* ex_06_rwd_menu.css */
+
+#wrap{
+  width: 100%; height:auto; padding:1rem;
+  box-sizing: border-box;
+  background-color: #f1f1f1;}
+
+#headBox {
+  width: 100%; height:90px; background-color: #acc;}
+
+  h1{ float:left; 
+    width:100px; height:100%; background-color: #07a;}
+  h1>a {display: block;width: 100%; height: 100%;}   
+  #navBox{float:right; }
+
+@media screen and (max-width:1279px) {
+  #navBox{ width:60px; height:60px;  margin-top:20px;}
+  .menu_btn {position: relative; z-index:500;}
+  .menu_btn, .menu_btn > button{ 
+    width: 100%; height: 100%; background-color: #fa0;}
+  .gnb {display: none; position: fixed; top: 0; right: 0; z-index:100;
+    width: 100%; height: 100%; background-color: rgba(0,0,0,0.7);
+    padding:3rem 2rem; padding-top: 5rem; box-sizing: border-box; 
+    color:#fff; font-size: 2rem; }
+  .gnb li {width:85%; min-width:260px; height:auto; margin-bottom: 1rem; border-bottom:1px solid #fff;}
+  .gnb a {display: block; width: 100%; padding: 0.5rem;}
+}/* @media screen and (max-width:1279px) */
+
+@media screen and (min-width:1280px) {
+  #navBox {width:600px; height:50px; margin-top:40px;  background-color: #fff;}
+  .menu_btn { display: none; }
+  .gnb{ display: block; position: static; }
+  .gnb li{ float:left; width:auto; height:100%; margin-left:1rem; border:0; padding: 0;}
+  .gnb li:first-child{margin-left: 0;}
+  .gnb li a {padding: 1rem 1.2rem;}
+}/* @media screen and (min-width:1280px) */
