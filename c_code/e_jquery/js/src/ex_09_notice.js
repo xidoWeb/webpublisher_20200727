@@ -6,11 +6,12 @@
     dataType: 'json',
     contenxt: document.body
   }).done(function(data){
+
     var dataFile;
     dataFile = data.sort(function(a,b){
       return b.id - a.id;
     });   
-    
+
     // console.log( dataFile );
     var noticeCode = '<li><a href="#"><em></em><span></span></a></li>';
     var indiCode = '<li><a href="#"></a></li>';
@@ -26,6 +27,7 @@
     var reSetting = function(){
       var i=0;
       var noticeLi;
+      noticeArea.empty();
       for(; i<dataFile.length; i+=1){
         noticeArea.append(noticeCode);
         noticeLi = noticeArea.children('li').eq(i);
@@ -48,11 +50,13 @@
             dataFile =  data.sort(function(a,b){
               return b.id - a.id;
             });
+            reSetting();
           break;
           case 1:
             dataFile =  data.sort(function(a,b){
               return a.id - b.id;
             });
+            reSetting();
           break;
         }
     });
