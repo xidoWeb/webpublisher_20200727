@@ -1,0 +1,40 @@
+/* ex_09_notice.css */
+
+#wrap{
+  width: 60rem; height:auto; min-height:500px; 
+  box-sizing: border-box; padding:0 2rem;
+  margin:auto; background-color: #dfdfdf;}
+
+h2{ width: 100%; text-align: center; margin-bottom:1rem;}
+.notice_board {
+  width: 100%; height: auto;
+  margin-top:2rem; border:0.0625rem solid #333; box-sizing: border-box;
+  padding:1rem;
+}
+/* 게시판영역 ------------------------------------------------------------- */
+.context {
+  width: 100%; height:auto;
+  box-sizing: border-box; padding:0.5rem; border-radius:0.3rem;  background-color: #fff;}
+.context ul {
+  width: 100%; height:auto;} 
+.context li {width: 100%; height:1.875rem; line-height:1.875rem;
+  border-bottom:1px dotted #333; margin-bottom:0.5rem; }
+.context li:last-child{ border:0; margin-bottom:0;}
+.context a {display: block; width: 100%; height:100%; text-indent:0.5rem;}
+.context em {
+  display:inline-block; width:3rem; 
+  text-align: right; font-style:normal; font-weight: bold; margin-right:0.5rem; }
+.context span {padding-left:0.5rem; border-left: 1px solid #07a; color:#777; }
+
+/* 인디케이터 영역 ------------------------------------------------------------- */
+.indicator {
+  width:80%; height:25px; margin:auto; margin-top:2rem; padding:0.2rem; border-radius:40px; background-color: #07a;}
+.indicator ul{width: 100%; height: 100%; text-align: center;}
+.indicator li{display:inline-block; margin:0 0.2rem; width:50px; height:25px; color:#07a; line-height: 21px;}
+
+.indicator a{display: block; 
+  width: 100%; height: 100%; border-radius:20px; border:2px solid #037; box-sizing: border-box;
+  text-align: center;  background-color: #fff; }
+
+.indicator li.action a{font-weight: bold; font-size: 1.1rem; color:#037;}
+
