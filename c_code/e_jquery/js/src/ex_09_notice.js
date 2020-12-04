@@ -51,7 +51,7 @@
 
       for(; iv < indiLen; iv += 1){
         if(iv < indiViewLen){
-          memoryN = iv;
+          memoryN = iv+1;
           continue;
         }else{
           indiLi.eq(iv).hide();
@@ -70,6 +70,8 @@
         }
         memoryN =  nbn;
       });
+
+      //----------------------------------------------------------
 
     // 내용 넣기
     var reSetting = function(n){
