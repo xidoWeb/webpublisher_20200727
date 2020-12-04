@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<!-- eq_08_moreBtn.html -->
+<!-- filename.html -->
 <html lang="ko-KR">
 <head>
   <meta charset="UTF-8">
@@ -17,7 +17,7 @@
 <!-- css -->
   <link rel="stylesheet" href="../css/base/reset.css">
   <link rel="stylesheet" href="../css/base/common.css">
-  <link rel="stylesheet" href="../css/src/eq_08_moreBtn.css">
+  <link rel="stylesheet" href="../css/src/filename.css">
 
 <!-- favicon -->
   <link rel="apple-touch-icon" href="../favicon.png">
@@ -27,20 +27,27 @@
 <body>
   <!-- layout -->
 <div id="wrap">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <h1><a href="./content.html">jquery 기초</a></h1>
-  <hr />
-  <h2>더보기 버튼 클릭처리하여 리스트 더보기 만들기</h2>
-  <div class="part">
-    <ul></ul>
-
-    <div class="more_btn"><button type="button">내용 더 보기</button></div>
+  <h1><a href="./">페이지이름</a></h1>
+  <div class="action">
+    <p>web</p>
+    <p>publisher</p>
   </div>
+
 </div>
 
   <!-- script -->
   <script src="../js/base/jquery-3.5.1.js"></script>
   <script src="../js/base/jquery-ui.js"></script>
-  <script src="../js/src/eq_08_moreBtn.js"></script>
+  <!-- <script src="../js/src/filename.js"></script> -->
+  <script>
+    var p = $('.action').find('p');
+    var p1t = p.eq(0).text().split('');
+    console.log( p1t );
+    $.each(p1t, function(i,d){
+      
+      p.eq(0).empty();
+      p.eq(0).append( d.wrap('span') );
+    });
+  </script>
 </body>
 </html>
