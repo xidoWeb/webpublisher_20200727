@@ -13,7 +13,12 @@ h1{width: 100%; height: 100%; font-size: 1.2rem; text-align: center;}
 #viewBox{width: 100%; height: 100vh; min-height:800px; background-color: #055;}
 
 #conBox{
-  width: 100%; height:150rem; background-color: #aaa;}
+  width: 100%; height:150rem; background-color: #aaa;
+  background-image: url("../../img/zoom/zoom_01_big.jpg");
+  background-repeat: no-repeat;
+  background-position:50% 0;
+  background-size: 130%;
+}
 #moreBox{
   width: 80%; max-width:100rem; min-width:60rem; height:150rem; 
   margin:auto; background-color: #ff5;}
@@ -24,6 +29,17 @@ h1{width: 100%; height: 100%; font-size: 1.2rem; text-align: center;}
     transition:all 1000ms ease;
   }
   #conBox > h2 { transform: translateY(-5rem); }
+
+  .content_area {
+    opacity: 0; transform: translateY(-5rem);
+    width: 60%; height:400px; margin:50px auto; background-color: #fff;
+    transition: all 500ms linear 800ms;
+  }
+  .action > .content_area{
+    opacity: 1; transform: translateY(0);
+  }
+
+  
   #moreBox > h2 { transform:translateX(-50rem) rotateX(720deg);}
   #wrap .action > h2 { opacity: 1; transform:translate(0) rotateX(0); }
   #moreBox.action > h2 { transform:translate(0) rotateX(0) scale(1.5);}
