@@ -15,14 +15,21 @@ h1{width: 100%; height: 100%; font-size: 1.2rem; text-align: center;}
 #conBox{
   width: 100%; height:150rem; background-color: #aaa;}
 #moreBox{
-  width: 80%; max-width:100rem; min-width:60rem; height:50rem; 
+  width: 80%; max-width:100rem; min-width:60rem; height:150rem; 
   margin:auto; background-color: #ff5;}
 
   h2{ 
     width:300px; height:3rem; margin:auto; background-color: #f5f; text-align: center; color:#fff;
-    opacity: 0; transition:all 300ms ease;
+    opacity: 0; 
+    transition:all 1000ms ease;
   }
-  .action > h2 { opacity: 1; }
+  #conBox > h2 { transform: translateY(-5rem); }
+  #moreBox > h2 { transform:translateX(-50rem) rotateX(720deg);}
+  #wrap .action > h2 { opacity: 1; transform:translate(0) rotateX(0); }
+  #moreBox.action > h2 { transform:translate(0) rotateX(0) scale(1.5);}
+
+  #moreBox.more { background-color: #0ca;}
+  #moreBox.more > h2{left:100%; opacity: 1;}
 
 #footBox{
   width: 100%; height: 15rem; background-color: #555;
