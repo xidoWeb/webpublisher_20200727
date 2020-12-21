@@ -5,6 +5,7 @@
 /* 공통 */
 #wrap {
   width: 100%; height:auto; min-height:125rem;
+  background-color:var(--c-primary);
 }
 #headBox{
   position: absolute; top: 0; left: 0; z-index:1500;
@@ -21,7 +22,7 @@ h1{width: 7rem; height:100%; float:left; background-color: #fa0; overflow: hidde
 #navBox a {display: block; width: auto; height:100%;}
 
 #viewBox{
-  position: relative; overflow: hidden;
+  position: relative; overflow: hidden; 
   width: 100%; height:100vh; min-height:31.25rem;
   background-color: #acf;}
 
@@ -47,13 +48,13 @@ h1{width: 7rem; height:100%; float:left; background-color: #fa0; overflow: hidde
   width: 100%; height:auto; min-height:62.5rem;
   box-sizing: border-box;
   padding-top:5rem; text-align: center; color:#fa0;
-  background-color: var(--c-primary);  
+  /* background-color: var(--c-primary);   */
 }
 
 #sampleBox {
   width: 100%; height:auto; min-width:31.25rem; min-height:62.5rem;
   box-sizing: border-box;  padding-top:5rem;
-  background-color: var(--c-primary);  
+  /* background-color: var(--c-primary);   */
   text-align: center; color:#fa0;
 }
 
@@ -81,12 +82,11 @@ h2{ margin-bottom: 3rem;}
 #sampleBox ul li:nth-child(4){
   background-image: url("../../img/firewatchgame/firewatch_04.jpg");}
 
-#sampleBox ul li:nth-child(2n){
-  float:right;
-}
+#sampleBox ul li:nth-child(2n){  float:right; }
 
 #footBox{width: 100%; height:62.5rem; 
   background-color: var(--c-primary); color:#fa0; text-align: center;}
+
 /* #sampleBox a{} */
 
 /* mobile */
