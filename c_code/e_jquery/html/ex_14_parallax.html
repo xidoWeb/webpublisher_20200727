@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<!-- ex_14_parallax.html -->
+<html lang="ko-KR">
+<head>
+  <meta charset="UTF-8">
+<!-- font -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="../fonts/fontawesome/css/all.css">
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;400;700&display=swap" rel="stylesheet">
+
+<!-- IE -->
+<!--[if IE]>
+<script src="../ie/modernizr-custom.js"></script>
+<script src="../ie/ie11CustomProperties.js"></script>
+<![endif]-->
+
+<!-- css -->
+  <link rel="stylesheet" href="../css/base/reset.css">
+  <link rel="stylesheet" href="../css/base/common.css">
+  <link rel="stylesheet" href="../css/src/ex_14_parallax.css">
+
+<!-- favicon -->
+  <link rel="apple-touch-icon" href="../favicon.png">
+  <link rel="shortcut icon" href="../favicon.png" type="image/png">
+  <title>페이지이름-</title>
+</head>
+<body>
+  <!-- layout -->
+<div id="wrap">
+  <header id="headbox">
+    <h1><a href="./content.html">jQuery- fire Watch Game 페이지 따라만들기</a></h1>
+    <nav id="navBox">
+      <h2 class="hidden_context">global navigation</h2>
+      <ul>
+        <li><a href="#">fire watch</a></li>
+        <li><a href="#">development blog</a></li>
+        <li><a href="#">campo store</a></li>
+        <li><a href="#">quarterly review</a></li>
+      </ul>
+    </nav>
+  </header>
+  <article id="viewBox">
+    <h2 class="hidden_context">fire watch</h2>
+    <p class="hidden_context">fire watch game에 대한 설명</p>
+    <!-- parallax이미지 배치 -->
+    <div class="view_01"></div>
+    <div class="view_02"></div>
+    <div class="view_03"></div>
+    <div class="view_04"></div>
+    <div class="view_05"></div>
+    <div class="view_06"></div>
+    <div class="view_07"></div>
+    <div class="view_08"></div>
+    <div class="view_09"></div>
+  </article>
+  <article id="gameNarrBox">
+    <h2>fire watch game 설명</h2>
+    <div class="no_data"></div>
+  </article>
+  <article id="sampleBox">
+    <h2>게임 데모 이미지</h2>
+    <ul class="hidden_wrap">
+      <li><a href="#"><span>게임 이미지에 대한 설명_1</span></a></li>
+      <li><a href="#"><span>게임 이미지에 대한 설명_2</span></a></li>
+      <li><a href="#"><span>게임 이미지에 대한 설명_3</span></a></li>
+      <li><a href="#"><span>게임 이미지에 대한 설명_4</span></a></li>
+    </ul>
+  </article>
+  <footer id="footBox">
+    <h2>game infomation</h2>
+    <p>©2020 CAMPO SANTO, IN COOPERATION WITH PANIC.<br />
+      FIREWATCH IS A TRADEMARK OF CAMPO SANTO.<br />      
+      NINTENDO SWITCH IS A TRADEMARK OF NINTENDO.</p>
+  </footer>
+</div>
+
+  <!-- script -->
+  <script src="../js/base/jquery-3.5.1.js"></script>
+  <script src="../js/base/jquery-ui.js"></script>
+  <script src="../js/src/ex_14_parallax.js"></script>
+</body>
+</html>

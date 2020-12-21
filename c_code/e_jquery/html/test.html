@@ -23,14 +23,16 @@
   <link rel="apple-touch-icon" href="../favicon.png">
   <link rel="shortcut icon" href="../favicon.png" type="image/png">
   <title>페이지이름-</title>
+  <style>
+    p.on:after{content:" "; display:inline-block; width:10px; height:15px; background-color:#f00;}
+  </style>
 </head>
 <body>
   <!-- layout -->
 <div id="wrap">
   <h1><a href="./">페이지이름</a></h1>
   <div class="action">
-    <p>web</p>
-    <p>publisher</p>
+    <p>web publisher</p>
   </div>
 
 </div>
@@ -43,11 +45,37 @@
     var p = $('.action').find('p');
     var p1t = p.eq(0).text().split('');
     console.log( p1t );
-    $.each(p1t, function(i,d){
-      
-      p.eq(0).empty();
-      p.eq(0).append( d.wrap('span') );
-    });
+    p.eq(0).empty();
+    var timeIdx = p1t.length;
+    var i=0;
+    var setI;
+    var Go = function(){
+        setI =  setInterval(function(){
+          p.eq(0).append('<span></span>');
+          p.eq(0).children('span').eq(i).text(p1t[i]);  
+          i++;
+
+          if(i >= timeIdx){ clearInterval(setI); }
+        }, 500);
+    };
+    Go();
+
+    setInterval(function(){
+      var p1 =  p.eq(0);
+      var p1has = p1.hasClass('on');
+        if(p1has){
+          p1.removeClass('on');
+        }else{
+          p1.addClass('on');
+        }
+    }, 500);
+   
+  
+
+    
+    
+
+
   </script>
 </body>
 </html>
