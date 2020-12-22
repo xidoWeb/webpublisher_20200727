@@ -1,0 +1,38 @@
+/* ex_15_parallax2.css */
+
+#wrap {
+  width: 100%; min-width:1280px;
+  height:auto;  min-height:3000px;
+  background-color: #0184b7;
+}
+
+#headBox{position: relative;
+  width: 100%;  height:100vh; min-height:600px;
+  background-color: #acf;}
+h1{
+  z-index:100;
+  position: absolute; left: 0; right: 0; top: 0; bottom:0; margin:auto;
+  width:500px; height:300px;
+}
+h1 a{
+  background-image: url("../../img/parallax2/logo.svg");
+  filter:drop-shadow(0 0 0.5rem rgba(0,0,0,0.7));  }
+
+.image_area {
+  position: absolute; top: 0; left: 0;  width: 100%; height: 100%; }
+.image_area div {
+  position: absolute; top: 0; left: 0;  width: 100%; height: 100%;
+  background-repeat: no-repeat;  background-size: cover;  background-position:50% 50%;}
+
+.front_image{ 
+  z-index:10;  background-image: url("../../img/parallax2/house.png");}
+.back_image{ 
+  z-index:5;  background-image: url("../../img/parallax2/airplane.png");}
+
+#subNavBox{
+  width: 100%; max-width:1600px; height:auto; min-height:500px;
+  margin:auto; background-color: #fca;}
+
+#contentBox{width: 100%; height:1500px; margin:auto; background-color: #ccc;}
+
+#footBox{width: 100%; height: 700px; background-color: #333;}
