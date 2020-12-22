@@ -20,14 +20,20 @@
     var opacityR;
     
     if(scaleR <= setN){
-      console.log('scale: ', 1 + per);
+      // console.log('scale: ', 1 + per);
       frontImg.css({transform:'scale(' + scaleR + ')'});
     }else if(scaleR >= setN + 1){      
-      console.log('opacity: ', opacityR+1);
+      // console.log('opacity: ', opacityR+1);
       opacityR = setN + 1 - per;    
       frontImg.css({opacity: opacityR});
     }
 
+  // 비행기 나타나면서 올라가기
+    if(scaleR > setN){
+      var airPer = (scaleR - setN) * 100;
+      console.log( airPer );
+      backImg.css({backgroundPositionY: airPer + '%'})
+    }
 
   }); // win.on('scroll')
 
