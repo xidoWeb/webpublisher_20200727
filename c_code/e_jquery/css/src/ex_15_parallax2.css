@@ -10,6 +10,10 @@
   width: 100%;  height:100vh; min-height:600px;
   background-color: #0184b7;}
 
+#headBox.default::before{
+  content:" "; display: block; position: absolute; top: 0; left: 0; z-index:500;
+  width: 100%; height: 100%; }
+
 h1{
   z-index:100;
   position: absolute; left: 0; right: 0; top: 0; bottom:0; margin:auto;
@@ -33,7 +37,7 @@ h1 a{
   z-index:5;  background-image: url("../../img/parallax2/airplane.png");}
 
 .blink_area {
-  width: 100%; height:3000px; background-color: #0184b7;
+  width: 100%; height:3500px; background-color: #0184b7;
 }
 
 #subNavBox{
