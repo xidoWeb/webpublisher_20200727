@@ -4,41 +4,8 @@
   /** todo list...
    * [o] 카드 js 에서구현하기 
    * [x] json파일 생성해서 불러오기/이미지 리스트화 처리
-   * [o] 생성된 ul의 가로 크기를 li의 갯수만큼 담을 수 있도록 수정
+   * [] 생성된 ul의 가로 크기를 li의 갯수만큼 담을 수 있도록 수정
    */
-
-   // 실제 데이터형식에서는
-  //  [
-  //    {"title":"카드 제목", "content":"카드내용", 
-  //    "imgSrc":'random_001.jpg', "imgAlt":'이미지설명'},
-  //    {"title":"카드 제목", "content":"카드내용", 
-  //    "imgSrc":'random_001.jpg', "imgAlt":'이미지설명'},
-  //    {"title":"카드 제목", "content":"카드내용", 
-  //    "imgSrc":'random_001.jpg', "imgAlt":'이미지설명'},
-  //    {"title":"카드 제목", "content":"카드내용", 
-  //    "imgSrc":'random_001.jpg', "imgAlt":'이미지설명'},
-  //  ];
-  var cardData = [];
-  var k=0, l; 
-  var url = "../img/random_img/";
-  var imgT = 'random_';
-  for(; k < 19; k += 1){
-    if(k < 9){
-      l = '00' + (k + 1); // 8 -> 009 
-    }else if(k < 99){ // 9 -> 010
-      l = '0' + (k + 1);
-    }
-
-    // cardData[k] = imgT + l + '.jpg';
-    
-    cardData[k] = {};
-    cardData[k].title = 'title' + l;
-    cardData[k].imgSrc = url + imgT + l + '.jpg';
-    cardData[k].imgAlt = imgT + l + '이미지설명';
-  }
-  // console.log( cardData );
-
-
   var win = $(window);
   var cardBox = $('#cardBox');
 
@@ -46,17 +13,11 @@
   var cardUl = cardBox.children('ul');
   var liText = '<li><a><div class="img_temp"><img></div><span></span></a></li>';
   var y = 0;
-  var listEl;
-  for(; y < cardData.length; y += 1){
+  for(; y < 20; y += 1){
     cardUl.append(liText);
-    listEl = cardUl.children('li').eq(y);
-    listEl.find('img').attr({'src' :cardData[y].imgSrc,
-                             'alt' :cardData[y].imgAlt  });
-    listEl.find('span').text(cardData[y].title);
-    listEl.find('a').attr({"href":'#'});
   }
-
   var cardLi = cardUl.children('li');
+  
  
 
   // ul의 크기설정
@@ -65,6 +26,9 @@
   
   var cardLiWidth = cardLi.eq(0).outerWidth();
   var cardMargin = cardLi.eq(0).outerWidth(true) - cardLiWidth;
+  var cardLiHeight = cardLi.eq(0).outerWidth();
+  var cardLiMargin = parseFloat(cardLi.eq(0).css('marginBottom'));
+
   // outerWidth(true) -> 마진값을 포함한 가로값
   // outerWidth() -> 마진값을 제외한 가로값(padding+border+width)
 
@@ -72,12 +36,10 @@
   var BrowserSet = function(){
     // 함수가 재수행 하면 li style속성 제거
     cardLi.removeAttr('style'); 
-
+    cardLi.css({position:"absolute"});
     var winW = win.outerWidth();
     var liLen = parseInt( winW / (cardLiWidth + cardMargin) );
-    // 정수화처리 : parseInt() 
-    // 버림,올림,반올림:  Math.floor(), Math.ceil(), Math.round()
-    // console.log( liLen );
+    
     var ulWidth = ((cardLiWidth + cardMargin) * liLen) - cardMargin;
     cardUl.css({width: ulWidth + 'px'});
     // console.log(liLen, ulWidth);
@@ -90,8 +52,9 @@
     var n;
     for(; lin < liNth; lin += 1){
       n = (liLen * lin) - 1;
-      console.log(n);
       cardLi.eq(n).css({marginRight:0});
+      
+  
     };
 
     // 가로에 4개씩에서 4번째( eq(4*n-1) )마다 마진값 x  -> 3,7,11,15...

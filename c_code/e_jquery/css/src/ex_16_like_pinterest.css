@@ -15,7 +15,7 @@
 h2{text-align: center;}
 
 #cardBox ul{
-  width:90%; height:auto; margin:2rem auto; background-color: #ddd;}
+  width:90%; height:auto; margin:2rem auto;}
 #cardBox ul:after,
 #cardBox ul::after{
   content:" "; display:block; clear:both; width:100%; height:0;}
