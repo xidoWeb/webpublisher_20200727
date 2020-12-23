@@ -1,7 +1,9 @@
 // ex_15_parallax2.js
 
 (function($){
+  
   var win = $(window);
+  $('html,body').animate({scrollTop:0});
   var winH = win.outerHeight();
 
   var headBox = $('#headBox');

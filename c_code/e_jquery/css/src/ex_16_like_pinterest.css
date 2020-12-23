@@ -1,0 +1,34 @@
+/* ex_16_like_pinterest.css */
+
+#wrap {
+  width: 100%; height:auto; min-height:1600px;
+  min-width:600px; margin:auto;
+  padding-top:100px;}
+
+#headBox {
+  position: fixed; top: 0; left: 0; z-index:1500;
+  width: 100%; height: 70px; background-color: #fff;
+  box-shadow:0 0.2rem 0.3rem rgba(0,0,0,0.7);}
+
+#cardBox {
+  width: 100%; height:auto;}
+#cardBox ul{
+  width:90%; height:auto; margin:auto; background-color: #ddd;}
+#cardBox ul:after,
+#cardBox ul::after{
+  content:" "; display:block; clear:both; width:100%; height:0;}
+#cardBox li{
+    float:left;
+    width:240px; height:480px; 
+    margin-right:20px; margin-bottom:20px;
+    border-radius:0.5rem; background-color: #aaa;
+    overflow: hidden;}
+
+#cardBox a{ display: block; width: 100%; height: 100%;}
+.img_temp{position: relative; width: 100%; height:430px;}
+.img_temp > img {
+  position: absolute; top: 50%; left: 50%;
+  width:auto; height:auto; min-width:100%; min-height:100%;
+  transform:translate(-50%, -50%);}
+
+#cardBox a > span {display:block; margin-top:0.5rem; width: 90%;}
