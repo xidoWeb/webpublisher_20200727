@@ -15,18 +15,17 @@
 h2{text-align: center;}
 
 #cardBox ul{
-  width:90%; height:auto; margin:2rem auto; background-color: #ddd; text-align: center;}
+  width:90%; height:auto; margin:2rem auto; background-color: #ddd;}
 #cardBox ul:after,
 #cardBox ul::after{
   content:" "; display:block; clear:both; width:100%; height:0;}
 #cardBox li{
-    /* float:left; */
-    display: inline-block;
+    float:left;
     width:240px; height:380px; 
     box-sizing: border-box; padding: 0.5rem;
     border:1px solid #777;
-    /* margin-right:20px; margin-bottom:50px; */
-    margin:0 10px 50px;
+    margin-right:20px; margin-bottom:50px;
+    /* margin:0 10px 50px; */
     border-radius:0.5rem; background-color: #fff;
     overflow: hidden;}
 
