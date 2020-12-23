@@ -31,9 +31,23 @@
   // 정수화처리 : parseInt() 
   // 버림,올림,반올림:  Math.floor(), Math.ceil(), Math.round()
   // console.log( liLen );
-  var ulWidth = (cardLiWidth * liLen);// - cardMargin;
+  var ulWidth = ((cardLiWidth + cardMargin) * liLen) - cardMargin;
   cardUl.css({width: ulWidth + 'px'});
-  console.log(ulWidth);
+  // console.log(liLen, ulWidth);
+  // li설정
+  // 1. li의 순번에서 가로 행에들어가는 마지막번째에는 margin 제거
+  // cardLi.eq(liLen-1).css({margin:0});
+  // 2. 각각의 행에 들어가는 모든 마지막위치의 갯수번째 margin 제거
+  var lin = 0;
+  var liNth = parseInt(cardLi.length / liLen);
+  var n;
+  for(; lin < liNth; lin += 1){
+    n = (liLen * lin) - 1;
+    console.log(liLen * lin -1);
+    cardLi.eq(n).css({margin:0});
+  };
 
+  // 가로에 4개씩에서 4번째( eq(4*n-1) )마다 마진값 x  -> 3,7,11,15...
+  // 가로에 6개씩에서 6번째( eq(6*n-1) )마다 마진값 x  -> 5,11,17,23...
 
 })(jQuery);
