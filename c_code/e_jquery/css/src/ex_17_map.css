@@ -1,0 +1,43 @@
+#wrap {
+ width: 90%; max-width:80rem;
+ height:auto; min-height:50rem; 
+ margin:auto;
+ padding-top: 2rem;
+}
+h1{text-align: center;}
+.part { 
+  width: 95%; height:auto; min-height:10rem;
+  margin:3rem auto; box-sizing: border-box; padding:2rem;
+  border:2px solid #07a;
+}
+
+.part > h2 {
+  width: 100%; height:auto; padding:1rem 0;
+  margin-bottom:1rem;
+  border-bottom: 1px dotted #999;}
+
+.map_area {
+  width: 100%; height:auto;}
+.map_area:after,
+.map_area::after{
+  content:" "; display: block; clear:both;}
+
+  .map_img{
+    float:left; width:70%; height:31.25rem;
+    background-color: #0aa; border-radius:0.5rem;}
+  .store{
+    float:right; width:27%; height:auto;}
+  
+  .store h3 {
+    width: 100%; height: 2rem; margin-bottom: 1rem;
+    font-size: 1.2rem; font-weight: bold;}  
+
+  .store ul { width: 100%; height: auto;}
+  .store ul > li { 
+    width: 100%; height:1.5rem; margin-bottom:0.5rem; }
+  .store a {
+    display: block; width: 100%; height: 100%; 
+    border-bottom:1px solid #777;}
+  .store a:focus {border-bottom:2px solid #f00;}
+  .store ul > li.action { 
+    background-color: #ddf; font-weight: bold;}
