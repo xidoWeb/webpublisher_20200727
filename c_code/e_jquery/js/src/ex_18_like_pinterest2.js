@@ -5,9 +5,11 @@
   // 2. 스크롤의 진행위치값 표시
   // 3. 스크롤시 일정위치가 넘어가면 추가 카드가 생성되게 처리
   // 4. Math.random()을 이용하여 색상, 높이값을 변경
-  // 5. 임시로 세팅했던 .card의 float기능은 삭제
+  // 5. 임시로 세팅했던 .card의 float기능은 삭제, position처리
   // 6. 화면상의 하나의 행에 들어갈 위치값(left값) 설정
   // 7. 화면상의 열에 해당하는 위치값(top) 설정
+  // 8. .card_area의 높이값을 강제 설정
+
 
   
   // 4-1. 컬러 랜덤 색상설정
@@ -18,8 +20,10 @@
   // console.log(randomColor);
 
   // 4-2. 높이값 랜덤수치 변경
+  var myRandomN = 7;
+  var myRandomH = 40;
   var RandomHeight = function(){
-    var h = parseInt(Math.random() * 7) * 40;
+    var h = parseInt(Math.random() * myRandomN) * myRandomH;
     return h;
   };
 
@@ -96,17 +100,37 @@
   }// CardWidthSet();
   CardWidthSet();
   // =======================================
-  // 6. 카드의 위치값 설정
+  // 6,7. 카드의 위치값 설정
   var remainder;
   // card = $('.card');
+  var topArr = [];
+
   var CardPositionSettingFn = function(){
     var j=0;
-    for(; j < cardCount; j+=1){
+    for(; j < cardCount ; j+=1){
       // 가로행에들어가는 각각 n번째(나머지값에 해당하는 번째)
-      // 요소의 위치를(left값) 배치
+      //6. 요소의 위치를(left값) 배치      
      remainder = j % cardWidthLen;
      card.eq(j).css({left: cardWidth*remainder+'px'});
-    }
+     var setTop, setHeight;
+     // 7. 요소의 추가 위치(top값) 배치
+      if(j < cardWidthLen){
+        card.eq(j).css({top:0});
+        topArr[j] = 0;
+      }else{
+        setTop = parseFloat(card.eq(j-cardWidthLen).css('top'));
+        setHeight = card.eq(j-cardWidthLen).outerHeight();
+        topArr[j] = setTop + setHeight;
+        card.eq(j).css({top: setTop + setHeight +'px'});
+      }
+    } // for()
+    // 8. .card_area의 높이값 설정
+    // 각각의 카드 높이값(height) 중의 가장큰값
+    var randomHMax = card.eq(0).outerHeight() + (myRandomN * myRandomH);
+    // 카드의 position의 위치 top의 최대값
+    var maxN = Math.max.apply(null, topArr);
+    // console.log(randomHMax, maxN)
+    cardArea.css({height:randomHMax + maxN +'px'});
   }// CardPositionSettingFn();
   // =======================================
   // 함수기능수행 
@@ -138,6 +162,7 @@
     // 카드를 생성한 영역을 재호출, 기존의 카드는 유지
     if(per >= 100){
       AppendCardFn();
+      CardPositionSettingFn();
     }
   });
 // -----------------------------------
