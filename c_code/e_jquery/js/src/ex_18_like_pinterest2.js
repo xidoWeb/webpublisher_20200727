@@ -24,15 +24,18 @@
   var cardEq0 = $('.card').eq(0);
   var cardWidth = cardEq0.outerWidth(); 
   //outerWidth = 가로+패딩+외곽선;
-  var cardWidthLen = 
-      parseInt(cardBox.outerWidth() / cardWidth);
-  cardArea.css({width:cardWidth * cardWidthLen + 'px'});
+  var cardWidthLen;
+  var CardWidthSet = function(){
+    cardWidthLen = 
+    parseInt(cardBox.outerWidth() / cardWidth);
+    cardArea.css({width:cardWidth * cardWidthLen + 'px'});
+  }// CardWidthSet();
+  CardWidthSet();
 
   $('.card').css({float:'left'});
-
   // 브라우저 크기 변경시 cardArea 사이즈 재수정
   win.on('resize', function(){
-    //
+    CardWidthSet();
   });
 
 
