@@ -29,7 +29,7 @@ h1{
 }
 
 .card_area{
-  width: 100%; height:500px; margin:auto; 
+  width: 100%; height:auto; min-height:500px; margin:auto; 
   background-color: #ffa;
 }
 

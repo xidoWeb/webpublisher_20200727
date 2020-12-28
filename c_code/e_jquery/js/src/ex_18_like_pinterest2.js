@@ -1,6 +1,19 @@
 // ex_18_like_pinterest2.js
 
 (function($){
+  // 1. 카드 감싸는영역 크기설정, 내용물 삽입 
+  // 2. 스크롤의 진행위치값 표시
+  //
+  var headBox = $('#headBox');
+  headBox.prepend('<div class="scroll_percent"></div>');
+  var scrollP = $('.scroll_percent ');
+  scrollP.css({
+    position:'absolute', top:0, left:0,zIndex:-1,
+    width:0, height:'90%', opacity:0.2,
+    backgroundColor:'#f06'
+  });
+  
+  // ----------------------------------
   var cardCode = '<div class="card"><div class="card_img"></div><div class="card_narr"><a href="#"><dl><dt>title</dt><dd>Lorem, ipsum.</dd></dl></a></div></div>';
 
   // window, cardBox, card_area 선택자
@@ -36,6 +49,20 @@
   // 브라우저 크기 변경시 cardArea 사이즈 재수정
   win.on('resize', function(){
     CardWidthSet();
+  });
+
+  win.on('scroll', function(){
+    var st = $(this).scrollTop();
+    var wrap = $('#wrap');
+    var wrapHeight = wrap.outerHeight();
+    var wihH = win.outerHeight();
+
+    // 퍼센트 공식: 값 / 기준(전체) * 100
+    // 스크롤처리시에는 화면의 높이값 만큼 빼주어야한다.
+    var per = st / (wrapHeight-wihH) * 100;
+    // console.log(per);
+    // .scroll_percent 의 가로값에 적용
+    scrollP.css({width: per + '%'});
   });
 
 
