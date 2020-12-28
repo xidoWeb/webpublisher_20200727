@@ -79,7 +79,7 @@
 
     // 5.삭제
     // $('.card').css({float:'left'}); 
-
+    card = $('.card');
   }// AppendCardFn();
   AppendCardFn();
   // =======================================
@@ -91,36 +91,32 @@
   var CardWidthSet = function(){
     cardWidthLen = 
     parseInt(cardBox.outerWidth() / cardWidth);
-    cardArea.css({width:cardWidth * cardWidthLen + 'px'}); 
-    
+    cardArea.css({width:cardWidth * cardWidthLen + 'px'});     
     return cardWidthLen;   
   }// CardWidthSet();
   CardWidthSet();
   // =======================================
   // 6. 카드의 위치값 설정
   var remainder;
-  card = $('.card');
+  // card = $('.card');
   var CardPositionSettingFn = function(){
     var j=0;
     for(; j < cardCount; j+=1){
-      // 가로에 3
+      // 가로행에들어가는 각각 n번째(나머지값에 해당하는 번째)
+      // 요소의 위치를(left값) 배치
      remainder = j % cardWidthLen;
-     var k=0;
-     for(; k < cardWidthLen; k+=1){
-       card.eq(j).css({left: cardWidth*remainder+'px'});
-      //  console.log( j );
-     }     
+     card.eq(j).css({left: cardWidth*remainder+'px'});
     }
   }// CardPositionSettingFn();
   // =======================================
-  // 함수기능수행
- 
+  // 함수기능수행 
   CardPositionSettingFn();
   
-
+  // =======================================
   // 브라우저 크기 변경시 cardArea 사이즈 재수정
   win.on('resize', function(){
     CardWidthSet();
+    CardPositionSettingFn();
   });
 
 // -----------------------------------
