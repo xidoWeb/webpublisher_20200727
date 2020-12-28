@@ -10,7 +10,8 @@
   scrollP.css({
     position:'absolute', top:0, left:0,zIndex:-1,
     width:0, height:'90%', opacity:0.2,
-    backgroundColor:'#f06'
+    backgroundColor:'#f06',
+    transform:'translate(-0.5rem) scale(1.1) skew(-15deg)'
   });
   
   // ----------------------------------
