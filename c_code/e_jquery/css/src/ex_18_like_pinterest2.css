@@ -29,11 +29,14 @@ h1{
 }
 
 .card_area{
+  position:relative;
   width: 100%; height:auto; min-height:500px; margin:auto; 
   background-color: #ffa;
 }
 
 .card {
+  position:absolute;
+  cursor:zoom-in;
   width: 15.75rem; height:10rem; 
   padding:0.5rem; padding-bottom:1rem;
   box-sizing:border-box;
