@@ -5,18 +5,19 @@
   // 2. 스크롤의 진행위치값 표시
   // 3. 스크롤시 일정위치가 넘어가면 추가 카드가 생성되게 처리
   // 4. Math.random()을 이용하여 색상, 높이값을 변경
+  
+  // 4-1. 컬러 랜덤 색상설정
+  var Rn = function(){
+    return  Math.floor(Math.random()*16).toString(16);
+  };
+  // var randomColor = '#'+Rn()+Rn()+Rn();  
+  // console.log(randomColor);
 
-  var r1 = 
-    Math.floor(Math.random() * 16).toString(16);
-  var r2 = 
-    Math.floor(Math.random() * 16).toString(16);
-  var r3 = 
-    Math.floor(Math.random() * 16).toString(16);
-var Rn = function(){
-  return  Math.floor(Math.random()*16).toString(16);
-};
-  var randomColor = '#'+Rn()+Rn()+Rn();  
-  console.log(randomColor);
+  // 4-2. 높이값 랜덤수치 변경
+  var RandomHeight = function(){
+    var h = parseInt(Math.random() * 7) * 40;
+    return h;
+  };
 
 // ================================
 // 2번기능 스크롤시 진행위치값
@@ -44,15 +45,30 @@ var Rn = function(){
   // 3번에서 요구하는 카드생성형태이므로 중복 수행이기에 함수화 처리
   var i=0;   
   var cardCount = 0;
+  var randomColor = [];
+  var cardRandomHeight = []; 
 
   var AppendCardFn = function(){
     cardCount += 50; 
-
+    // var r1,r2,r3;
+    
     for(; i < cardCount; i++){
+      // r1 = parseInt(Math.random()*16).toString(16);
+      // r2 = parseInt(Math.random()*16).toString(16);
+      // r3 = parseInt(Math.random()*16).toString(16);
       cardArea.append(cardCode);
       card = cardArea.children('.card').eq(i);
       card.find('dt').text( 'title_'+ (i+1) );
+      randomColor[i] = '#'+Rn()+Rn()+Rn();
+      // randomColor[i] = '#'+r1+r2+r3;
+      card.find('.card_img').css({
+        backgroundColor:randomColor[i]
+      });
+      // card높이값을 기존값과 random함수값을 합쳐서 처리
+      cardRandomHeight[i]=card.outerHeight()+RandomHeight();
+      card.css({height:cardRandomHeight[i] + 'px'});
     }
+    // console.log( randomColor );
 
     $('.card').css({float:'left'});
 
