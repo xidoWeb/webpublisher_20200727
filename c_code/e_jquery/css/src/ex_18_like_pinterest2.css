@@ -18,7 +18,7 @@ h1{
 #cardBox {
   width: 98%; height:auto; min-height:31.25rem;
   margin:auto; padding-bottom:5rem;
-  background-color: #ccc;
+  /* background-color: #ccc; */
 }
 
 #cardBox h2{
@@ -36,22 +36,26 @@ h1{
 
 .card {
   position:absolute;
-  cursor:zoom-in;
   width: 15.75rem; height:10rem; 
   padding:0.5rem; padding-bottom:1rem;
   box-sizing:border-box;
-  border:1px solid #777;
+  /* border:1px solid #777; */
   background-color: #fff;
 }
 
 .card > .card_img{
+  cursor:zoom-in;
   width: 100%; height:calc(100% - 70px);
   background-color: #f90; border-radius:0.5rem;
   background-repeat: no-repeat;
   background-position: 50% 50%;
   background-size: cover;
 }
-
+.card a{display: block; width: 100%; height: auto;}
+.card a:hover,
+.card a:focus{
+  color:#f06; border-bottom:2px solid #f06;
+}
 .card dl {
   width: 100%; height:65px; padding-top:5px;
 }
