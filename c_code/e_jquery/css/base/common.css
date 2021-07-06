@@ -22,3 +22,21 @@
 .float_first li:first-child {margin-left:0;}
 .float_last li:last-child { margin-right:0; }
 
+
+.info_content {
+  width:100%; max-width:1600px; 
+  padding:2rem 3rem; box-sizing: border-box;
+
+}
+
+.info_content hr {margin: 1rem 0;}
+.info_content h2 {padding: 1rem; background-color: #37a; color:#fff; border-radius: 0.1rem;}
+.info_content h2 ~ ul { padding: 0.5rem; border:1px solid #777; border-top:0; padding-top: 1rem;}
+.info_content ul li {
+  margin-bottom: 0.3rem; border-bottom:1px solid #aaa; 
+  padding: 0.5rem; margin-left: 3rem; list-style:decimal;
+  }
+
+body {
+  padding: 1rem;
+}
